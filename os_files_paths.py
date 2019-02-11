@@ -150,6 +150,20 @@ os.path.isdir('./dir')    # True
 
 
 """
+Funciones para localizar el user path..
+
+"""
+#You want to use os.path.expanduser. This will ensure it works on all platforms
+
+from os.path import expanduser
+home = expanduser("~")
+
+#If you're on Python 3.5+ you can use pathlib.Path.home():
+
+from pathlib import Path
+home = str(Path.home())
+
+"""
 Funciones propias AUXILIARES
 """
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import glob
 import os
 import socket
@@ -14,6 +15,7 @@ from aux_tools import *
     4 - Check if plug-ins path exists - if not create
     5 - Check if scripts exists - if not create
     6 - Copy each file to each place. Check errors
+    pyinstaller --onefile option to create only one exe file
 
 """
 
@@ -22,31 +24,38 @@ class Installator():
     """ Clase para realizar la instalación de plug-ins o scripts en
         Maya2018
     """
-    def __init__(self, installationList):
+    def __init__(self, installationList=[]):
         """
         Inicializamos el instalador
         Leemos la configuración del la lista installationList
         """
-        self.installList = installtionList
+        self.installList = installationList
         self.userName = getpass.getuser()
         self.baseMayaPath = 'C:/Users/' + self.userName + '/documents/maya/2018'
         pluginsPath = self.baseMayaPath + 'plug-ins'
         scriptsPath = self.baseMayaPath + 'scripts'
         if not self.pathExists(self.baseMayaPath):
             self.get_cmdialog_value("Installator alert!!", "No encuentro el directorio de maya 2018: " + self.baseMayaPath)
-            return
+            exit(0)
         else:
             print ('Encontrado maya en: ' + self.baseMayaPath)
         self.pluginsPath = self.baseMayaPath + '/plug-ins'
         self.scriptsPath = self.baseMayaPath + '/scripts'
         if not self.pathExists(self.pluginsPath):
             self.createFolder(self.pluginsPath)
-        if not self.pathExists(self.pluginsPath):
-            self.createFolder(self.pluginsPath)
-
+        if not self.pathExists(self.scriptsPath):
+            self.createFolder(self.scriptsPath)
+        self.processList()
 
     def processList(self):
         self.get_cmdialog_value("Installator alert!!", "Estoy preparado para instalar " + self.baseMayaPath)
+        if not self.installList:
+            self.get_cmdialog_value("Installator alert!!", "No se relleno la lista de instalacion:")
+            exit(0)
+        for elem in self.installList:
+
+            print elem
+
 
 
     def pathExists(self, path):
@@ -74,8 +83,8 @@ class Installator():
 
     def get_cmdialog_value(self, title, message):
         """
-        Abre un cuadro de dialogo de para pedir un número entero
-        message es el mensaje de la ventana.
+        Abre un cuadro de dialogo de confirmación
+        se utiliza solo para confirmar errores..
         devuelve el numero entero:
         Si no ha tenido exito devuelve None
         mas info:
@@ -86,16 +95,14 @@ class Installator():
 
     # Ask the user to select a single file name.
         root = Tkinter.Tk()
-        root.iconbitmap('Z:/config/ffmpeg/editor/resources/ffmpeg.ico')
+        #root.iconbitmap('Z:/config/ffmpeg/editor/resources/ffmpeg.ico')
         root.withdraw() #otulta la ventana de tkinter
-        value = tkSimpleDialog.askinteger( title, message, parent = root,
-            initialvalue=0,
-            minvalue=0,
-            maxvalue=999)
-        return value
+        value = tkMessageBox.showinfo( title, message, parent = root)
 
 
-install = Installator([{'a':123, 'b': 132},{'a':123, 'b': 132},{'a':123, 'b': 132}])
+
+install = Installator([])
+#install = Installator([{'script':'aux_tools.py'},{'plugin':'aux_tools.py'}])
 
 
 """

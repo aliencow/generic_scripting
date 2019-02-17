@@ -184,7 +184,7 @@ inst = Installer()
 
 window = Tk()
 
-iconPath = inst.resource_paths('resources/conct_icon.ico')
+iconPath = inst.resource_paths('./resources/conct_icon.ico')
 #root.iconbitmap('./resources/PB.ico')
 window.iconbitmap(iconPath)
 window.geometry('640x480')
@@ -196,7 +196,7 @@ label = Label(window, text="Hello papanatas\nque te pasa??", font=("Arial Bold",
 #label.grid(column=0, row=0)
 label.pack(fill=X)
 
-button = Button(window, text="Click Me",font=("Arial Bold", 20), borderwidth=0, bg=colors.buttonBG, fg=colors.buttonFG, cursor='hand2', justify = CENTER)
+button = Button(window, text="Click Me",font=("Arial Bold", 20), borderwidth=0, bg='DarkGray', fg=colors.buttonFG, cursor='hand2', justify = CENTER)
 #button.grid(column=3, row=1)
 button.pack(fill=X, padx=2, pady=1)
 

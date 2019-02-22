@@ -2,6 +2,7 @@
 
 try:
     from Tkinter import *
+    import Tkinter as tk
 except ImportError:
     from tkinter import *
 
@@ -63,7 +64,7 @@ class CollapsibleFrame(Frame):
     def _place_caption(self, caption_separation, icon_x, width_of_icon):
         self.update()
         x = caption_separation + icon_x + width_of_icon
-        y = -(self._captionLabel.winfo_reqheight())
+        y = -(self._captionLabel.winfo_reqheight()+2)
 
         self._captionLabel.place(in_= self._containerFrame, x=x, y=y, anchor=N+W, bordermode="ignore")
 
@@ -178,7 +179,6 @@ class Installer():
 
 
 
-
 colors = Colors()
 inst = Installer()
 
@@ -196,14 +196,17 @@ label = Label(window, text="Hello papanatas\nque te pasa??", font=("Arial Bold",
 #label.grid(column=0, row=0)
 label.pack(fill=X)
 
-button = Button(window, text="Click Me",font=("Arial Bold", 20), borderwidth=0, bg='DarkGray', fg=colors.buttonFG, cursor='hand2', justify = CENTER)
+button = Button(window, text="Click Me",font=("Arial Bold", 20), borderwidth=0, bg='DarkGray', fg=colors.buttonFG, cursor='hand2', pady=5, justify = CENTER)
 #button.grid(column=3, row=1)
 button.pack(fill=X, padx=2, pady=1)
+
+
 
 
 cf1 = CollapsibleFrame(window, text ="Esta es una prueba", interior_padx=5)
 cf1.pack(fill=X,padx=2, pady=1)
 for i in range(3):
-    Button(cf1.interior, text="button %s"%i).pack(fill=X, padx=5)
+    #Button(cf1.interior, text="button %s"%i).pack(fill=X, padx=5)
+    Button(cf1.interior, text="Click Me", borderwidth=0, bg='DarkGray', font=("Arial Bold", 9), fg=colors.buttonFG, cursor='hand2',  pady=5, justify = CENTER).pack(fill=X, padx=2, pady=1)
 
 window.mainloop()

@@ -59,6 +59,9 @@ class Interface(tk.Frame):
         self.normalfont = tkFont.Font(family='Helvetica', size=9)
         self.tittlefont = tkFont.Font(family='Helvetica', size=11, weight='bold')
 
+        for r in range(5):#Configurar numero de filas
+            self.master.rowconfigure(r, weight=1)
+
 
         self.ent_pieza_value = tk.StringVar()
         self.valores_combo = ["EP111", "EP109", "N103", "N101"]
@@ -146,8 +149,20 @@ class Interface(tk.Frame):
 
     def resto_init(self):
 
-        fr_labels_pieza = tk.Frame(self.master, bg="blue") #columna etiqueta
-        fr_labels_pieza.grid(row = 2, column = 0, rowspan = 1, columnspan = 1, sticky ='EWNS')
+        fr_footer = tk.Frame(self.master, bg="red") #row para footer
+        fr_footer.grid(row = 4,sticky = 'WENS')
+        fr_footer.columnconfigure(0, weight=1)
+
+        for c in range(2):
+            fr_footer.columnconfigure(c, weight=1)
+
+        but_footer = tk.Button(fr_footer, text='SAVE', command=self.dummy, borderwidth=0, bg=self.colors.buttonBG,  fg=self.colors.buttonFG, font=self.tittlefont)
+        but_footer.grid(row=0, column=0, columnspan=2, sticky='WE', pady=5, padx=5)
+
+
+
+        fr_labels_pieza = tk.Frame(self.master,bg=self.colors.frameBG) #columna etiqueta
+        fr_labels_pieza.grid(row = 2, column = 0, rowspan = 1,  sticky ='EWNS')
         fr_labels_pieza.columnconfigure(0, weight=1)
 
         lbl_buttons = tk.Label(fr_labels_pieza, text='Campito:', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo, pady=0)
@@ -158,9 +173,9 @@ class Interface(tk.Frame):
         lbl_buttons.grid(row=2, column=0, sticky='E', pady=5, padx=5)
 
 
-        fr_contents_pieza = tk.Frame(self.master, bg="green") #columna contenido
-        fr_contents_pieza.grid(row = 2, column = 1, rowspan = 1, columnspan = 1, sticky = 'EWNS')
-        fr_contents_pieza.columnconfigure(0, weight=1)
+        fr_contents_pieza = tk.Frame(self.master, bg=self.colors.frameBG) #columna contenido
+        fr_contents_pieza.grid(row = 2, column = 1, rowspan = 1,  sticky = 'EWNS')
+        fr_contents_pieza.columnconfigure(0, weight=1, minsize=250)
 
 
         ent_pieza = tk.Entry(fr_contents_pieza, text='', textvariable=self.ent_pieza_value, bg=self.colors.entryBG, fg=self.colors.buttonFG)
@@ -177,8 +192,6 @@ class Interface(tk.Frame):
         ent_pieza.grid(row=2, column=0, columnspan=6, sticky='EW', pady=5, padx=5)
 
 
-        fr_footer = tk.Frame(self.master, bg="red") #row para footer
-        fr_footer.grid(row = 3, column = 0, rowspan = 1, columnspan = 2, sticky = 'EWNS')
 
     def dummy(self):
         print 'rutina dummy'

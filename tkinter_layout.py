@@ -6,6 +6,25 @@ import Tkinter as tk
 
 import base64
 
+
+import tkFont
+#from tkinter import font
+
+
+
+class Colors():
+    def __init__(self):
+        self.bgtitulo ='#626262'
+        self.fgtitulo ='#dcdcdc'
+        self.background = '#444444'
+        self.frameBG = '#494949'
+        self.label = '#bbbbbb'
+        self.buttonBG = '#5d5d5d'
+        self.buttonFG = '#eeeeee'
+        self.entryBG = '#2b2b2b'
+
+
+
 """ Sample layout
 |-------------------------------------------------------|
 | LOGO                           Nombre App u otra info.|
@@ -24,41 +43,78 @@ import base64
 |-------------------------------------------------------|
 """
 
-class Application(ttk.Frame):
+
+
+class Interface(tk.Frame):
 
     def __init__(self, master=None):
-        ttk.Frame.__init__(self, master)
+        tk.Frame.__init__(self, master)
         self.grid()
         self.master.title("Grid Manager")
+        self.master.iconbitmap('resources/conct_icon.ico')
+        self.master.resizable(False, True)
 
-        for r in range(5):
-            self.master.rowconfigure(r, weight=0)
 
+        self.colors = Colors()
+        self.normalfont = tkFont.Font(family='Helvetica', size=9)
+        self.tittlefont = tkFont.Font(family='Helvetica', size=11, weight='bold')
+
+
+        self.ent_pieza_value = tk.StringVar()
+        self.valores_combo = ["EP111", "EP109", "N103", "N101"]
         self.header_init()
         self.info_init()
         self.resto_init()
 
     def header_init(self):
         """ HEADER SETUP
+            Configuración grafica de la sección Header:
+            logo e imagen
         """
-        fr_header = tk.Frame(self.master, bg="red") #cabeecera
+        fr_header = tk.Frame(self.master, bg=self.colors.bgtitulo) #cabeecera
         fr_header.grid(row = 0, column = 0, rowspan = 1, columnspan = 2, sticky = 'WENS')
 
-        logo = tk.PhotoImage(file="resources/flecha_close.gif") # poner el path correcot
-        logo = tk.PhotoImage(data=base64.encodestring(open("./resources/mole.gif", "rb").read(  )))
-        lbl_logo = tk.Label(fr_header, image=logo).grid(row=0, column=0, sticky = 'WNS')
-        lbl_titulo = tk.Label(fr_header, text='ConCatenator for ffmpeg videos - AOM', justify=tk.RIGHT).grid(row=0, column=2, sticky = 'WENS', pady=5)
+        for c in range(1):
+            fr_header.columnconfigure(c, weight=0)
+
+
+        #logo = tk.PhotoImage(file="F:/proyectos_python/generic_scriptingresources/flecha_close.gif") # poner el path correcot
+        logo = tk.PhotoImage(data=base64.encodestring(open("resources/conct_iconc.gif", "rb").read()))
+        #logo = logo.subsample(2,2) #la mitad
+        lbl_logo = tk.Label(fr_header, image=logo, bg=self.colors.bgtitulo)
+        lbl_logo.image = logo
+        lbl_logo.grid(row=0, column=0, sticky = 'EWNS', pady=5, padx=5)
+
+        lbl_titulo = tk.Label(fr_header, text='ConCatenator for ffmpeg videos - AOM', font=self.tittlefont, bg=self.colors.bgtitulo, fg=self.colors.fgtitulo)
+        lbl_titulo.grid(row=0, column=1, columnspan=1, sticky = 'W', pady=3, padx=5)
 
     def info_init(self):
         """ INFORMACION SETUP
         """
-        fr_select_pieza = tk.Frame(self.master, bg="red") #zona informacion de la pieza
+        fr_select_pieza = tk.Frame(self.master, bg=self.colors.frameBG) #zona informacion de la pieza
         fr_select_pieza.grid(row = 1, column = 0, rowspan = 1, columnspan = 2, sticky = 'WENS')
-        for c in range(5):
+
+        for c in range(4):
             fr_select_pieza.columnconfigure(c, weight=1)
             #Button(master, text="Button {0}".format(c)).grid(row=6,column=c,sticky=E+W)
-        valores = ["EP111", "EP109", "N103", "N101"]
-        combo = ttk.Combobox(fr_select_pieza, state="readonly", postcommand=self.dummy, values=valores).grid(row=1, column=0, columnspan=2, sticky='WE', pady=5)
+
+        for r in range(2):#Configurar numero de filas
+            fr_select_pieza.rowconfigure(r, weight=0)
+
+        lbl_entry = tk.Label(fr_select_pieza, text='Piece selected', font=self.normalfont, bg=self.colors.frameBG, fg=self.colors.fgtitulo)
+        lbl_entry.grid(row=0, column=2, columnspan=1, sticky='W', pady=3)
+
+        self.ent_pieza = tk.Entry(fr_select_pieza, text='', textvariable=self.ent_pieza_value, bg=self.colors.entryBG, fg=self.colors.buttonFG)
+        self.ent_pieza.grid(row=1, column=2, columnspan=1, sticky='WE', pady=5,padx=5)
+
+        lbl_combo = tk.Label(fr_select_pieza, text='Piece list', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo)
+        lbl_combo.grid(row=0, column=0, columnspan=2, sticky='W', pady=3, padx=5)
+
+
+        self.combo_piezas = ttk.Combobox(fr_select_pieza, state="readonly", postcommand=self.dummy, values=self.valores_combo)
+        self.combo_piezas.grid(row=1, column=0, columnspan=2, sticky='WE', pady=5, padx=5)
+        self.combo_piezas.bind("<<ComboboxSelected>>", self.get_project_from_combo)
+        self.combo_piezas.current(0)
 
         """ Acceso al combo box
         combo["values"] = ["Python", "C", "C++", "Java"]  #hay que asignarle valores
@@ -72,20 +128,54 @@ class Application(ttk.Frame):
         # Vaciar lista.
         self.combo["values"] = []
         """
-        ent_pieza = tk.Entry(fr_select_pieza).grid(row=1, column=2, columnspan=1, sticky='WE', pady=5,padx=5)
 
-        button = tk.Button(fr_select_pieza, text='Stop', width=25, command=self.dummy)
+        lbl_buttons = tk.Label(fr_select_pieza, text='Operations', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo)
+        lbl_buttons.grid(row=0, column=3, columnspan=2, sticky='W', pady=3, padx=5)
 
-        but_open_pieza = tk.Button(fr_select_pieza, text='Open', command=self.dummy).grid(row=1, column=3, columnspan=1, sticky='WE', pady=5, padx=5)
-        but_new_pieza = tk.Button(fr_select_pieza, text='Open', command=self.dummy).grid(row=1, column=4, columnspan=1, sticky='WE', pady=5 , padx=5)
+        but_open_pieza = tk.Button(fr_select_pieza, text='Open', command=self.dummy, borderwidth=0, bg=self.colors.buttonBG,  fg=self.colors.buttonFG, pady=0, padx = 5)
+        but_open_pieza.grid(row=1, column=3, columnspan=1, sticky='WE', pady=5, padx=5)
+
+        but_new_pieza = tk.Button(fr_select_pieza, text='New', command=self.dummy, borderwidth=0, bg=self.colors.buttonBG, fg=self.colors.buttonFG, pady=0, padx = 5)
+        but_new_pieza.grid(row=1, column=4, columnspan=1, sticky='WE', pady=5 , padx=5)
+
+
+
+        lbl_titulonext = tk.Label(fr_select_pieza, text='Selection details:', font=self.tittlefont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo)
+        lbl_titulonext.grid(row=2, column=0, columnspan=5, sticky = 'W', pady=3, padx=5)
+
 
     def resto_init(self):
 
         fr_labels_pieza = tk.Frame(self.master, bg="blue") #columna etiqueta
         fr_labels_pieza.grid(row = 2, column = 0, rowspan = 1, columnspan = 1, sticky ='EWNS')
+        fr_labels_pieza.columnconfigure(0, weight=1)
+
+        lbl_buttons = tk.Label(fr_labels_pieza, text='Campito:', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo, pady=0)
+        lbl_buttons.grid(row=0, column=0, sticky='E', pady=5, padx=5)
+        lbl_buttons = tk.Label(fr_labels_pieza, text='Campito:', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo, pady=0)
+        lbl_buttons.grid(row=1, column=0, sticky='E', pady=5, padx=5)
+        lbl_buttons = tk.Label(fr_labels_pieza, text='Campito:', font=self.normalfont,  bg=self.colors.frameBG, fg=self.colors.fgtitulo, pady=0)
+        lbl_buttons.grid(row=2, column=0, sticky='E', pady=5, padx=5)
+
 
         fr_contents_pieza = tk.Frame(self.master, bg="green") #columna contenido
         fr_contents_pieza.grid(row = 2, column = 1, rowspan = 1, columnspan = 1, sticky = 'EWNS')
+        fr_contents_pieza.columnconfigure(0, weight=1)
+
+
+        ent_pieza = tk.Entry(fr_contents_pieza, text='', textvariable=self.ent_pieza_value, bg=self.colors.entryBG, fg=self.colors.buttonFG)
+        ent_pieza.grid(row=0, column=0, columnspan=6, sticky='EW', pady=5, padx=5)
+        but_dir = tk.Button(fr_contents_pieza, text='...', command=self.dummy, borderwidth=0, bg=self.colors.buttonBG,  fg=self.colors.buttonFG, pady=0, padx = 2)
+        but_dir.grid(row=0, column=1, columnspan=1, sticky='WE', pady=5, padx=5)
+
+        ent_pieza = tk.Entry(fr_contents_pieza, text='', textvariable=self.ent_pieza_value, bg=self.colors.entryBG, fg=self.colors.buttonFG)
+        ent_pieza.grid(row=1, column=0, columnspan=6, sticky='EW', pady=5, padx=5)
+        but_dir = tk.Button(fr_contents_pieza, text='...', command=self.dummy, borderwidth=0, bg=self.colors.buttonBG,  fg=self.colors.buttonFG, pady=0, padx = 2)
+        but_dir.grid(row=1, column=1, columnspan=1, sticky='WE', pady=5, padx=5)
+
+        ent_pieza = tk.Entry(fr_contents_pieza, text='', textvariable=self.ent_pieza_value, bg=self.colors.entryBG, fg=self.colors.buttonFG)
+        ent_pieza.grid(row=2, column=0, columnspan=6, sticky='EW', pady=5, padx=5)
+
 
         fr_footer = tk.Frame(self.master, bg="red") #row para footer
         fr_footer.grid(row = 3, column = 0, rowspan = 1, columnspan = 2, sticky = 'EWNS')
@@ -93,10 +183,17 @@ class Application(ttk.Frame):
     def dummy(self):
         print 'rutina dummy'
 
+    def get_project_from_combo(self, event):
+        value = self.combo_piezas.get()
+        self.ent_pieza_value.set(value)
+
+    def get_ent_pieza_value(self):
+        return self.ent_pieza_value.get()
+
 
 
 
 root = tk.Tk()
 #root.geometry("400x200+200+200")
-app = Application(master=root)
+app = Interface(master=root)
 app.mainloop()

@@ -28,8 +28,8 @@ class CollapsibleFrame(Frame):
         self._interior_padx = interior_padx
         self._interior_pady = interior_pady
 
-        self._iconOpen = PhotoImage(data= base64.encodestring(open("./resources/flecha_open.gif", "rb").read(  )))
-        self._iconClose = PhotoImage(data=base64.encodestring(open("./resources/flecha_close.gif", "rb").read(  )))
+        self._iconOpen = PhotoImage(data= base64.encodestring(open("../resources/flecha_open.gif", "rb").read(  )))
+        self._iconClose = PhotoImage(data=base64.encodestring(open("../resources/flecha_close.gif", "rb").read(  )))
         #self._iconOpen = PhotoImage(data="R0lGODlhEAAQAKIAAP///9TQyICAgEBAQAAAAAAAAAAAAAAAACwAAAAAEAAQAAADNhi63BMgyinFAy0HC3Xj2EJoIEOM32WeaSeeqFK+say+2azUi+5ttx/QJeQIjshkcsBsOp/MBAA7")
         #self._iconClose = PhotoImage(data="R0lGODlhEAAQAKIAAP///9TQyICAgEBAQAAAAAAAAAAAAAAAACwAAAAAEAAQAAADMxi63BMgyinFAy0HC3XjmLeA4ngpRKoSZoeuDLmo38mwtVvKu93rIo5gSCwWB8ikcolMAAA7")
 

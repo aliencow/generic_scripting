@@ -1,0 +1,62 @@
+
+____    ____  __  .______     .___________. __    __       ___       __       _______ .__   __. ____    ____
+\   \  /   / |  | |   _  \    |           ||  |  |  |     /   \     |  |     |   ____||  \ |  | \   \  /   /
+ \   \/   /  |  | |  |_)  |   `---|  |----`|  |  |  |    /  ^  \    |  |     |  |__   |   \|  |  \   \/   /
+  \      /   |  | |      /        |  |     |  |  |  |   /  /_\  \   |  |     |   __|  |  . `  |   \      /
+   \    /    |  | |  |\  \----.   |  |     |  `--'  |  /  _____  \  |  `----.|  |____ |  |\   |    \    /
+    \__/     |__| | _| `._____|   |__|      \______/  /__/     \__\ |_______||_______||__| \__|     \__/
+
+
+Método tradicional para usar virtualenv:
+
+
+VirtualEnv se usa para crear un entorno virtual para trabajar en python sin contaminar lo demas
+
+para instalar virtualenv:
+
+desde CMD: pip install virtualenv
+
+para crear un entorno virtual:
+
+desde CMD: virtualenv --python=python2.7 flaskpymongo
+donde se pone la version de python y el nombre del directorio
+
+para activar el entorno virtual:
+
+desde CMD: source flaskpymongo/bin/activate (Mac)
+desde CMD: call flaskpymongo/scripts/activate  (Windows)
+donde flaskpymongo es el nombre del directorio donde esta el entorno virtual
+
+para desactivar el entorno virtual
+
+desde CMD: deactivate
+
+
+Método con virtualenvwrapper:
+
+
+Otro modo de poner el virtualenv mas facil es con mkvirtualenv. Previamente tenemos que ejecutar virtualenvwrapper
+
+Explicacion de virtualenv https://gist.github.com/IamAdiSri/a379c36b70044725a85a1216e7ee9a46
+en windows http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/
+virtualenvwrapper https://virtualenvwrapper.readthedocs.io/en/latest/index.html
+virtualenvwrapper https://pypi.org/project/virtualenvwrapper-win/
+
+para instalar en windows
+pip install virtualenvwrapper-win
+en mac
+pip install wirtualenvwrapper
+
+Uso:
+makevirtualenv nombre
+crea un entorno virtual denominado nombre
+
+luego nos ubicamos en el directorio por ejemplo cd f:\projects\env\nombre
+
+y lo hacemos proyecto actual con:
+
+setprojectdir .   (desde dentro del directorio creado)
+
+con deactivate desactivamos el entorno.
+
+Para volverlo a activar:  workon nombre

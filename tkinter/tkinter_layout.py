@@ -51,7 +51,7 @@ class Interface(tk.Frame):
         tk.Frame.__init__(self, master)
         self.grid()
         self.master.title("Grid Manager")
-        self.master.iconbitmap('resources/conct_icon.ico')
+        self.master.iconbitmap('../resources/conct_icon.ico')
         self.master.resizable(False, True)
 
 
@@ -82,7 +82,7 @@ class Interface(tk.Frame):
 
 
         #logo = tk.PhotoImage(file="F:/proyectos_python/generic_scriptingresources/flecha_close.gif") # poner el path correcot
-        logo = tk.PhotoImage(data=base64.encodestring(open("resources/conct_iconc.gif", "rb").read()))
+        logo = tk.PhotoImage(data=base64.encodestring(open("../resources/conct_iconc.gif", "rb").read()))
         #logo = logo.subsample(2,2) #la mitad
         lbl_logo = tk.Label(fr_header, image=logo, bg=self.colors.bgtitulo)
         lbl_logo.image = logo

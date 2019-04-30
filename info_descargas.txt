@@ -1,0 +1,22 @@
+Este fichero solo es para almacenar información respecto al nuevo Blender y barnold (arnold para blender)
+
+link para acceder al proyecto barnold (beta):
+https://github.com/tyler-furby/barnold
+
+Frameworks that run on WSGI https://wsgi.readthedocs.io/en/latest/frameworks.html
+How to run kivy an flask together https://stackoverflow.com/questions/49884548/how-to-run-kivy-and-flask-apps-together
+Flask SEO tutorial https://pythonprogramming.net/flask-seo-tutorial/
+
+Query pagination in Flask and MongoDB https://www.google.es/search?source=hp&ei=wOrWW93XH--CrwSE9qywAg&q=flask+bootstrap+pymongo&oq=flask+bootstrap+pymongo&gs_l=psy-ab.3..0i22i30k1.1171.1171.0.1353.2.1.0.0.0.0.99.99.1.1.0....0...1.1.64.psy-ab..1.1.98.0...0.6OCONuA3jE4
+
+The Simple Flask Blog Ofiicial Code Base (con Bootstrap) https://github.com/agusmakmun/flaskblog
+
+How to Get Python and JavaScript to Communicate Using JSON  https://www.makeuseof.com/tag/python-javascript-communicate-json/
+
+How to put data on tables html Bootstrap https://datatables.net/examples/styling/bootstrap4
+How to use datatables with flask    https://github.com/SergioLlana/datatables-flask-serverside
+                                    https://github.com/Sighery/mongodb-flask-datatables
+
+How to kill processes on MAC http://www.chriswrites.com/how-to-view-and-kill-processes-using-the-terminal-in-mac-os-x/
+
+Flask Cheat Sheet https://s3.us-east-2.amazonaws.com/prettyprinted/flask_cheatsheet.pdf

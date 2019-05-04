@@ -1,0 +1,51 @@
+Plugins de atom a instalar
+
+Herramienta para verificación de sintaxis
+linter
+linter-css
+linter-js
+etc.
+
+Gestion git
+gitplus
+
+
+Autocompiladores
+
+linter-sass
+sass-autocompiler (es necesario instalar con npm node-sass)
+este último módulo requiere instalación previa de node-sass: npm install node-sass -g
+
+
+Herramienta de abreviaturas ayudas
+
+emmet - consultar emmet cheat sheet
+autoprefixer - ayuda a poner en css los prefijos de los distintos browsers
+
+Herramientas de interface:
+
+file-icons  - para que se muestren los iconos por tipos de archivo
+color-picker - para seleccionar un color css por paleta interactiva
+pigments - muestra los hexadecimales de códigos de color con el color de fondo del código
+minimap - muestra los archivos en miniatura y podemos desplazarnos por ellos
+highlight-selected - muestra lo seleccionado en todo el documento.
+
+
+Herramientas de ejecución:
+
+browser-plus - ejecuta el html seleccionado en una ventana de atom
+open-in-browser - ejecuta el html seleccionado en el default browser
+
+Terminal
+platformio-ide-terminal  - permite la ejecución del terminal integrado en atom
+
+Abreviaturas de teclado útiles:
+
+ctrl-shift-p --  Command Palette
+cmd-shift-p (en mac)
+ctrl-alt-o   --  ejecuta el browser-plus
+ctrl-alt-o  (en mac)
+ctrl-,      -- settings and Plugins
+cmd-,       (en mac)
+ctrl-`      -- platformio Terminal
+ctrl-`      (en mac)

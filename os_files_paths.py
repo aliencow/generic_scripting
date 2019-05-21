@@ -8,6 +8,20 @@ Los directorios aquí https://www.programiz.com/python-programming/directory
 https://www.ibm.com/developerworks/library/wa-aj-pyjamas/index.html
 """
 
+""" listar todas las variables de entorno """
+
+import os
+list = os.environ
+for l in list:
+    print l
+
+""" Descomponer y listar conenidos de una variable de entorno concreta """
+
+cual = os.getenv('MAYA_SCRIPT_PATH')
+lista = cual.split(';')
+for l in lista:
+    print l
+
 
 """ get current directory """
 

@@ -165,6 +165,9 @@ current_path = FR.path
 FR.replaceWith(new_path)
 
 
+# bloquear desbloquear nodes en maya
+import pymel.core as pm
+pm.lockNode(l=True) #True bloquea, False desbloquea
 
 """
 

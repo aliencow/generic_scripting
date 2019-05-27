@@ -33,6 +33,21 @@ ___  ___                                           _      ______                
 
 # RECOPILATORIO DE SNIPPETS PYTHON PARA COSAS
 
+
+""" Crear u asignar un shader a un objeto en mayaA
+"""
+
+import maya.cmds as mc
+
+def applyMaterial(node, material):
+    if mc.objExists(node):
+        shd = mc.shadingNode('lambert', name="%s_lambert" % node, asShader=True)
+        shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
+        mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
+        mc.sets(node, e=True, forceElement=shdSG)
+
+applyMaterial("pSphere1")
+
 #LISTAR ATRIBUTOS DE defaultArnoldDriver
 #Este snippet lista los atributos de defaultArnoldDriver en la ventana de script
 

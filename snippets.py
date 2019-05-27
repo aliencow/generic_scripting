@@ -177,10 +177,6 @@ I think you need to do it in 2 commands. You can list objects of a certain type 
 
 You could put them all together in mel like this
 
-
-
-
-
 {string $locs[] = eval("listRelatives -p `ls -type locator \"loc*\"`"); select $locs;}
 
 
@@ -190,11 +186,19 @@ Its a bit neater in python
 """
 
 
-
 import pymel.core as pm
 
 pm.select(pm.listRelatives(pm.ls('loc*',type='locator'),parent=True))
 
+
+import pymel.core as pm
+pm.select("Environment_GRP")
+nodes = pm.ls(sl=True)
+#nodes += pm.listRelatives(nodes, allDescendents=True, -shapes,type='joint') #seleccionar todas las joints
+#nodes += pm.listRelatives(nodes, allDescendents=True, shapes=True) #seleccionar solo shapes
+
+nodes += pm.listRelatives(nodes, allDescendents=True) #seleccionar toda la jerarquia
+pm.select(nodes)
 
 
 # more about listrelatives http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/PyMel/generated/functions/pymel.core.general/pymel.core.general.listRelatives.html

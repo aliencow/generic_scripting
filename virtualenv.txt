@@ -41,11 +41,14 @@ Explicacion de virtualenv https://gist.github.com/IamAdiSri/a379c36b70044725a85a
 en windows http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/
 virtualenvwrapper https://virtualenvwrapper.readthedocs.io/en/latest/index.html
 virtualenvwrapper https://pypi.org/project/virtualenvwrapper-win/
+instalar en mac http://exponential.io/blog/2015/02/10/install-virtualenv-and-virtualenvwrapper-on-mac-os-x/
+
+comandos mkvirtualenv https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html
 
 para instalar en windows
 pip install virtualenvwrapper-win
 en mac
-pip install wirtualenvwrapper
+pip install virtualenvwrapper
 
 Uso:
 makevirtualenv nombre

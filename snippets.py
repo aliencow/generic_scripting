@@ -1,4 +1,52 @@
+"""
+______                                             ___  ___                            _ _
+| ___ \                                            |  \/  |                           | | |
+| |_/ /   _ _ __ ___   ___  _ __   __ _  ___       | .  . | ___  _ __   __ _  ___   __| | |__
+|  __/ | | | '_ ` _ \ / _ \| '_ \ / _` |/ _ \      | |\/| |/ _ \| '_ \ / _` |/ _ \ / _` | '_ \
+| |  | |_| | | | | | | (_) | | | | (_| | (_) |  _  | |  | | (_) | | | | (_| | (_) | (_| | |_) |
+\_|   \__, |_| |_| |_|\___/|_| |_|\__, |\___/  (_) \_|  |_/\___/|_| |_|\__, |\___/ \__,_|_.__/
+       __/ |                       __/ |                                __/ |
+      |___/                       |___/                                |___/
+"""
+
+""" Insertar un registro con referencia a otro registro..
+"""
+oid = ObjectId()
+db.country.insert({ _id: oid, code : 1, name: 'Brasil' });
+db.state.insert({ code : 1, state: 'SC', country: oid });
+
+
+
+
+"""
+___  ___                                           _      ______                     _
+|  \/  |                                          | |     | ___ \                   | |
+| .  . | __ _ _   _  __ _        ___ _ __ ___   __| |     | |_/ /   _ _ __ ___   ___| |
+| |\/| |/ _` | | | |/ _` |      / __| '_ ` _ \ / _` |     |  __/ | | | '_ ` _ \ / _ \ |
+| |  | | (_| | |_| | (_| |  _  | (__| | | | | | (_| |  _  | |  | |_| | | | | | |  __/ |
+\_|  |_/\__,_|\__, |\__,_| (_)  \___|_| |_| |_|\__,_| (_) \_|   \__, |_| |_| |_|\___|_|
+               __/ |                                             __/ |
+              |___/                                             |___/
+"""
+
+
+
 # RECOPILATORIO DE SNIPPETS PYTHON PARA COSAS
+
+
+""" Crear u asignar un shader a un objeto en mayaA
+"""
+
+import maya.cmds as mc
+
+def applyMaterial(node, material):
+    if mc.objExists(node):
+        shd = mc.shadingNode('lambert', name="%s_lambert" % node, asShader=True)
+        shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
+        mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
+        mc.sets(node, e=True, forceElement=shdSG)
+
+applyMaterial("pSphere1")
 
 #LISTAR ATRIBUTOS DE defaultArnoldDriver
 #Este snippet lista los atributos de defaultArnoldDriver en la ventana de script
@@ -132,6 +180,9 @@ current_path = FR.path
 FR.replaceWith(new_path)
 
 
+# bloquear desbloquear nodes en maya
+import pymel.core as pm
+pm.lockNode(l=True) #True bloquea, False desbloquea
 
 """
 
@@ -140,10 +191,6 @@ Info about como seleccionar nodos por tipos.
 I think you need to do it in 2 commands. You can list objects of a certain type and then you can select the objects in that list. In the case of a locator the shapeNode type is “locator”, but you probably want to select the transform above that locator, which requires another command.
 
 You could put them all together in mel like this
-
-
-
-
 
 {string $locs[] = eval("listRelatives -p `ls -type locator \"loc*\"`"); select $locs;}
 
@@ -154,11 +201,19 @@ Its a bit neater in python
 """
 
 
-
 import pymel.core as pm
 
 pm.select(pm.listRelatives(pm.ls('loc*',type='locator'),parent=True))
 
+
+import pymel.core as pm
+pm.select("Environment_GRP")
+nodes = pm.ls(sl=True)
+#nodes += pm.listRelatives(nodes, allDescendents=True, -shapes,type='joint') #seleccionar todas las joints
+#nodes += pm.listRelatives(nodes, allDescendents=True, shapes=True) #seleccionar solo shapes
+
+nodes += pm.listRelatives(nodes, allDescendents=True) #seleccionar toda la jerarquia
+pm.select(nodes)
 
 
 # more about listrelatives http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/PyMel/generated/functions/pymel.core.general/pymel.core.general.listRelatives.html
@@ -425,44 +480,44 @@ will output:
 
 
 """
-         _      _               _                 
-        (_)    | |             | |                
+         _      _               _
+        (_)    | |             | |
   __   ___ _ __| |_ _   _  __ _| | ___ _ ____   __
   \ \ / / | '__| __| | | |/ _` | |/ _ \ '_ \ \ / /
-   \ V /| | |  | |_| |_| | (_| | |  __/ | | \ V / 
-    \_/ |_|_|   \__|\__,_|\__,_|_|\___|_| |_|\_/  
-                                                  
-                                                  
+   \ V /| | |  | |_| |_| | (_| | |  __/ | | \ V /
+    \_/ |_|_|   \__|\__,_|\__,_|_|\___|_| |_|\_/
+
+
 TIPOGRAFIAS GRANDES COMO ESTAS Y OTRAS PARA COMENTARIOS: Doom
 
- _____ _                      _         _   _                              __ _          ___   _____ _____ _____ _____ 
+ _____ _                      _         _   _                              __ _          ___   _____ _____ _____ _____
 |  ___(_)                    | |       | | (_)                            / _(_)        / _ \ /  ___/  __ \_   _|_   _|
-| |__  _  ___ _ __ ___  _ __ | | ___   | |_ _ _ __   ___   __ _ _ __ __ _| |_ _  __ _  / /_\ \\ `--.| /  \/ | |   | |  
-|  __|| |/ _ \ '_ ` _ \| '_ \| |/ _ \  | __| | '_ \ / _ \ / _` | '__/ _` |  _| |/ _` | |  _  | `--. \ |     | |   | |  
-| |___| |  __/ | | | | | |_) | | (_) | | |_| | |_) | (_) | (_| | | | (_| | | | | (_| | | | | |/\__/ / \__/\_| |_ _| |_ 
-\____/| |\___|_| |_| |_| .__/|_|\___/   \__|_| .__/ \___/ \__, |_|  \__,_|_| |_|\__,_| \_| |_/\____/ \____/\___/ \___/ 
-     _/ |              | |                   | |           __/ |                                                       
-    |__/               |_|                   |_|          |___/                                                        
-	
+| |__  _  ___ _ __ ___  _ __ | | ___   | |_ _ _ __   ___   __ _ _ __ __ _| |_ _  __ _  / /_\ \\ `--.| /  \/ | |   | |
+|  __|| |/ _ \ '_ ` _ \| '_ \| |/ _ \  | __| | '_ \ / _ \ / _` | '__/ _` |  _| |/ _` | |  _  | `--. \ |     | |   | |
+| |___| |  __/ | | | | | |_) | | (_) | | |_| | |_) | (_) | (_| | | | (_| | | | | (_| | | | | |/\__/ / \__/\_| |_ _| |_
+\____/| |\___|_| |_| |_| .__/|_|\___/   \__|_| .__/ \___/ \__, |_|  \__,_|_| |_|\__,_| \_| |_/\____/ \____/\___/ \___/
+     _/ |              | |                   | |           __/ |
+    |__/               |_|                   |_|          |___/
+
 more about	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejemplo%20tipografia%20ASCII
 
 OTRO EJEMPLO: Big (tiene acentos)
-  ______ _                      _         _   _                              __ __                  _____  _____ _____ _____ 
+  ______ _                      _         _   _                              __ __                  _____  _____ _____ _____
  |  ____(_)                    | |       | | (_)                            / _/_/           /\    / ____|/ ____|_   _|_   _|
- | |__   _  ___ _ __ ___  _ __ | | ___   | |_ _ _ __   ___   __ _ _ __ __ _| |_ _  __ _     /  \  | (___ | |      | |   | |  
- |  __| | |/ _ \ '_ ` _ \| '_ \| |/ _ \  | __| | '_ \ / _ \ / _` | '__/ _` |  _| |/ _` |   / /\ \  \___ \| |      | |   | |  
- | |____| |  __/ | | | | | |_) | | (_) | | |_| | |_) | (_) | (_| | | | (_| | | | | (_| |  / ____ \ ____) | |____ _| |_ _| |_ 
+ | |__   _  ___ _ __ ___  _ __ | | ___   | |_ _ _ __   ___   __ _ _ __ __ _| |_ _  __ _     /  \  | (___ | |      | |   | |
+ |  __| | |/ _ \ '_ ` _ \| '_ \| |/ _ \  | __| | '_ \ / _ \ / _` | '__/ _` |  _| |/ _` |   / /\ \  \___ \| |      | |   | |
+ | |____| |  __/ | | | | | |_) | | (_) | | |_| | |_) | (_) | (_| | | | (_| | | | | (_| |  / ____ \ ____) | |____ _| |_ _| |_
  |______| |\___|_| |_| |_| .__/|_|\___/   \__|_| .__/ \___/ \__, |_|  \__,_|_| |_|\__,_| /_/    \_\_____/ \_____|_____|_____|
-       _/ |              | |                   | |           __/ |                                                           
-      |__/               |_|                   |_|          |___/                                                            
+       _/ |              | |                   | |           __/ |
+      |__/               |_|                   |_|          |___/
 
 Y OTRO: Small (tiene acentos)
 
-  ___  _                _       _   _                           __ __         _   ___  ___ ___ ___ 
+  ___  _                _       _   _                           __ __         _   ___  ___ ___ ___
  | __|(_)___ _ __  _ __| |___  | |_(_)_ __  ___  __ _ _ _ __ _ / _/_/__ _    /_\ / __|/ __|_ _|_ _|
- | _| | / -_) '  \| '_ \ / _ \ |  _| | '_ \/ _ \/ _` | '_/ _` |  _| / _` |  / _ \\__ \ (__ | | | | 
+ | _| | / -_) '  \| '_ \ / _ \ |  _| | '_ \/ _ \/ _` | '_/ _` |  _| / _` |  / _ \\__ \ (__ | | | |
  |___|/ \___|_|_|_| .__/_\___/  \__|_| .__/\___/\__, |_| \__,_|_| |_\__,_| /_/ \_\___/\___|___|___|
-    |__/          |_|                |_|        |___/                                              
+    |__/          |_|                |_|        |___/
 
 
 """

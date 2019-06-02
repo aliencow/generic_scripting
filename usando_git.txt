@@ -50,6 +50,8 @@ git reset   #elimina todos los ficheros del staging
 
 # podemos si estan bien o mal con git status
 
+# VI EDITOR COMMANDS https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor
+
 
  _____ _   _ _   _ _____  ___  ______       ______ ___________ _____
 |  ___| \ | | | | |_   _|/ _ \ | ___ \      | ___ \  ___| ___ \  _  |

@@ -8,6 +8,29 @@ Los directorios aquí https://www.programiz.com/python-programming/directory
 https://www.ibm.com/developerworks/library/wa-aj-pyjamas/index.html
 """
 
+
+"""
+______ _ _              _____ _____              _____                        _                  _
+|  ___(_) |            |  _  /  ___|    ___     |  ___|                      (_)                | |
+| |_   _| | ___  ___   | | | \ `--.    ( _ )    | |__ _ ____   __   ___ _ __  _ _ __  _ __   ___| |_ ___
+|  _| | | |/ _ \/ __|  | | | |`--. \   / _ \/\  |  __| '_ \ \ / /  / __| '_ \| | '_ \| '_ \ / _ \ __/ __|
+| |   | | |  __/\__ \  \ \_/ /\__/ /  | (_>  <  | |__| | | \ V /   \__ \ | | | | |_) | |_) |  __/ |_\__ \
+\_|   |_|_|\___||___/   \___/\____/    \___/\/  \____/_| |_|\_/    |___/_| |_|_| .__/| .__/ \___|\__|___/
+                                                                               | |   | |
+                                                                               |_|   |_|                                                                                 |_|   |_|
+los fonts estan aquí:	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejemplo%20tipografia%20ASCII
+"""
+
+"""
+ _____           _                                      _        _     _____ _   _ ___________
+|  ___|         (_)                                    | |      | |   /  ___| \ | |_   _| ___ \
+| |__ _ ____   ___ _ __ ___  _ __  _ __ ___   ___ _ __ | |_ __ _| |   \ `--.|  \| | | | | |_/ /
+|  __| '_ \ \ / / | '__/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __/ _` | |    `--. \ . ` | | | |  __/
+| |__| | | \ V /| | | | (_) | | | | | | | | |  __/ | | | || (_| | |   /\__/ / |\  |_| |_| |
+\____/_| |_|\_/ |_|_|  \___/|_| |_|_| |_| |_|\___|_| |_|\__\__,_|_|   \____/\_| \_/\___/\_|
+
+
+"""
 """ listar todas las variables de entorno """
 
 import os
@@ -21,6 +44,19 @@ cual = os.getenv('MAYA_SCRIPT_PATH')
 lista = cual.split(';')
 for l in lista:
     print l
+
+
+
+"""
+______ _               _             _                         ______ _ _               _____ _   _ ___________
+|  _  (_)             | |           (_)               ___      |  ___(_) |             /  ___| \ | |_   _| ___ \
+| | | |_ _ __ ___  ___| |_ ___  _ __ _  ___  ___     ( _ )     | |_   _| | ___  ___    \ `--.|  \| | | | | |_/ /
+| | | | | '__/ _ \/ __| __/ _ \| '__| |/ _ \/ __|    / _ \/\   |  _| | | |/ _ \/ __|    `--. \ . ` | | | |  __/
+| |/ /| | | |  __/ (__| || (_) | |  | |  __/\__ \   | (_>  <   | |   | | |  __/\__ \   /\__/ / |\  |_| |_| |
+|___/ |_|_|  \___|\___|\__\___/|_|  |_|\___||___/    \___/\/   \_|   |_|_|\___||___/   \____/\_| \_/\___/\_|
+
+
+"""
 
 
 """ get current directory """
@@ -204,3 +240,37 @@ def createFolder(path):
         print ('Error: Creating the directory ' +  path)
     else:
         print ('Successfully created the directory ' + path)
+
+
+def save_file_from_list(path, filename, list):
+    """
+    Escribe un fichero de texto a partir de  una lista de líneas
+    """
+    outpathname = os.path.join( path, filename)
+    with open(outpathname, 'wb') as file:
+        for row in list:
+            file.write(row)
+            file.write('\r\n')
+        print 'writing completed!'
+        file.close()
+
+def check_if_file_exits(filename):
+    """
+    Comprueba si existe un fichero o directorio..
+    """
+    return os.path.exists(filename)
+
+def copy_tree_structure(src, dest):
+    """
+    copia el subdiretorio indicado en src con todo su contenido a un nuevo
+    subdirectorio dest
+    https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python
+    """
+    try:
+        shutil.copytree(src, dest)
+    except OSError as e:
+        # If the error was caused because the source wasn't a directory
+        if e.errno == errno.ENOTDIR:
+            shutil.copy(src, dest)
+        else:
+            print('Directory not copied. Error: %s' % e)

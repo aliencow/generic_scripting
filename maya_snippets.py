@@ -176,14 +176,14 @@ pm.setAttr( 'lst_set:lgt_key_farol02_03Shape.aiAov', 'oquemedeagana' )
 
 
 """
- _____                      _   _     _                      _                 _       ___                   _     _             ___  ___  _____   _____
-/  ___|                    | | | |   (_)                    | |               | |     / _ \                 | |   | |            |  \/  | / _ \ \ / / _ \
-\ `--.  ___  _ __ ___   ___| |_| |__  _ _ __   __ _     __ _| |__   ___  _   _| |_   / /_\ \_ __ _ __   ___ | | __| |   ______   | .  . |/ /_\ \ V / /_\ \
- `--. \/ _ \| '_ ` _ \ / _ \ __| '_ \| | '_ \ / _` |   / _` | '_ \ / _ \| | | | __|  |  _  | '__| '_ \ / _ \| |/ _` |  |______|  | |\/| ||  _  |\ /|  _  |
-/\__/ / (_) | | | | | |  __/ |_| | | | | | | | (_| |  | (_| | |_) | (_) | |_| | |_   | | | | |  | | | | (_) | | (_| |            | |  | || | | || || | | |
-\____/ \___/|_| |_| |_|\___|\__|_| |_|_|_| |_|\__, |   \__,_|_.__/ \___/ \__,_|\__|  \_| |_/_|  |_| |_|\___/|_|\__,_|            \_|  |_/\_| |_/\_/\_| |_/
-                                               __/ |
-                                              |___/
+______      __                                       _____                              _____                 _                         ___  ___  _____   _____
+| ___ \    / _|                                     |  ___|                   ___      |  _  |               (_)                        |  \/  | / _ \ \ / / _ \
+| |_/ /___| |_ ___ _ __ ___ _ __   ___ ___  ___     | |__ _ ____   _____     ( _ )     | | | |_   _  ___ _ __ _  ___  ___     ______    | .  . |/ /_\ \ V / /_\ \
+|    // _ \  _/ _ \ '__/ _ \ '_ \ / __/ _ \/ __|    |  __| '_ \ \ / / __|    / _ \/\   | | | | | | |/ _ \ '__| |/ _ \/ __|   |______|   | |\/| ||  _  |\ /|  _  |
+| |\ \  __/ ||  __/ | |  __/ | | | (_|  __/\__ \    | |__| | | \ V /\__ \   | (_>  <   \ \/' / |_| |  __/ |  | |  __/\__ \              | |  | || | | || || | | |
+\_| \_\___|_| \___|_|  \___|_| |_|\___\___||___/    \____/_| |_|\_/ |___/    \___/\/    \_/\_\\__,_|\___|_|  |_|\___||___/              \_|  |_/\_| |_/\_/\_| |_/
+
+                                                                                                                                                                                                               |___/
 """
 
 
@@ -244,8 +244,56 @@ def getEnvironment():
         print sysPath
 
 
+
+# Query para leer todas las referencias de la escena y guardarlas en una lista de listas
+
+refs_in = leer_referencias_escena()
+for ref_in in refs_in:
+    NameSpaceRef = ref_in[0]
+    FileRef = ref_in[1]
+    print NameSpaceRef, FileRef
+
+def leer_referencias_escena():
+    """
+    Localiza las referencias que existen en la escena y las devuelve en un array de arrays
+    en el elemento 0 del array devuelve el namespace y en el 1
+    """
+    return pm.listReferences(namespaces = True)
+
+# script for automatically loading reference files from different destinations in Maya
+#info about https://stackoverflow.com/questions/19677109/script-for-automatically-loading-reference-files-from-different-destinations-in
+
+import maya.cmds as cmds
+import os
+
+def openFileAndRemapRefs():
+    multipleFilters = "Maya Files (*.ma *.mb);;Maya ASCII (*.ma);;Maya Binary (*.mb);;All Files (*.*)"
+
+    # Choose file to open
+    filename = cmds.fileDialog2(fileFilter=multipleFilters, dialogStyle=2, fileMode=1)
+
+    # Open file with no reference loaded
+    cmds.file( filename[0], open=True, force=True );
+
+    # Dir containing the references
+    refDir = 'C:/References'
+
+    # A list of any references found in the scene
+    references = cmds.ls(type='reference')
+
+    # For each reference found in scene, load it with the path leading up to it replaced
+    for ref in references:
+        refFilepath = cmds.referenceQuery(ref, f=True)
+        refFilename = os.path.basename( refFilepath )
+        print 'Reference ' + ref + ' found at: ' + cmds.referenceQuery(ref, f=True)
+        cmds.file( os.path.join(refDir, refFilename), loadReference=ref, options='v=0;')
+
+openFileAndRemapRefs()
+
+
 # distintos querys (texturas y referencias)
 # info about https://groups.google.com/forum/#!msg/python_inside_maya/KYgnHkc1xvk/ADZ4USknEAAJ
+
 
 # So if you want the texture file nodes in the scene, you can get them from pymel with:
 import pymel.core as pm
@@ -276,6 +324,18 @@ FR.replaceWith(new_path)
 import pymel.core as pm
 pm.lockNode(l=True) #True bloquea, False desbloquea
 
+
+"""
+ _____      _           _                 _   _                _           _                 ___  ___  _____   _____
+/  ___|    | |         | |               | | | |              | |         | |                |  \/  | / _ \ \ / / _ \
+\ `--.  ___| | ___  ___| |_    ______    | | | |_ __  ___  ___| | ___  ___| |_     ______    | .  . |/ /_\ \ V / /_\ \
+ `--. \/ _ \ |/ _ \/ __| __|  |______|   | | | | '_ \/ __|/ _ \ |/ _ \/ __| __|   |______|   | |\/| ||  _  |\ /|  _  |
+/\__/ /  __/ |  __/ (__| |_              | |_| | | | \__ \  __/ |  __/ (__| |_               | |  | || | | || || | | |
+\____/ \___|_|\___|\___|\__|              \___/|_| |_|___/\___|_|\___|\___|\__|              \_|  |_/\_| |_/\_/\_| |_/
+
+"""
+
+
 """
 
 Info about como seleccionar nodos por tipos.
@@ -293,16 +353,22 @@ Its a bit neater in python
 """
 
 
+
 import pymel.core as pm
 
+#desactivar la seleccióón activa
+pm.select( clear=True ) #desactivar selección
+
+
+#seleccion por tipos (locator en el ejemplo)
 pm.select(pm.listRelatives(pm.ls('loc*',type='locator'),parent=True))
 
 
+
+# seleccion de todos los descendientes de un grupo de objetos
 import pymel.core as pm
 pm.select("Environment_GRP")
 nodes = pm.ls(sl=True)
-#nodes += pm.listRelatives(nodes, allDescendents=True, -shapes,type='joint') #seleccionar todas las joints
-#nodes += pm.listRelatives(nodes, allDescendents=True, shapes=True) #seleccionar solo shapes
 
 nodes += pm.listRelatives(nodes, allDescendents=True) #seleccionar toda la jerarquia
 pm.select(nodes)
@@ -353,224 +419,6 @@ more about xform buscar
 """
 
 
-# script for automatically loading reference files from different destinations in Maya
-#info about https://stackoverflow.com/questions/19677109/script-for-automatically-loading-reference-files-from-different-destinations-in
-
-import maya.cmds as cmds
-import os
-
-def openFileAndRemapRefs():
-    multipleFilters = "Maya Files (*.ma *.mb);;Maya ASCII (*.ma);;Maya Binary (*.mb);;All Files (*.*)"
-
-    # Choose file to open
-    filename = cmds.fileDialog2(fileFilter=multipleFilters, dialogStyle=2, fileMode=1)
-
-    # Open file with no reference loaded
-    cmds.file( filename[0], open=True, force=True );
-
-    # Dir containing the references
-    refDir = 'C:/References'
-
-    # A list of any references found in the scene
-    references = cmds.ls(type='reference')
-
-    # For each reference found in scene, load it with the path leading up to it replaced
-    for ref in references:
-        refFilepath = cmds.referenceQuery(ref, f=True)
-        refFilename = os.path.basename( refFilepath )
-        print 'Reference ' + ref + ' found at: ' + cmds.referenceQuery(ref, f=True)
-        cmds.file( os.path.join(refDir, refFilename), loadReference=ref, options='v=0;')
-
-openFileAndRemapRefs()
-
-# PARA REEMPLAZAR CONTENIDOS DENTRO DE UNA FICHERO MEL  POR EJEMPLO
-# info about https://stackoverflow.com/questions/49859115/maya-ascii-filepath-replace
-
-import os
-
-# Adjust these paths to existing maya scene files.
-scnPath = "/path/to/file/to/open.ma"
-oldPath = "/path/to/old/file.ma"
-newPath = "/path/to/new/file.ma"
-aborrar_en_ficheros='fileInfo "license" "student"'
-with open(scnPath, "r") as fp:
-    # Get all file contents in a list.
-    fileLines = fp.readlines()
-
-    # Use enumerate to keep track of what index we're at.
-    for i, line in enumerate(previsReadlines):
-        # Check if the line has the old path in it.
-        if oldPath in line:
-            # Replace with the new path and assign the change.
-            # Before you were assigning this to a new variable that goes nowhere.
-            # Instead it needs to re-assign the line from the list we first read from.
-            fileLines[i] = line.replace(oldPath, newPath)
-
-# Completely replace the file with our changes.
-with open(scnPath, 'w') as fw:
-    # You must pass the contents in here to write it.
-    fw.writelines(fileLines)
-
-
-
-## STRING STRING STRING functions
-# rawString para anular las secuencias de escape en los nombre
-# more about in http://code.activestate.com/recipes/65211-convert-a-string-into-a-raw-string/
-
-escape_dict={'\a':r'\a',
-           '\b':r'\b',
-           '\c':r'\c',
-           '\f':r'\f',
-           '\n':r'\n',
-           '\r':r'\r',
-           '\t':r'\t',
-           '\v':r'\v',
-           '\'':r'\'',
-           '\"':r'\"',
-           '\0':r'\0',
-           '\1':r'\1',
-           '\2':r'\2',
-           '\3':r'\3',
-           '\4':r'\4',
-           '\5':r'\5',
-           '\6':r'\6',
-           '\7':r'\7',
-           '\8':r'\8',
-           '\9':r'\9'}
-
-def rawString(text):
-    """Returns a raw string representation of text"""
-    escape_dict={'\a':r'\a',
-               '\b':r'\b',
-               '\c':r'\c',
-               '\f':r'\f',
-               '\n':r'\n',
-               '\r':r'\r',
-               '\t':r'\t',
-               '\v':r'\v',
-               '\'':r'\'',
-               '\"':r'\"',
-               '\0':r'\0',
-               '\1':r'\1',
-               '\2':r'\2',
-               '\3':r'\3',
-               '\4':r'\4',
-               '\5':r'\5',
-               '\6':r'\6',
-               '\7':r'\7',
-               '\8':r'\8',
-               '\9':r'\9'}
-
-    new_string=''
-    for char in text:
-        try: new_string+=escape_dict[char]
-        except KeyError: new_string+=char
-    return new_string
-
-## Funciones para escribir leer y tratar ficheros JSON
-# la primera es pasar el path a un fichero JSON
-# more about in https://stackoverflow.com/questions/25226208/represent-directory-tree-as-json
-""" Represent directory tree as JSON
-como en este ejemplo:
-
-{
-  "type": "directory",
-  "name": "hello",
-  "children": [
-    {
-      "type": "directory",
-      "name": "world",
-      "children": [
-        {
-          "type": "file",
-          "name": "one.txt"
-        },
-        {
-          "type": "file",
-          "name": "two.txt"
-        }
-      ]
-    },
-    {
-      "type": "file",
-      "name": "README"
-    }
-  ]
-}
-
-"""
-import os
-import json
-
-def path_to_dict(path):
-    d = {'name': os.path.basename(path)}
-    if os.path.isdir(path):
-        d['type'] = "directory"
-        d['children'] = [path_to_dict(os.path.join(path,x)) for x in os.listdir\
-(path)]
-    else:
-        d['type'] = "file"
-    return d
-
-
-with open('data.txt', 'w') as outfile:
-    json.dump(data, outfile)
-
-print json.dumps(path_to_dict('.'))
-
-decoded = json.loads(data_string)
-
-
-""" Volcar una varible json a fichero
-
-Writing JSON to a File
-"""
-#more about in https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/
-import json
-
-data = {}
-data['people'] = []
-data['people'].append({
-    'name': 'Scott',
-    'website': 'stackabuse.com',
-    'from': 'Nebraska'
-})
-data['people'].append({
-    'name': 'Larry',
-    'website': 'google.com',
-    'from': 'Michigan'
-})
-data['people'].append({
-    'name': 'Tim',
-    'website': 'apple.com',
-    'from': 'Alabama'
-})
-
-with open('data.txt', 'w') as outfile:
-    json.dump(data, outfile)
-
-
-""" Ejemplo con JSON identado
-"""
-import json
-
-d = {'one': 1, 'group': [4,9,7]}
-print json.dumps(d, indent=4, sort_keys=True)
-
-"""
-will output:
-
-   {
-        "one": 1,
-            "group": [
-            4,
-            9,
-            7
-        ]
-    }
-"""
-
-
 """
  _____                      _   _     _                      _                 _     ______ _____ _      _____ _____    _                  ___  ___  _____   _____
 /  ___|                    | | | |   (_)                    | |               | |    |  ___|_   _| |    |  ___/  ___|  (_)                 |  \/  | / _ \ \ / / _ \
@@ -581,6 +429,7 @@ will output:
                                                __/ |
                                               |___/
 """
+
 
 def seleccionarNombre():
     """ Funcion seleccionarNombre obtiene el nombre de la escena (sin path)
@@ -612,6 +461,36 @@ def seleccionarRuta():
     ruta =  pm.sceneName()
     ruta = 	ruta[:-3] #quitar el .ma
     return ruta
+
+
+# PARA REEMPLAZAR CONTENIDOS DENTRO DE UNA FICHERO MEL  POR EJEMPLO
+# info about https://stackoverflow.com/questions/49859115/maya-ascii-filepath-replace
+
+import os
+
+# Adjust these paths to existing maya scene files.
+scnPath = "/path/to/file/to/open.ma"
+oldPath = "/path/to/old/file.ma"
+newPath = "/path/to/new/file.ma"
+aborrar_en_ficheros='fileInfo "license" "student"'
+with open(scnPath, "r") as fp:
+    # Get all file contents in a list.
+    fileLines = fp.readlines()
+
+    # Use enumerate to keep track of what index we're at.
+    for i, line in enumerate(previsReadlines):
+        # Check if the line has the old path in it.
+        if oldPath in line:
+            # Replace with the new path and assign the change.
+            # Before you were assigning this to a new variable that goes nowhere.
+            # Instead it needs to re-assign the line from the list we first read from.
+            fileLines[i] = line.replace(oldPath, newPath)
+
+# Completely replace the file with our changes.
+with open(scnPath, 'w') as fw:
+    # You must pass the contents in here to write it.
+    fw.writelines(fileLines)
+
 
 
 

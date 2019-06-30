@@ -36,9 +36,16 @@ Herramientas de ejecución:
 
 browser-plus - ejecuta el html seleccionado en una ventana de atom
 open-in-browser - ejecuta el html seleccionado en el default browser
+atom-runner - ejecuta codigos de distintos tipos
+atom-python-run - ejecuta codigo en pyhton
+
 
 Terminal
 platformio-ide-terminal  - permite la ejecución del terminal integrado en atom
+
+Python addings
+autocomplete-python
+
 
 Abreviaturas de teclado útiles:
 

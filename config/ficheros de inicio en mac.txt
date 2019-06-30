@@ -1,0 +1,6 @@
+En el usuario hay un fichero oculto ./bash_profile que contiene las secuencias
+de comandos que queramos ejecutar al arranque.
+
+Por ejemplo para actualizar los proyectos git al arrancar.. hemos incluido:
+
+source /Users/juan.nouche/desktop/actualizar.sh

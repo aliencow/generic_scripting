@@ -22,10 +22,14 @@ Go to the root folder of your project, if you had not active the environment act
 C:\myrootProject> workon sphinxdocs
 (sphinxdocs)C:\myrootProject>
 ```
-Then create a folder named docs or whatever you want.
-then from your project folder run sphinx-quickstart
+Then create a folder named docs or whatever you want. Go to this new folder and run sphinx-quickstart:
 
 ```shell
 (sphinxdocs)C:\myrootProject> mkdir docs
-(sphinxdocs)C:\myrootProject> sphinx-quickstart
+(sphinxdocs)C:\myrootProject> cd docs
+(sphinxdocs)C:\myrootProject\docs> sphinx-quickstart
 ```
+
+Next we are going to customize sphinx. The sphinx quickstart will ask us a series of questionsk, and based in our answers it will do the setup of documentation. You have a good reference in this tutorial:
+
+###### [Sphinx setup config tutorial](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

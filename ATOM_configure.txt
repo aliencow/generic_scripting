@@ -22,6 +22,7 @@ Herramienta de abreviaturas ayudas
 emmet - consultar emmet cheat sheet
 autoprefixer - ayuda a poner en css los prefijos de los distintos browsers
 pdf-view - Para visualizar pdfs dentro de atom
+markdown-preview - para visualizar markdown md files on preview
 
 Herramientas de interface:
 

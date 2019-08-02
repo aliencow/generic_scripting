@@ -5,14 +5,14 @@
 Create a virtualenv sphinxdocs (optional name)
 In this case we use the structure of makevirtualenv wrapper.
 ```shell
-$ mkviertualenv sphinxdocs
-$ workon sphinxdocs
-(sphinxdocs) $
+C:\myfolder> mkviertualenv sphinxdocs
+C:\myfolder> workon sphinxdocs
+(sphinxdocs)C:\myfolder>
 ```
 Now we will install sphinx inside this virtualenv
 
 ```shell
-(sphinxdocs) $ pip instal -U sphinx
+(sphinxdocs)C:\myfolder> pip instal -U sphinx
 ```
 
 ## Setting up a project documentation
@@ -32,4 +32,4 @@ Then create a folder named docs or whatever you want. Go to this new folder and 
 
 Next we are going to customize sphinx. The sphinx quickstart will ask us a series of questionsk, and based in our answers it will do the setup of documentation. You have a good reference in this tutorial:
 
-###### [Sphinx setup config tutorial](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+###### [Sphinx setup config tutorial](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)

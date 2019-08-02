@@ -31,9 +31,9 @@ Then create a folder named docs or whatever you want. Go to this new folder and 
 ```
 
 Next we are going to customize sphinx. The sphinx quickstart will ask us a series of questionsk, and based in our answers it will do the setup of documentation. You have a good reference in this tutorial:
+##### [Sphinx setup config tutorial](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
 
-###### [Sphinx setup config tutorial](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
-
-In this other link you hava another starting tutorial ###### [Alternative tutorial](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
+In this other link you hava another starting tutorial
+##### [Alternative tutorial](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
 
 Is very important to separate build and source folders.

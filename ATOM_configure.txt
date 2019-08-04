@@ -31,7 +31,7 @@ color-picker - para seleccionar un color css por paleta interactiva
 pigments - muestra los hexadecimales de códigos de color con el color de fondo del código
 minimap - muestra los archivos en miniatura y podemos desplazarnos por ellos
 highlight-selected - muestra lo seleccionado en todo el documento.
-symbols-tree-view - muestra una lista de funciones y de variables del código
+symbols-tree-view - muestra una lista de funciones y de variables del código settings auto-hide y auto-toggle a true
 
 
 Herramientas de ejecución:

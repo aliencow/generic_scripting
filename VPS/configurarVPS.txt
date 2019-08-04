@@ -19,6 +19,11 @@ Como crear un VPS en clouding.io
 https://www.unaexperiencia20.com/2018/03/tutorial-crear-vps-clouding.html
 
 
+Links para clasificar:
+
 https://www.linode.com/pricing
 https://www.digitalocean.com/pricing/
 https://clouding.io/
+https://www.atareao.es/tutorial/servidor-virtual/primeros-pasos-con-tu-vps/
+https://docs.ovh.com/es/vps/primeros-pasos-con-vps/
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps

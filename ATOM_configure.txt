@@ -8,6 +8,9 @@ etc.
 
 Gestion git
 gitplus
+gitlab - para el repositorio de antaruza https://gitlab.antaruxa.com:30001
+gitlab-integration - para complementar a la anterior es necesario un token
+
 
 
 Autocompiladores
@@ -45,10 +48,14 @@ atom-python-run - ejecuta codigo en pyhton
 Terminal
 platformio-ide-terminal  - permite la ejecución del terminal integrado en atom
 terminal-plus - en defecto del anterior si no funciona bien
-language-batchfile - reconoce la sintaxis de los bat de windows
+
 
 Python addings
 autocomplete-python
+
+File sintaxis
+language-restructuredtext - reconoce la sintaxis de los ficheros rst
+language-batchfile - reconoce la sintaxis de los bat de windows
 
 
 Abreviaturas de teclado útiles:

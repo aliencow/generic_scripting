@@ -1,0 +1,229 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Usando_git &#8212; documentación de Generic Scripting info - 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Generic Scripting documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="usando-git">
+<h1>Usando_git<a class="headerlink" href="#usando-git" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>MORE ABOUT THIS ON <a class="reference external" href="https://www.youtube.com/watch?v=HVsySz-h9r4">https://www.youtube.com/watch?v=HVsySz-h9r4</a></p>
+<p>GIT GIT GIT</p>
+<div class="section" id="configuracion-y-basicos">
+<h2>Configuración y básicos<a class="headerlink" href="#configuracion-y-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p># CMDs para configuración</p>
+<p>git config –global user.name «Juan R Nouche»
+git config –global user.email «<a class="reference external" href="mailto:juan&#46;nouche&#37;&#52;&#48;gmail&#46;com">juan<span>&#46;</span>nouche<span>&#64;</span>gmail<span>&#46;</span>com</a>»
+# con esto configuramos nuestro usuario</p>
+<p>git add –help
+# obtener ayuda de cualquier comando (por ejemplo add)</p>
+<p>git init
+# inicializa el directorio del proyecto local para trabajar con git</p>
+<p>git status
+# comprueba el status de los commits</p>
+<p>#Para excluir ficheros del commit debemos crear el fichero .gitignore
+#dentro de este fihero van los nombres de fichero directorios o tipos de datos a excluir (Ejemplo <code class="docutils literal notranslate"><span class="pre">*</span></code>.pyc excluye del commit todos los fichero pyc)</p>
+<p>STAGING AREA: es una zona intermedia donde quedan los ficheros antes de hacer el final commits. Primero se marcan ahí y una vez que estamos
+seguros de lo que queremos enviar se hace el commits</p>
+<p>git add</p>
+<p># se añaden ficheros al staging AREA
+# solo se añaden los ficheros que no estén dentro de gitignore
+# por ejemplo:</p>
+<p>git add mifichero.xxx  #si funcionaria salvo que mifichero.xxx estuviese incluido en .gitignore</p>
+<p>git add -A  #añade todo lo que no esté en .gitignore al commit</p>
+<p>git reset #contrario de add quita ficheros del commit</p>
+<p>git reset mifichero.xxx #quita del staging a mifichero.xxx</p>
+<p>git reset   #elimina todos los ficheros del staging</p>
+<p># podemos si estan bien o mal con git status</p>
+<p># VI EDITOR COMMANDS <a class="reference external" href="https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor">https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor</a></p>
+</div>
+<div class="section" id="enviar-repo">
+<h2>Enviar REPO<a class="headerlink" href="#enviar-repo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p># CMDs para empezar un proyecto
+# Opción 1: Proyecto existente en carpeta local pasarlo a github</p>
+<p># primer commit</p>
+<p>git add -A #añadimos todo lo que no esté en .gitignore
+git status  #comprobamos si es correcto
+git commit -m «primer commit o algo así» #Prepara el commit</p>
+<p>git remote add origin <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a>
+#crear el remote en github desde nuestro usuario previamente github nos da el link para
+#añadir el origin</p>
+<p>git push -u origin master #envia y crea un proyecto en github
+#nos va a pedir nuestro usuario y pass en github</p>
+</div>
+<div class="section" id="clonar-repo">
+<h2>Clonar REPO<a class="headerlink" href="#clonar-repo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p># CMDs para empezar un proyecto
+# Opción 2: Proyecto existente en github que se clona en carpeta local</p>
+<p># Primero obtener la dirección del repo en github ejemplo: <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a></p>
+<p># sintaxis para clonar:</p>
+<p>git clone &lt;urlgit&gt; &lt;carpeta&gt;</p>
+<p># ejemplo:</p>
+<p>git clone <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a> micarpeta #crea el directorio micarpeta y clona el repositorio</p>
+<p># si creamos primero la carpeta y queremos clonar dentro de ella se pone . en lugar del nombre de la micarpeta
+# ejemplo:</p>
+<p>cd micarpeta
+git clone <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a> .</p>
+<p># clonaria dendro de mi carpeta sin crearla</p>
+<p>git remote -v
+# para ver el status del remoto</p>
+<p>git branch -a
+# para ver la rama en la que estamos</p>
+</div>
+<div class="section" id="actualizaciones-repo">
+<h2>Actualizaciones REPO<a class="headerlink" href="#actualizaciones-repo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>git diff
+# podemos ver los cambios en el código que no ha sido realizado en commit</p>
+<p>git add -A
+# una vez actualizados los campos añadimos todo al commit y…</p>
+<p>git commit -m «los cambios que sean»
+# … preparar el commit que sea</p>
+<p>git pull origin master
+# Hacemos un pull previo por si alguien ha hecho cambios que no tenemos</p>
+<p>git push origin master
+# Finalmente hacemos el push para subir nuestros cambios</p>
+<p>git stash save –keep-index –include-untracked
+# Si queremos descartar los cambios hechos en local desde el ultimo commit y
+# sincronizar con el master con pull</p>
+<p>git push –force –set-upstream origin master
+#forzar a que el repositorio se actualice con el local para cuando haya
+conflictos pull y push</p>
+</div>
+<div class="section" id="branching">
+<h2>BRANCHING<a class="headerlink" href="#branching" title="Enlazar permanentemente con este título">¶</a></h2>
+<p># los CMDS para crear ramificaciones de cógigo</p>
+<p>git branch cambio-codigo
+# crea una rama llamada cambio-codigo</p>
+<p>git branch
+# git branch a secas muestra las ramas que hay y cual está activa</p>
+<p>git checkout cambio-codigo
+# pone cambio-codigo como rama activa</p>
+<p>git push -u origin cambio-codigo
+# hacer el push a una rama especifica</p>
+<p>git push
+# una vez hemos hecho el checkout no es preciso especificar la rama con
+# git push y git pull enviamos o bajamos de la rama seleccionada</p>
+<p>git branch -a
+# Nos muestra todas las ramas vivas y el estatus de cada incluido el master.</p>
+<p>git branch –merged
+# Nos permite ver como esta el merge de branchs</p>
+<p>git chekout master
+git pull origin master
+git merge cambio-codigo
+git push origin master
+# Secuencia de comandos para hacer el merge de una rama en el master
+# observese que se hace el push directamente.. no hace falta el commit en este caso</p>
+<p>git branch -d cambio-codigo
+# Borra una rama en el repositorio local
+git push origin –delete cambio-codigo
+# pero hay que hacer el push del delete para borrarlo en github</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Generic Scripting info</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usando_git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuracion-y-basicos">Configuración y básicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enviar-repo">Enviar REPO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clonar-repo">Clonar REPO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actualizaciones-repo">Actualizaciones REPO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching">BRANCHING</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="capítulo anterior">Generic Scripting documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Juan R. Nouche.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usando_git.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

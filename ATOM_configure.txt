@@ -44,6 +44,7 @@ atom-python-run - ejecuta codigo en pyhton
 
 Terminal
 platformio-ide-terminal  - permite la ejecución del terminal integrado en atom
+terminal-plus - en defecto del anterior si no funciona bien
 language-batchfile - reconoce la sintaxis de los bat de windows
 
 Python addings

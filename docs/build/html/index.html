@@ -17,7 +17,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Usando_git" href="usando_git.html" />
+    <link rel="next" title="Usando git" href="usando_git.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -40,18 +40,96 @@
 <div class="section" id="this-is-a-subtitle-sample">
 <h2>This is a subtitle sample<a class="headerlink" href="#this-is-a-subtitle-sample" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>At this moment we are testing sphinx to generate documentation as this paragraph is only a sample test for this.</p>
-<div class="section" id="contenidos">
-<h3>Contenidos:<a class="headerlink" href="#contenidos" title="Enlazar permanentemente con este título">¶</a></h3>
-<blockquote>
-<div>print hello
-&gt;&gt;hello</div></blockquote>
+<div class="section" id="module-prueba">
+<span id="una-prueba-de-documentacion-prueba-py"></span><h3>Una prueba de documentación (prueba.py)<a class="headerlink" href="#module-prueba" title="Enlazar permanentemente con este título">¶</a></h3>
+<dl class="function">
+<dt id="prueba.get_all_files_Google">
+<code class="descclassname">prueba.</code><code class="descname">get_all_files_Google</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#prueba.get_all_files_Google" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Descripción corta</p>
+<p>Recoge todos los archivos de un path filtrando por string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>string_completo</strong> (<em>string</em>) – <p>???</p>
+</li>
+<li><strong>path</strong> (<em>string</em>) – Path donde buscar.</li>
+<li><strong>string</strong> (<em>string</em>) – string para filtrar la busqueda.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first">Lista de files encontrados.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">return (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(en Python versión 3.7)">list</a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prueba.get_all_files_NumPy">
+<code class="descclassname">prueba.</code><code class="descname">get_all_files_NumPy</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#prueba.get_all_files_NumPy" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Descripción corta</p>
+<p>Recoge todos los archivos de un path filtrando por string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>string_completo</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(en Python versión 3.7)"><em>str</em></a>) – <p>???</p>
+</li>
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(en Python versión 3.7)"><em>str</em></a>) – Path donde buscar.</li>
+<li><strong>string</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(en Python versión 3.7)"><em>str</em></a>) – String para filtrar la busqueda.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first"><strong>list</strong> – Lista de files encontrados.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(en Python versión 3.7)">list</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="prueba.get_all_files_con_RST">
+<code class="descclassname">prueba.</code><code class="descname">get_all_files_con_RST</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#prueba.get_all_files_con_RST" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Descripción corta</p>
+<p>Recoge todos los archivos de un path filtrando por string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>string_completo</strong> – </li>
+<li><strong>path</strong> – string Path donde buscar.</li>
+<li><strong>string</strong> – string string para filtrar la busqueda.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return list:</th><td class="field-body"><p class="first last">Lista de files encontrados.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="otros-contenidos">
+<h3>Otros Contenidos:<a class="headerlink" href="#otros-contenidos" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="usando_git.html">Usando_git</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="usando_git.html">Usando git</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="usando_git.html#configuracion-y-basicos">Configuración y básicos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usando_git.html#enviar-repo">Enviar REPO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usando_git.html#clonar-repo">Clonar REPO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usando_git.html#manipulando-repositorio">Manipulando repositorio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usando_git.html#actualizaciones-repo">Actualizaciones REPO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usando_git.html#branching">BRANCHING</a></li>
 </ul>
@@ -89,14 +167,14 @@
 <h3>Navegación</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="usando_git.html">Usando_git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usando_git.html">Usando git</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="usando_git.html" title="próximo capítulo">Usando_git</a></li>
+      <li>Next: <a href="usando_git.html" title="próximo capítulo">Usando git</a></li>
   </ul></li>
 </ul>
 </div>

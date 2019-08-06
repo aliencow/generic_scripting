@@ -13,6 +13,7 @@ https://stackoverflow.com/questions/4571244/creating-a-bat-file-for-python-scrip
 Bloque de funciones de entrada
 """
 
+
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
 
@@ -50,27 +51,6 @@ def query_yes_no(question, default="yes"):
 ## STRING STRING STRING functions
 # rawString para anular las secuencias de escape en los nombres
 # more about in http://code.activestate.com/recipes/65211-convert-a-string-into-a-raw-string/
-
-escape_dict={'\a':r'\a',
-           '\b':r'\b',
-           '\c':r'\c',
-           '\f':r'\f',
-           '\n':r'\n',
-           '\r':r'\r',
-           '\t':r'\t',
-           '\v':r'\v',
-           '\'':r'\'',
-           '\"':r'\"',
-           '\0':r'\0',
-           '\1':r'\1',
-           '\2':r'\2',
-           '\3':r'\3',
-           '\4':r'\4',
-           '\5':r'\5',
-           '\6':r'\6',
-           '\7':r'\7',
-           '\8':r'\8',
-           '\9':r'\9'}
 
 def rawString(text):
     """Returns a raw string representation of text"""
@@ -339,7 +319,7 @@ def get_cmdialog_value(title, message):
     return value
 
 def confirmdialog(title, message):
-    """
+    """Dialogo de confirmación si/no
     Abre un cuadro de dialogo de para pedir confirmar con si o no..
     message es el mensaje de la ventana, title es el título del dialogo
     devuelve un boolean:

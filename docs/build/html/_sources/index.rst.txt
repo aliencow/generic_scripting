@@ -13,11 +13,14 @@ This is a subtitle sample
 -------------------------
 At this moment we are testing sphinx to generate documentation as this paragraph is only a sample test for this.
 
-Contenidos:
-^^^^^^^^^^^
-  print hello
-  >>hello
+Una prueba de documentación (prueba.py)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. automodule:: prueba
+    :members:
+
+Otros Contenidos:
+^^^^^^^^^^^^^^^^^
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

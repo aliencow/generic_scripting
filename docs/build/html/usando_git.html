@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Usando_git &#8212; documentación de Generic Scripting info - 0.0.1</title>
+    <title>Usando git &#8212; documentación de Generic Scripting info - 0.0.1</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -35,92 +35,126 @@
           <div class="body" role="main">
             
   <div class="section" id="usando-git">
-<h1>Usando_git<a class="headerlink" href="#usando-git" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>MORE ABOUT THIS ON <a class="reference external" href="https://www.youtube.com/watch?v=HVsySz-h9r4">https://www.youtube.com/watch?v=HVsySz-h9r4</a></p>
-<p>GIT GIT GIT</p>
+<h1>Usando git<a class="headerlink" href="#usando-git" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Video introductorio a git puedes verlo en este enlace:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=HVsySz-h9r4">https://www.youtube.com/watch?v=HVsySz-h9r4</a></p>
 <div class="section" id="configuracion-y-basicos">
 <h2>Configuración y básicos<a class="headerlink" href="#configuracion-y-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
-<p># CMDs para configuración</p>
-<p>git config –global user.name «Juan R Nouche»
-git config –global user.email «<a class="reference external" href="mailto:juan&#46;nouche&#37;&#52;&#48;gmail&#46;com">juan<span>&#46;</span>nouche<span>&#64;</span>gmail<span>&#46;</span>com</a>»
-# con esto configuramos nuestro usuario</p>
-<p>git add –help
-# obtener ayuda de cualquier comando (por ejemplo add)</p>
-<p>git init
-# inicializa el directorio del proyecto local para trabajar con git</p>
-<p>git status
-# comprueba el status de los commits</p>
-<p>#Para excluir ficheros del commit debemos crear el fichero .gitignore
-#dentro de este fihero van los nombres de fichero directorios o tipos de datos a excluir (Ejemplo <code class="docutils literal notranslate"><span class="pre">*</span></code>.pyc excluye del commit todos los fichero pyc)</p>
-<p>STAGING AREA: es una zona intermedia donde quedan los ficheros antes de hacer el final commits. Primero se marcan ahí y una vez que estamos
+<p>Comandoa para configuración:</p>
+<blockquote>
+<div>git config –global user.name «Juan R Nouche»
+git config –global user.email «<a class="reference external" href="mailto:juan&#46;nouche&#37;&#52;&#48;gmail&#46;com">juan<span>&#46;</span>nouche<span>&#64;</span>gmail<span>&#46;</span>com</a>»</div></blockquote>
+<p>de este modo configuramos nuestro usuario</p>
+<blockquote>
+<div>git add –help</div></blockquote>
+<p>obtener ayuda de cualquier comando (por ejemplo add)</p>
+<blockquote>
+<div>git init</div></blockquote>
+<p>inicializa el directorio del proyecto local para trabajar con git</p>
+<blockquote>
+<div>git status</div></blockquote>
+<p>comprueba el status de los commits</p>
+<p>Para excluir ficheros del commit debemos crear el fichero <strong>.gitignore</strong>
+dentro de este fihero van los nombres de fichero directorios o tipos de datos a excluir (Ejemplo <code class="docutils literal notranslate"><span class="pre">*</span></code>.pyc excluye del commit todos los ficheros tipo pyc)</p>
+<p><strong>STAGING AREA:</strong> es una zona intermedia donde quedan los ficheros antes de hacer el final commits. Primero se marcan ahí y una vez que estamos
 seguros de lo que queremos enviar se hace el commits</p>
-<p>git add</p>
-<p># se añaden ficheros al staging AREA
-# solo se añaden los ficheros que no estén dentro de gitignore
-# por ejemplo:</p>
-<p>git add mifichero.xxx  #si funcionaria salvo que mifichero.xxx estuviese incluido en .gitignore</p>
-<p>git add -A  #añade todo lo que no esté en .gitignore al commit</p>
-<p>git reset #contrario de add quita ficheros del commit</p>
-<p>git reset mifichero.xxx #quita del staging a mifichero.xxx</p>
-<p>git reset   #elimina todos los ficheros del staging</p>
-<p># podemos si estan bien o mal con git status</p>
-<p># VI EDITOR COMMANDS <a class="reference external" href="https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor">https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor</a></p>
+<blockquote>
+<div>git add</div></blockquote>
+<p>se añaden ficheros al staging AREA
+solo se añaden los ficheros que no estén dentro de gitignore por ejemplo:</p>
+<blockquote>
+<div>git add mifichero.xxx</div></blockquote>
+<p>mp funcionaria si mifichero.xxx estuviese incluido en <em>.gitignore</em></p>
+<blockquote>
+<div>git add -A</div></blockquote>
+<p>añade todo lo que no esté en .gitignore al commit</p>
+<blockquote>
+<div>git reset</div></blockquote>
+<p>contrario de add quita ficheros del commit</p>
+<blockquote>
+<div>git reset mifichero.xxx</div></blockquote>
+<p>quita del staging a mifichero.xxx</p>
+<blockquote>
+<div>git reset</div></blockquote>
+<p>elimina todos los ficheros del staging</p>
+<p>podemos si estan bien o mal con git status</p>
+<p><em>Nota: en este link podemos encontrar los comandos del editor por defecto VI por si nos encontramos con dificultades de uso.</em></p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor">https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor</a></p>
 </div>
+<div class="section" id="manipulando-repositorio">
+<h2>Manipulando repositorio<a class="headerlink" href="#manipulando-repositorio" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="enviar-repo">
-<h2>Enviar REPO<a class="headerlink" href="#enviar-repo" title="Enlazar permanentemente con este título">¶</a></h2>
-<p># CMDs para empezar un proyecto
-# Opción 1: Proyecto existente en carpeta local pasarlo a github</p>
-<p># primer commit</p>
-<p>git add -A #añadimos todo lo que no esté en .gitignore
+<h3>Enviar REPO<a class="headerlink" href="#enviar-repo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un proyecto que ya existe en carpeta local enviarlo a github (o gitlab)</p>
+<p>Comandos para empezar un proyecto</p>
+<p>Después de iniciar el git hacemos nuestro primer commit:</p>
+<blockquote>
+<div>git add -A #añadimos todo lo que no esté en <strong>.gitignore</strong>
 git status  #comprobamos si es correcto
-git commit -m «primer commit o algo así» #Prepara el commit</p>
-<p>git remote add origin <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a>
-#crear el remote en github desde nuestro usuario previamente github nos da el link para
-#añadir el origin</p>
-<p>git push -u origin master #envia y crea un proyecto en github
-#nos va a pedir nuestro usuario y pass en github</p>
+git commit -m «primer commit o algo así» #Prepara el commit</div></blockquote>
+<p>A continuación creamos el proyecto en github:</p>
+<blockquote>
+<div>git remote add origin <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code></div></blockquote>
+<p>Esto crea el remote en github desde nuestro usuario previamente github nos da el link para
+añadir el origin</p>
+<blockquote>
+<div>git push -u origin master</div></blockquote>
+<p>envía y crea un proyecto en github
+(nos va a pedir nuestro usuario y pass en github)</p>
 </div>
 <div class="section" id="clonar-repo">
-<h2>Clonar REPO<a class="headerlink" href="#clonar-repo" title="Enlazar permanentemente con este título">¶</a></h2>
-<p># CMDs para empezar un proyecto
-# Opción 2: Proyecto existente en github que se clona en carpeta local</p>
-<p># Primero obtener la dirección del repo en github ejemplo: <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a></p>
-<p># sintaxis para clonar:</p>
-<p>git clone &lt;urlgit&gt; &lt;carpeta&gt;</p>
-<p># ejemplo:</p>
-<p>git clone <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a> micarpeta #crea el directorio micarpeta y clona el repositorio</p>
-<p># si creamos primero la carpeta y queremos clonar dentro de ella se pone . en lugar del nombre de la micarpeta
-# ejemplo:</p>
-<p>cd micarpeta
-git clone <a class="reference external" href="https://github.com/aliencow/flask_pymongo.git">https://github.com/aliencow/flask_pymongo.git</a> .</p>
-<p># clonaria dendro de mi carpeta sin crearla</p>
-<p>git remote -v
-# para ver el status del remoto</p>
-<p>git branch -a
-# para ver la rama en la que estamos</p>
+<h3>Clonar REPO<a class="headerlink" href="#clonar-repo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un proyecto existente en github que se clona en carpeta local</p>
+<p>Comandos para clonar un proyecto</p>
+<p>Antes de clonar debemos obtener la dirección del repo en github ejemplo: <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code></p>
+<p>Para clonar ejecutamos:</p>
+<blockquote>
+<div>git clone &lt;urlgit&gt; &lt;carpeta&gt;</div></blockquote>
+<p>ejemplo:</p>
+<blockquote>
+<div>git clone <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code> micarpeta   //crea el directorio micarpeta y clona el repositorio</div></blockquote>
+<p>si creamos primero la carpeta y queremos clonar dentro de ella se pone . en lugar del nombre de la micarpeta ejemplo:</p>
+<blockquote>
+<div>cd micarpeta
+git clone <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code> .</div></blockquote>
+<p>de ese modo el proyecto se clonaría dentro de micarpeta sin crear una nueva</p>
+<blockquote>
+<div>git remote -v</div></blockquote>
+<p>para ver el status del remoto</p>
+<blockquote>
+<div>git branch -a</div></blockquote>
+<p>para ver la rama en la que estamos</p>
+</div>
 </div>
 <div class="section" id="actualizaciones-repo">
 <h2>Actualizaciones REPO<a class="headerlink" href="#actualizaciones-repo" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>git diff
-# podemos ver los cambios en el código que no ha sido realizado en commit</p>
-<p>git add -A
-# una vez actualizados los campos añadimos todo al commit y…</p>
-<p>git commit -m «los cambios que sean»
-# … preparar el commit que sea</p>
-<p>git pull origin master
-# Hacemos un pull previo por si alguien ha hecho cambios que no tenemos</p>
-<p>git push origin master
-# Finalmente hacemos el push para subir nuestros cambios</p>
-<p>git stash save –keep-index –include-untracked
-# Si queremos descartar los cambios hechos en local desde el ultimo commit y
-# sincronizar con el master con pull</p>
-<p>git push –force –set-upstream origin master
-#forzar a que el repositorio se actualice con el local para cuando haya
+<blockquote>
+<div>git diff</div></blockquote>
+<p>podemos ver los cambios en el código que no ha sido realizado en commit</p>
+<blockquote>
+<div>git add -A</div></blockquote>
+<p>una vez actualizados los campos añadimos todo al commit y…</p>
+<blockquote>
+<div>git commit -m «los cambios que sean»</div></blockquote>
+<p>… preparar el commit que sea</p>
+<blockquote>
+<div>git pull origin master</div></blockquote>
+<p>Hacemos un pull previo por si alguien ha hecho cambios que no tenemos</p>
+<blockquote>
+<div>git push origin master</div></blockquote>
+<p>Finalmente hacemos el push para subir nuestros cambios</p>
+<blockquote>
+<div>git stash save –keep-index –include-untracked</div></blockquote>
+<p>Si queremos descartar los cambios hechos en local desde el ultimo commit y
+sincronizar con el master con pull</p>
+<blockquote>
+<div>git push –force –set-upstream origin master</div></blockquote>
+<p>forzar a que el repositorio se actualice con el local para cuando haya
 conflictos pull y push</p>
 </div>
 <div class="section" id="branching">
 <h2>BRANCHING<a class="headerlink" href="#branching" title="Enlazar permanentemente con este título">¶</a></h2>
-<p># los CMDS para crear ramificaciones de cógigo</p>
+<p>A continuación los comandos para crear ramificaciones de cógigo</p>
 <p>git branch cambio-codigo
 # crea una rama llamada cambio-codigo</p>
 <p>git branch
@@ -168,10 +202,9 @@ git push origin –delete cambio-codigo
 <h3>Navegación</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usando_git</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usando git</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#configuracion-y-basicos">Configuración y básicos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#enviar-repo">Enviar REPO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clonar-repo">Clonar REPO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulando-repositorio">Manipulando repositorio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#actualizaciones-repo">Actualizaciones REPO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#branching">BRANCHING</a></li>
 </ul>

@@ -19,8 +19,8 @@ def query_yes_no(question, default="yes"):
 
     "question" is a string that is presented to the user.
     "default" is the presumed answer if the user just hits <Enter>.
-        It must be "yes" (the default), "no" or None (meaning
-        an answer is required of the user).
+    It must be "yes" (the default), "no" or None (meaning
+    an answer is required of the user).
 
     The "answer" return value is True for "yes" or False for "no".
     """
@@ -223,16 +223,23 @@ def writeJSONfile(filename, content):
 """
 
 def get_path_and_filename(titulo, initialdir):
-    """
+    """ Abre un cuadro de dialogo de selección de ficheros
+
     Abre un cuadro de dialogo de selección de ficheros
     initialdir es el directorio de partida.
-    devuelve una lista de dos elementos:
-        lista[0] nombre del directorio.
-        lista[1] nombre del fichero seleccionado.
-    Si no ha tenido exito devuelve una lista con dos nulos
-    mas info:
-    ver https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python
-    ver http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html
+
+    Args:
+        titulo (string): El título de la caja de diálogo
+        initialdir (string): El directorio de partida
+    Returns:
+        lista (list): Devuelve una lista de dos elementos
+        lista[0]: Nombre del directorio.
+        lista[1]: Nombre del fichero seleccionado.
+
+    Notes:
+        Si no ha tenido exito devuelve una lista con dos nulos. Info sobre dialog box:
+        ver https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python
+        ver http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html
     """
     import Tkinter, tkFileDialog
 
@@ -260,17 +267,25 @@ def get_path_and_filename(titulo, initialdir):
         return ['','']
 
 def set_path_and_filename(titulo, initialdir):
-    """
+    """ Cuadro de dialogo selección de ficheros
+
     Abre un cuadro de dialogo de selección de ficheros
     para hacer un save y poder teclear el fichero.
-    devuelve una lista de dos elementos:
-        lista[0] nombre del directorio.
-        lista[1] nombre del fichero seleccionado.
-    Si no ha tenido exito devuelve una lista con dos nulos
-    mas info:
-    ver https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python
-    ver http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html
+
+    Args:
+        titulo (string): El título de la caja de diálogo
+        initialdir (string): El directorio de partida
+    Returns:
+        lista (list): Devuelve una lista de dos elementos
+        lista[0]: Nombre del directorio.
+        lista[1]: Nombre del fichero seleccionado.
+
+    Notes:
+        Si no ha tenido exito devuelve una lista con dos nulos. Info sobre dialog box:
+        ver https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python
+        ver http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html
     """
+
     import Tkinter, tkFileDialog
 
 # Ask the user to select a single file name.
@@ -320,10 +335,11 @@ def get_cmdialog_value(title, message):
 
 def confirmdialog(title, message):
     """Dialogo de confirmación si/no
+
     Abre un cuadro de dialogo de para pedir confirmar con si o no..
     message es el mensaje de la ventana, title es el título del dialogo
     devuelve un boolean:
-     True si se ha pulsado yes:
+    True si se ha pulsado yes:
     mas info:
     ver https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python
     ver http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html

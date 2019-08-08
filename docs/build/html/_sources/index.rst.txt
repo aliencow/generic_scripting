@@ -16,8 +16,15 @@ At this moment we are testing sphinx to generate documentation as this paragraph
 Una prueba de documentación (prueba.py)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: prueba
-    :members:
+  .. automodule:: prueba
+      :members:
+
+Una Segunda prueba de documentación (aux_tools.py)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. automodule:: aux_tools
+      :members:
+
 
 Otros Contenidos:
 ^^^^^^^^^^^^^^^^^

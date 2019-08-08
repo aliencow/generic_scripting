@@ -12,8 +12,6 @@ def get_all_files_con_RST(self, path, string):
     :return list: Lista de files encontrados.
 
     """
-    os.chdir(path)
-    ret = list()
     return ret
 
 def get_all_files_Google(self, path, string):
@@ -31,9 +29,6 @@ def get_all_files_Google(self, path, string):
 
     """
 
-    # recogemos todos los archivos
-    os.chdir(path)
-    ret = list()
     return ret
 
 def get_all_files_NumPy(self, path, string):
@@ -57,7 +52,4 @@ def get_all_files_NumPy(self, path, string):
 
     """
 
-    # recogemos todos los archivos
-    os.chdir(path)
-    ret = list()
     return ret

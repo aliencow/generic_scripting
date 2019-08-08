@@ -40,9 +40,10 @@
 <div class="section" id="this-is-a-subtitle-sample">
 <h2>This is a subtitle sample<a class="headerlink" href="#this-is-a-subtitle-sample" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>At this moment we are testing sphinx to generate documentation as this paragraph is only a sample test for this.</p>
-<div class="section" id="module-prueba">
-<span id="una-prueba-de-documentacion-prueba-py"></span><h3>Una prueba de documentación (prueba.py)<a class="headerlink" href="#module-prueba" title="Enlazar permanentemente con este título">¶</a></h3>
-<dl class="function">
+<div class="section" id="una-prueba-de-documentacion-prueba-py">
+<h3>Una prueba de documentación (prueba.py)<a class="headerlink" href="#una-prueba-de-documentacion-prueba-py" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><span class="target" id="module-prueba"></span><dl class="function">
 <dt id="prueba.get_all_files_Google">
 <code class="descclassname">prueba.</code><code class="descname">get_all_files_Google</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#prueba.get_all_files_Google" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Descripción corta</p>
@@ -121,6 +122,161 @@
 </table>
 </dd></dl>
 
+</div></blockquote>
+</div>
+<div class="section" id="una-segunda-prueba-de-documentacion-aux-tools-py">
+<h3>Una Segunda prueba de documentación (aux_tools.py)<a class="headerlink" href="#una-segunda-prueba-de-documentacion-aux-tools-py" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div><span class="target" id="module-aux_tools"></span><dl class="function">
+<dt id="aux_tools.check_if_file_exits">
+<code class="descclassname">aux_tools.</code><code class="descname">check_if_file_exits</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.check_if_file_exits" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Comprueba si existe un fichero o directorio..</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.clear_output">
+<code class="descclassname">aux_tools.</code><code class="descname">clear_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.clear_output" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.confirmdialog">
+<code class="descclassname">aux_tools.</code><code class="descname">confirmdialog</code><span class="sig-paren">(</span><em>title</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.confirmdialog" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Dialogo de confirmación si/no</p>
+<p>Abre un cuadro de dialogo de para pedir confirmar con si o no..
+message es el mensaje de la ventana, title es el título del dialogo
+devuelve un boolean:
+True si se ha pulsado yes:
+mas info:
+ver <a class="reference external" href="https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python">https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python</a>
+ver <a class="reference external" href="http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html">http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.copy_tree_structure">
+<code class="descclassname">aux_tools.</code><code class="descname">copy_tree_structure</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.copy_tree_structure" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>copia el subdiretorio indicado en src con todo su contenido a un nuevo
+subdirectorio dest
+<a class="reference external" href="https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python">https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.get_cmdialog_value">
+<code class="descclassname">aux_tools.</code><code class="descname">get_cmdialog_value</code><span class="sig-paren">(</span><em>title</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.get_cmdialog_value" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Abre un cuadro de dialogo de para pedir un número entero
+message es el mensaje de la ventana.
+devuelve el numero entero:
+Si no ha tenido exito devuelve None
+mas info:
+ver <a class="reference external" href="https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python">https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python</a>
+ver <a class="reference external" href="http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html">http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.get_path_and_filename">
+<code class="descclassname">aux_tools.</code><code class="descname">get_path_and_filename</code><span class="sig-paren">(</span><em>titulo</em>, <em>initialdir</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.get_path_and_filename" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Abre un cuadro de dialogo de selección de ficheros</p>
+<p>Abre un cuadro de dialogo de selección de ficheros
+initialdir es el directorio de partida.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>titulo</strong> (<em>string</em>) – El título de la caja de diálogo</li>
+<li><strong>initialdir</strong> (<em>string</em>) – El directorio de partida</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first">Devuelve una lista de dos elementos
+lista[0]: Nombre del directorio.
+lista[1]: Nombre del fichero seleccionado.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">lista (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(en Python versión 3.7)">list</a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notas</p>
+<p>Si no ha tenido exito devuelve una lista con dos nulos. Info sobre dialog box:
+ver <a class="reference external" href="https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python">https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python</a>
+ver <a class="reference external" href="http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html">http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.increaseversion">
+<code class="descclassname">aux_tools.</code><code class="descname">increaseversion</code><span class="sig-paren">(</span><em>version</em>, <em>incletra=False</em>, <em>incnumber=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.increaseversion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Incrementa en numero y/o letra la versión de edición.
+incletra=True se incrementa la letra de la versión por ejemplo “a” pasa a “b”
+incnumber = True se incrementa el número de la versión por ejemplo “001” pasa a “002”
+devuelve la nueva version concatenando letra y numero</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.query_yes_no">
+<code class="descclassname">aux_tools.</code><code class="descname">query_yes_no</code><span class="sig-paren">(</span><em>question</em>, <em>default='yes'</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.query_yes_no" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Ask a yes/no question via raw_input() and return their answer.</p>
+<p>«question» is a string that is presented to the user.
+«default» is the presumed answer if the user just hits &lt;Enter&gt;.
+It must be «yes» (the default), «no» or None (meaning
+an answer is required of the user).</p>
+<p>The «answer» return value is True for «yes» or False for «no».</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.rawString">
+<code class="descclassname">aux_tools.</code><code class="descname">rawString</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.rawString" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Returns a raw string representation of text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.readJSONfile">
+<code class="descclassname">aux_tools.</code><code class="descname">readJSONfile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.readJSONfile" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Devuelve una variable dictionary (content)
+cargada con el contenido del JSON referenciado en filename</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.save_file_from_list">
+<code class="descclassname">aux_tools.</code><code class="descname">save_file_from_list</code><span class="sig-paren">(</span><em>path</em>, <em>filename</em>, <em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.save_file_from_list" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Escribe un fichero de texto a partir de  una lista de líneas</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aux_tools.set_path_and_filename">
+<code class="descclassname">aux_tools.</code><code class="descname">set_path_and_filename</code><span class="sig-paren">(</span><em>titulo</em>, <em>initialdir</em><span class="sig-paren">)</span><a class="headerlink" href="#aux_tools.set_path_and_filename" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Cuadro de dialogo selección de ficheros</p>
+<p>Abre un cuadro de dialogo de selección de ficheros
+para hacer un save y poder teclear el fichero.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>titulo</strong> (<em>string</em>) – El título de la caja de diálogo</li>
+<li><strong>initialdir</strong> (<em>string</em>) – El directorio de partida</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first">Devuelve una lista de dos elementos
+lista[0]: Nombre del directorio.
+lista[1]: Nombre del fichero seleccionado.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo del valor devuelto:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">lista (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(en Python versión 3.7)">list</a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notas</p>
+<p>Si no ha tenido exito devuelve una lista con dos nulos. Info sobre dialog box:
+ver <a class="reference external" href="https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python">https://stackoverflow.com/questions/9319317/quick-and-easy-file-dialog-in-python</a>
+ver <a class="reference external" href="http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html">http://interactivepython.org/runestone/static/CS152f17/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html</a></p>
+</dd></dl>
+
+</div></blockquote>
 </div>
 <div class="section" id="otros-contenidos">
 <h3>Otros Contenidos:<a class="headerlink" href="#otros-contenidos" title="Enlazar permanentemente con este título">¶</a></h3>

@@ -168,36 +168,47 @@ BRANCHING
 
 A continuación los comandos para crear ramificaciones de cógigo
 
-git branch cambio-codigo
-# crea una rama llamada cambio-codigo
+	git branch cambio-codigo
 
-git branch
-# git branch a secas muestra las ramas que hay y cual está activa
+crea una rama llamada cambio-codigo
 
-git checkout cambio-codigo
-# pone cambio-codigo como rama activa
+	git branch
 
-git push -u origin cambio-codigo
-# hacer el push a una rama especifica
+git branch a secas muestra las ramas que hay y cual está activa
 
-git push
-# una vez hemos hecho el checkout no es preciso especificar la rama con
-# git push y git pull enviamos o bajamos de la rama seleccionada
+	git checkout cambio-codigo
 
-git branch -a
-# Nos muestra todas las ramas vivas y el estatus de cada incluido el master.
+pone cambio-codigo como rama activa
 
-git branch --merged
-# Nos permite ver como esta el merge de branchs
+	git push -u origin cambio-codigo
 
-git chekout master
-git pull origin master
-git merge cambio-codigo
-git push origin master
-# Secuencia de comandos para hacer el merge de una rama en el master
-# observese que se hace el push directamente.. no hace falta el commit en este caso
+hacer el push a una rama especifica
 
-git branch -d cambio-codigo
-# Borra una rama en el repositorio local
-git push origin --delete cambio-codigo
-# pero hay que hacer el push del delete para borrarlo en github
+	git push
+
+una vez hemos hecho el checkout no es preciso especificar la rama con
+git push y git pull enviamos o bajamos de la rama seleccionada
+
+	git branch -a
+
+Nos muestra todas las ramas vivas y el estatus de cada incluido el master.
+
+	git branch --merged
+
+Nos permite ver como esta el merge de branchs
+
+	git chekout master
+	git pull origin master
+	git merge cambio-codigo
+	git push origin master
+
+Secuencia de comandos para hacer el merge de una rama en el master
+observese que se hace el push directamente.. no hace falta el commit en este caso
+
+	git branch -d cambio-codigo
+
+Borra una rama en el repositorio local
+
+	git push origin --delete cambio-codigo
+
+pero hay que hacer el push del delete para borrarlo en github

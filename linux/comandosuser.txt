@@ -1,0 +1,87 @@
+
+alberto.moure:x:1077:100:Animator:/var/services/homes/alberto.moure:/sbin/nologin
+alvaro.bravo:x:1075:100:Animator:/var/services/homes/alvaro.bravo:/sbin/nologin
+ana.bilbao:x:1071:100:Muchacha agresiva y versátil:/var/services/homes/ana.bilbao:/sbin/nologin
+archi:x:1048:100:Maestro del movimiento:/var/services/homes/archi:/sbin/nologin
+brandan:x:1026:100::/var/services/homes/brandan:/bin/sh
+carlos.garcia:x:1058:100:Animador:/var/services/homes/carlos.garcia:/sbin/nologin
+carlos.jimenez:x:1040:100:Animador de los potentes:/var/services/homes/carlos.jimenez:/sbin/nologin
+chelo:x:1053:100:Xefa máxima de Valentina:/var/services/homes/chelo:/sbin/nologin
+cristian:x:1038:100:Señor de luz y color:/var/services/homes/cristian:/sbin/nologin
+cristina.calles:x:1056:100:Cristina, la animadora:/var/services/homes/cristina.calles:/sbin/nologin
+daniel.abalo:x:1046:100:Animador:/var/services/homes/daniel.abalo:/sbin/nologin
+david.lopez:x:1030:100::/var/services/homes/david.lopez:/bin/sh
+gabriel.garcia:x:1043:100:animador:/var/services/homes/gabriel.garcia:/sbin/nologin
+guest:x:1025:100:Guest:/var/services/homes/guest:/sbin/nologin
+javier.vazquez:x:1042:100:Animatooor:/var/services/homes/javier.vazquez:/sbin/nologin
+jonathan.martin:x:1074:100:animator:/var/services/homes/jonathan.martin:/sbin/nologin
+juan.gabriel:x:1076:100:Animator:/var/services/homes/juan.gabriel:/sbin/nologin
+juan.nouche:x:1029:100::/var/services/homes/juan.nouche:/bin/sh
+julian.villanua:x:1049:100:Animador:/var/services/homes/julian.villanua:/sbin/nologin
+lola.blanco:x:1032:100:Cuenta invitada chat:/var/services/homes/lola.blanco:/sbin/nologin
+manuel.pedrenho:x:1060:100:Lolo, el animador:/var/services/homes/manuel.pedrenho:/sbin/nologin
+mapache:x:1057:100:Violento mamífero con habilidades CGI:/var/services/homes/mapache:/sbin/nologin
+metro.produccion:x:1035:100:Cuenta invitado chat:/var/services/homes/metro.produccion:/sbin/nologin
+miguel.janeiro:x:1045:100:Un tio super guay (es Mexicano):/var/services/homes/miguel.janeiro:/sbin/nologin
+miguel.quinta:x:1037:100:Our portuguese power:/var/services/homes/miguel.quinta:/sbin/nologin
+miguel.rubio:x:1044:100:animador:/var/services/homes/miguel.rubio:/sbin/nologin
+nacho:x:1050:100:Nacho Peña, maestro del movimiento:/var/services/homes/nacho:/sbin/nologin
+nuria.madrid:x:1055:100:Nuria, la animadora:/var/services/homes/nuria.madrid:/sbin/nologin
+pablo.lorenzo:x:1062:100:cuenta invitado chat:/var/services/homes/pablo.lorenzo:/sbin/nologin
+pedromm:x:1036:100:Maestro de las herramientas y el automatismo:/var/services/homes/pedromm:/bin/sh
+pepmi:x:1051:100:Maestro del trazo en movimiento:/var/services/homes/pepmi:/sbin/nologin
+raquel.rodriguez:x:1033:100:La super ayudante:/var/services/homes/raquel.rodriguez:/sbin/nologin
+raul.andres:x:1041:100:Animador dinámico:/var/services/homes/raul.andres:/sbin/nologin
+root:x:0:0::/root:/bin/ash
+ruben.barrocal:x:1047:100:Animador:/var/services/homes/ruben.barrocal:/sbin/nologin
+salo.rv:x:1054:100:Salomé, la animadora:/var/services/homes/salo.rv:/sbin/nologin
+sebastian.marin:x:1073:100:Animador:/var/services/homes/sebastian.marin:/sbin/nologin
+sergio.navarro:x:1070:100:Animador:/var/services/homes/sergio.navarro:/sbin/nologin
+TIE-00:x:1064:100::/var/services/homes/TIE-00:/sbin/nologin
+TIE-01:x:1059:100::/var/services/homes/TIE-01:/sbin/nologin
+TIE-02:x:1063:100::/var/services/homes/TIE-02:/sbin/nologin
+TIE-03:x:1065:100::/var/services/homes/TIE-03:/sbin/nologin
+TIE-04:x:1066:100::/var/services/homes/TIE-04:/sbin/nologin
+TIE-05:x:1067:100::/var/services/homes/TIE-05:/sbin/nologin
+TIE-06:x:1068:100::/var/services/homes/TIE-06:/sbin/nologin
+TIE-07:x:1069:100::/var/services/homes/TIE-07:/sbin/nologin
+veronica.madrid:x:1061:100:Verónica una animadora:/var/services/homes/veronica.madrid:/sbin/nologin
+xemi:x:1052:100:Animador isleño:/var/services/homes/xemi:/sbin/nologin
+xenxo:x:1028:100::/var/services/homes/xenxo:/bin/sh
+yael.gomez:x:1072:100:novatilla de los bosques:/var/services/homes/yael.gomez:/sbin/nologin
+
+
+/etc/passwd
+Campo 1	Es el nombre del usuario, identificador de inicio de sesión (login). Tiene que ser único.
+
+Campo 2	La ‘x’ indica la contraseña encriptada del usuario, además también indica que se está haciendo
+uso del archivo /etc/shadow, si no se hace uso de este archivo, este campo se vería algo así como: ‘ghy675gjuXCc12r5gt78uuu6R‘.
+
+Campo 3	Número de identificación del usuario (UID). Tiene que ser único. 0 para root, generalmente las cuentas
+o usuarios especiales se numeran del 1 al 100 y las de usuario normal del 101 en delante, en las distribuciones mas
+recientes esta numeración comienza a partir del 500.
+
+Campo 4	Numeración de identificación del grupo (GID). El que aparece es el número de grupo principal del usuario, pero
+puede pertenecer a otros, esto se configura en /etc/groups.
+
+Campo 5	Comentarios o el nombre completo del usuario.
+
+Campo 6	Directorio de trabajo (Home) donde se sitúa al usuario después del inicio de sesión.
+
+Campo 7	Shell que va a utilizar el usuario de forma predeterminada.
+
+
+administrators:x:101:admin,brandan,david.lopez,juan.nouche,pedromm,xenxo
+aom_animadores:x:65537:alberto.moure,alvaro.bravo,archi,carlos.garcia,carlos.jimenez,cristina.calles,daniel.abalo,gabriel.garcia,javier.vazquez,jonathan.martin,juan.gabriel,julian.villanua,manuel.pedrenho,miguel.rubio,nuria.madrid,raul.andres,ruben.barrocal,salo.rv,sebastian.marin,sergio.navarro,veronica.madrid
+aom_render:x:65543:TIE-00,TIE-01,TIE-02,TIE-03,TIE-04,TIE-05,TIE-06,TIE-07
+supervisores:x:65539:ana.bilbao,cristian,lordtest,mapache,miguel.janeiro,raquel.rodriguez,yael.gomez
+ved_externos:x:65540:chelo,xemi
+
+/etc/group
+
+El campo 1 indica el nombre de grupo.
+El campo 2 ‘x’ indica la contraseña del grupo, que no existe, si hubiera se mostraría un ‘hash’ encriptado.
+El campo 3 es el Group ID (GID) o identificación del grupo.
+El campo 4 es opcional e indica la lista de usuarios que pertenecen al grupo
+
+explicacion https://www.pedroventura.com/linux/administracion-de-usuarios-en-linux-crear-borrar-modificar-usuarios-y-grupos/

@@ -40,42 +40,52 @@
 <p><a class="reference external" href="https://www.youtube.com/watch?v=HVsySz-h9r4">https://www.youtube.com/watch?v=HVsySz-h9r4</a></p>
 <div class="section" id="configuracion-y-basicos">
 <h2>Configuración y básicos<a class="headerlink" href="#configuracion-y-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Comandoa para configuración:</p>
-<blockquote>
-<div>git config –global user.name «Juan R Nouche»
-git config –global user.email «<a class="reference external" href="mailto:juan&#46;nouche&#37;&#52;&#48;gmail&#46;com">juan<span>&#46;</span>nouche<span>&#64;</span>gmail<span>&#46;</span>com</a>»</div></blockquote>
-<p>de este modo configuramos nuestro usuario</p>
-<blockquote>
-<div>git add –help</div></blockquote>
+<p>Comandos para configuración:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git config --global user.name &quot;Juan R Nouche&quot;</span>
+<span class="go">git config --global user.email &quot;juan.nouche@gmail.com&quot;</span>
+</pre></div>
+</div>
+<p>Descripción: de este modo configuramos nuestro usuario</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add --help</span>
+</pre></div>
+</div>
 <p>obtener ayuda de cualquier comando (por ejemplo add)</p>
-<blockquote>
-<div>git init</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git init</span>
+</pre></div>
+</div>
 <p>inicializa el directorio del proyecto local para trabajar con git</p>
-<blockquote>
-<div>git status</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git status</span>
+</pre></div>
+</div>
 <p>comprueba el status de los commits</p>
 <p>Para excluir ficheros del commit debemos crear el fichero <strong>.gitignore</strong>
 dentro de este fihero van los nombres de fichero directorios o tipos de datos a excluir (Ejemplo <code class="docutils literal notranslate"><span class="pre">*</span></code>.pyc excluye del commit todos los ficheros tipo pyc)</p>
 <p><strong>STAGING AREA:</strong> es una zona intermedia donde quedan los ficheros antes de hacer el final commits. Primero se marcan ahí y una vez que estamos
 seguros de lo que queremos enviar se hace el commits</p>
-<blockquote>
-<div>git add</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add</span>
+</pre></div>
+</div>
 <p>se añaden ficheros al staging AREA
 solo se añaden los ficheros que no estén dentro de gitignore por ejemplo:</p>
-<blockquote>
-<div>git add mifichero.xxx</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add mifichero.xxx</span>
+</pre></div>
+</div>
 <p>mp funcionaria si mifichero.xxx estuviese incluido en <em>.gitignore</em></p>
-<blockquote>
-<div>git add -A</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add -A</span>
+</pre></div>
+</div>
 <p>añade todo lo que no esté en .gitignore al commit</p>
-<blockquote>
-<div>git reset</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git reset</span>
+</pre></div>
+</div>
 <p>contrario de add quita ficheros del commit</p>
-<blockquote>
-<div>git reset mifichero.xxx</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git reset mifichero.xxx</span>
+</pre></div>
+</div>
 <p>quita del staging a mifichero.xxx</p>
-<blockquote>
-<div>git reset</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git reset</span>
+</pre></div>
+</div>
 <p>elimina todos los ficheros del staging</p>
 <p>podemos si estan bien o mal con git status</p>
 <p><em>Nota: en este link podemos encontrar los comandos del editor por defecto VI por si nos encontramos con dificultades de uso.</em></p>
@@ -88,17 +98,20 @@ solo se añaden los ficheros que no estén dentro de gitignore por ejemplo:</p>
 <p>Un proyecto que ya existe en carpeta local enviarlo a github (o gitlab)</p>
 <p>Comandos para empezar un proyecto</p>
 <p>Después de iniciar el git hacemos nuestro primer commit:</p>
-<blockquote>
-<div>git add -A #añadimos todo lo que no esté en <strong>.gitignore</strong>
-git status  #comprobamos si es correcto
-git commit -m «primer commit o algo así» #Prepara el commit</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add -A #añadimos todo lo que no esté en **.gitignore**</span>
+<span class="go">git status  #comprobamos si es correcto</span>
+<span class="go">git commit -m &quot;primer commit o algo así&quot; #Prepara el commit</span>
+</pre></div>
+</div>
 <p>A continuación creamos el proyecto en github:</p>
-<blockquote>
-<div>git remote add origin <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code></div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git remote add origin ``https://github.com/aliencow/flask_pymongo.git``</span>
+</pre></div>
+</div>
 <p>Esto crea el remote en github desde nuestro usuario previamente github nos da el link para
 añadir el origin</p>
-<blockquote>
-<div>git push -u origin master</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push -u origin master</span>
+</pre></div>
+</div>
 <p>envía y crea un proyecto en github
 (nos va a pedir nuestro usuario y pass en github)</p>
 </div>
@@ -108,87 +121,109 @@ añadir el origin</p>
 <p>Comandos para clonar un proyecto</p>
 <p>Antes de clonar debemos obtener la dirección del repo en github ejemplo: <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code></p>
 <p>Para clonar ejecutamos:</p>
-<blockquote>
-<div>git clone &lt;urlgit&gt; &lt;carpeta&gt;</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone &lt;urlgit&gt; &lt;carpeta&gt;</span>
+</pre></div>
+</div>
 <p>ejemplo:</p>
-<blockquote>
-<div>git clone <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code> micarpeta   //crea el directorio micarpeta y clona el repositorio</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone ``https://github.com/aliencow/flask_pymongo.git`` micarpeta   //crea el directorio micarpeta y clona el repositorio</span>
+</pre></div>
+</div>
 <p>si creamos primero la carpeta y queremos clonar dentro de ella se pone . en lugar del nombre de la micarpeta ejemplo:</p>
-<blockquote>
-<div>cd micarpeta
-git clone <code class="docutils literal notranslate"><span class="pre">https://github.com/aliencow/flask_pymongo.git</span></code> .</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd micarpeta</span>
+<span class="go">git clone ``https://github.com/aliencow/flask_pymongo.git`` .</span>
+</pre></div>
+</div>
 <p>de ese modo el proyecto se clonaría dentro de micarpeta sin crear una nueva</p>
-<blockquote>
-<div>git remote -v</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git remote -v</span>
+</pre></div>
+</div>
 <p>para ver el status del remoto</p>
-<blockquote>
-<div>git branch -a</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch -a</span>
+</pre></div>
+</div>
 <p>para ver la rama en la que estamos</p>
 </div>
 </div>
 <div class="section" id="actualizaciones-repo">
 <h2>Actualizaciones REPO<a class="headerlink" href="#actualizaciones-repo" title="Enlazar permanentemente con este título">¶</a></h2>
-<blockquote>
-<div>git diff</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git diff</span>
+</pre></div>
+</div>
 <p>podemos ver los cambios en el código que no ha sido realizado en commit</p>
-<blockquote>
-<div>git add -A</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add -A</span>
+</pre></div>
+</div>
 <p>una vez actualizados los campos añadimos todo al commit y…</p>
-<blockquote>
-<div>git commit -m «los cambios que sean»</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &quot;los cambios que sean&quot;</span>
+</pre></div>
+</div>
 <p>… preparar el commit que sea</p>
-<blockquote>
-<div>git pull origin master</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git pull origin master</span>
+</pre></div>
+</div>
 <p>Hacemos un pull previo por si alguien ha hecho cambios que no tenemos</p>
-<blockquote>
-<div>git push origin master</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push origin master</span>
+</pre></div>
+</div>
 <p>Finalmente hacemos el push para subir nuestros cambios</p>
-<blockquote>
-<div>git stash save –keep-index –include-untracked</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git stash save --keep-index --include-untracked</span>
+</pre></div>
+</div>
 <p>Si queremos descartar los cambios hechos en local desde el ultimo commit y
 sincronizar con el master con pull</p>
-<blockquote>
-<div>git push –force –set-upstream origin master</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push --force --set-upstream origin master</span>
+</pre></div>
+</div>
 <p>forzar a que el repositorio se actualice con el local para cuando haya
 conflictos pull y push</p>
 </div>
 <div class="section" id="branching">
 <h2>BRANCHING<a class="headerlink" href="#branching" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>A continuación los comandos para crear ramificaciones de cógigo</p>
-<blockquote>
-<div>git branch cambio-codigo</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch cambio-codigo</span>
+</pre></div>
+</div>
 <p>crea una rama llamada cambio-codigo</p>
-<blockquote>
-<div>git branch</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch</span>
+</pre></div>
+</div>
 <p>git branch a secas muestra las ramas que hay y cual está activa</p>
-<blockquote>
-<div>git checkout cambio-codigo</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout cambio-codigo</span>
+</pre></div>
+</div>
 <p>pone cambio-codigo como rama activa</p>
-<blockquote>
-<div>git push -u origin cambio-codigo</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push -u origin cambio-codigo</span>
+</pre></div>
+</div>
 <p>hacer el push a una rama especifica</p>
-<blockquote>
-<div>git push</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push</span>
+</pre></div>
+</div>
 <p>una vez hemos hecho el checkout no es preciso especificar la rama con
 git push y git pull enviamos o bajamos de la rama seleccionada</p>
-<blockquote>
-<div>git branch -a</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch -a</span>
+</pre></div>
+</div>
 <p>Nos muestra todas las ramas vivas y el estatus de cada incluido el master.</p>
-<blockquote>
-<div>git branch –merged</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch --merged</span>
+</pre></div>
+</div>
 <p>Nos permite ver como esta el merge de branchs</p>
-<blockquote>
-<div>git chekout master
-git pull origin master
-git merge cambio-codigo
-git push origin master</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git chekout master</span>
+<span class="go">git pull origin master</span>
+<span class="go">git merge cambio-codigo</span>
+<span class="go">git push origin master</span>
+</pre></div>
+</div>
 <p>Secuencia de comandos para hacer el merge de una rama en el master
 observese que se hace el push directamente.. no hace falta el commit en este caso</p>
-<blockquote>
-<div>git branch -d cambio-codigo</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch -d cambio-codigo</span>
+</pre></div>
+</div>
 <p>Borra una rama en el repositorio local</p>
-<blockquote>
-<div>git push origin –delete cambio-codigo</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push origin --delete cambio-codigo</span>
+</pre></div>
+</div>
 <p>pero hay que hacer el push del delete para borrarlo en github</p>
 </div>
 </div>

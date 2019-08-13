@@ -27,3 +27,8 @@ https://clouding.io/
 https://www.atareao.es/tutorial/servidor-virtual/primeros-pasos-con-tu-vps/
 https://docs.ovh.com/es/vps/primeros-pasos-con-vps/
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+
+Seguridad en VPS:
+
+https://luisperis.com/seguridad-los-vps/
+https://blog.hostdime.com.co/5-consejos-basicos-de-seguridad-en-su-vps/

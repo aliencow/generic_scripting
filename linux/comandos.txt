@@ -1,0 +1,20 @@
+Listar comandos disponibles.
+You can use compgen
+
+compgen -c # will list all the commands you could run.
+
+
+FYI:
+
+compgen -a # will list all the aliases you could run.
+compgen -b # will list all the built-ins you could run.
+compgen -k # will list all the keywords you could run.
+compgen -A function # will list all the functions you could run.
+compgen -A function -abck # will list all the above in one go.
+
+comandos synology
+https://forum.synology.com/enu/viewtopic.php?t=126516#p464447
+
+
+configure a raspberrypi with openmediavault
+https://www.google.com/search?q=raspberry+pi+as+nas+openmediavault&oq=raspberry+pi+as+nas+openmediavault&aqs=chrome..69i57.34991j0j9&sourceid=chrome&ie=UTF-8#kpvalbx=_swtTXfHED62CjLsPs6KjqAM17

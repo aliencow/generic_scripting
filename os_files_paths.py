@@ -21,6 +21,14 @@ ______ _ _              _____ _____              _____                        _ 
 los fonts estan aquí:	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejemplo%20tipografia%20ASCII
 """
 
+""" Como averiguar directorio de instalacion desde Python """
+import os
+import sys
+os.path.dirname(sys.executable)
+# 'C:\\Python25'
+
+
+
 """
  _____           _                                      _        _     _____ _   _ ___________
 |  ___|         (_)                                    | |      | |   /  ___| \ | |_   _| ___ \

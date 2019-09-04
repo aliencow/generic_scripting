@@ -25,6 +25,7 @@ los fonts estan aquí:	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejem
 import os
 import sys
 os.path.dirname(sys.executable)
+
 # 'C:\\Python25'
 
 

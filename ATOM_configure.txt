@@ -56,6 +56,7 @@ autocomplete-python
 File sintaxis
 language-restructuredtext - reconoce la sintaxis de los ficheros rst
 language-batchfile - reconoce la sintaxis de los bat de windows
+language-powershell - reconoce la sintaxis de powershell windows
 
 
 Abreviaturas de teclado útiles:

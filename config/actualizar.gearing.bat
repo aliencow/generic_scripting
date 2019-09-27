@@ -22,9 +22,9 @@ git pull
 
 REM Para el setup de las librerias y startup en vbs  solo para el estudio
 Y:
-cd Y:\config\lib\vbs\tools\vbsjson
-git pull
 cd Y:\config\lib\vbs\studio
+git pull
+cd Y:\config\lib\vbs\tools\vbsjson
 git pull
 cd Y:\config\setup\startup
 git pull

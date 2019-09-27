@@ -24,3 +24,8 @@ git remote add origin ssh://git@gitlab.antaruxa.com:30001/setup/startup.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
+
+
+Un clonado simple:
+
+git clone http://gitlab.antaruxa.com:30000/setup/vbsstudiolib.git .

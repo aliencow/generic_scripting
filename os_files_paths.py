@@ -28,7 +28,12 @@ os.path.dirname(sys.executable)
 
 # 'C:\\Python25'
 
-
+""" Como generar ficheros compilados (.pyc) de nuevo
+    desde un bash o un cmd:
+    python -m compileall path_y_nombrefile.py
+    para compilar todos los de una carpeta:
+    python -m compileall .
+"""
 
 """
  _____           _                                      _        _     _____ _   _ ___________

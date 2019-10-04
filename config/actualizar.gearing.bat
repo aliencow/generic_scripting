@@ -19,12 +19,3 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\tablasdir
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\aom_playblast
 git pull
-
-REM Para el setup de las librerias y startup en vbs  solo para el estudio
-Y:
-cd Y:\config\lib\vbs\studio
-git pull
-cd Y:\config\lib\vbs\tools\vbsjson
-git pull
-cd Y:\config\setup\startup
-git pull

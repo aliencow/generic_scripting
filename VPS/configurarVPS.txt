@@ -43,8 +43,14 @@ https://blog.hostdime.com.co/5-consejos-basicos-de-seguridad-en-su-vps/
                                                              __/ |
                                                             |___/
 
+Linode starting guide
+https://www.linode.com/docs/getting-started/
+
 SSH keys in linode
 https://linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
+Using SSH on windows
+https://www.linode.com/docs/networking/ssh/using-ssh-on-windows/
+
 
 
 Datos de servidor LINODE
@@ -56,3 +62,5 @@ milinode
 password: 55_Cincuenta&cinco_55
 
 Es necesario descargar Putty en windows en mac no
+
+SSH Access:  ssh root@139.162.170.222

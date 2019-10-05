@@ -42,12 +42,23 @@ https://blog.hostdime.com.co/5-consejos-basicos-de-seguridad-en-su-vps/
 \_____/\___/\_| \_/\___/|___/ \____/   \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
                                                              __/ |
                                                             |___/
-
+### INSTALADO
 Linode starting guide
 https://www.linode.com/docs/getting-started/
 Linode secure guide
 https://www.linode.com/docs/security/securing-your-server/
+Linode install fail2ban
+https://www.linode.com/docs/security/using-fail2ban-for-security/
+check if fail2ban is running: /etc/init.d/fail2ban status
 
+# ver en el futuro de instalar estos dos
+Configuracion del firewall iptables
+https://www.linode.com/docs/security/firewalls/control-network-traffic-with-iptables/
+instalar detección de intrusos
+https://www.linode.com/docs/uptime/monitoring/ossec-ids-debian-7/
+
+
+### DATOS DEL SERVIDOR
 
 Datos de servidor LINODE
 linode user: nouche
@@ -55,8 +66,14 @@ e-mail: juan.nouche@gmail.com
 password: 44_cUATRO_44
 
 milinode
+usuario: root
 password: 55_Cincuenta&cinco_55
 
+usuariod de trabajo (sudo)
+usuario: updatelinode
+password: 66_Sesenta&seis_66
+
+### ACCESO CON SSH
 Es necesario descargar Putty en windows en mac no
 En windows configurar crear la ssh key con Putty y conectar con la misma.
 
@@ -67,7 +84,11 @@ En Mac
 
 SSH Access:  ssh root@139.162.170.222
 
-SSH Access desde el Mac: ssh -i ~/.ssh/id_rsamac4096 root@139.162.170.222 (por que la clave ssh no tiene nombre standard)
+SSH Access desde el Mac para root: (por que la clave ssh no tiene el nombre standard)
+ssh -i ~/.ssh/id_rsamac4096 root@139.162.170.222
+
+para usuariolinode:
+ssh -i ~/.ssh/id_rsamac4096 updatelinode@139.162.170.222
 
 en ambos casos la passphrase para root es:
 lulaperro.

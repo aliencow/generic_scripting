@@ -51,11 +51,17 @@ Linode install fail2ban
 https://www.linode.com/docs/security/using-fail2ban-for-security/
 check if fail2ban is running: /etc/init.d/fail2ban status
 
-# ver en el futuro de instalar estos dos
 Configuracion del firewall iptables
 https://www.linode.com/docs/security/firewalls/control-network-traffic-with-iptables/
+He instalado un firewall básico siguiendo este tutorial:
+https://www.atareao.es/tutorial/servidor-virtual/primeros-pasos-con-tu-vps/
+OJOOo ! aqui con el puerso ssh configurado (8870 en lugar de 22 ver mas abajo) 
+
+# ver en el futuro de instalar estos dos
 instalar detección de intrusos
 https://www.linode.com/docs/uptime/monitoring/ossec-ids-debian-7/
+ssh movil Mosh
+https://www.atareao.es/software/internet/mosh-ssh-movil/
 
 
 ### DATOS DEL SERVIDOR
@@ -74,6 +80,9 @@ usuario: updatelinode
 password: 66_Sesenta&seis_66
 
 ### ACCESO CON SSH
+se ha puesto el puerto Port 8870 en lugar del 22 para ssh
+El cambio esta guardado en /etc/ssh/sshd_config
+
 Es necesario descargar Putty en windows en mac no
 En windows configurar crear la ssh key con Putty y conectar con la misma.
 

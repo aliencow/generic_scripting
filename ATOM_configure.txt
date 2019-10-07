@@ -53,10 +53,13 @@ terminal-plus - en defecto del anterior si no funciona bien
 Python addings
 autocomplete-python
 
-File sintaxis
-language-restructuredtext - reconoce la sintaxis de los ficheros rst
+File sintaxlanguage-restructuredtext - reconoce la sintaxis de los ficheros rst
 language-batchfile - reconoce la sintaxis de los bat de windows
 language-powershell - reconoce la sintaxis de powershell windows
+
+Go language
+
+go-plus - para manipular el lenguaje go
 
 
 Abreviaturas de teclado útiles:

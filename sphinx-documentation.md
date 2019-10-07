@@ -5,7 +5,7 @@
 Create a virtualenv sphinxdocs (optional name)
 In this case we use the structure of makevirtualenv wrapper.
 ```shell
-C:\myfolder> mkviertualenv sphinxdocs
+C:\myfolder> mkvirtualenv sphinxdocs
 C:\myfolder> workon sphinxdocs
 (sphinxdocs)C:\myfolder>
 ```

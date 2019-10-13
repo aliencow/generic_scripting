@@ -1,0 +1,17 @@
+##Normas el prefijo sudo se usa para los comando que solo puede ejecutar
+##root
+
+##APT-GET
+#actualizar las instalaciones..
+sudo apt-get update #Actualizar todo
+sudo apt-get install apache2 -y #Instalar Apache contestando a todo yes
+
+apt-get remove packagename
+eliminará los archivos binarios, pero no la configuración de datos o archivos del paquete packagename.
+
+apt-get purge packagename, o
+apt-get remove --purge packagename
+va a quitar sobre todo sobre el paquete de packagename, [...]
+Particularmente útil cuando usted quiere 'empezar' con una aplicación, ya que mal estado de la configuración.
+
+Fuente: https://www.enmimaquinafunciona.com/pregunta/24038/cual-es-la-diferencia-entre-apt-get-purge-y-apt-get-remove

@@ -1,0 +1,2 @@
+# centro de desarrollo synology
+https://www.synology.com/es-es/support/developer#tool

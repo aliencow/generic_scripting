@@ -43,6 +43,14 @@ To check the rendering of .rst files check [this link](http://socrates.io)
 
 ##Info to document the chode for autodoc python files:
 
-[A complete getting started](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
-[rst syntax fo documentation](https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html)
-[napoleon Support for NumPy and Google style docstrings](http://www.sphinx-doc.org/es/stable/ext/napoleon.html)
+This is [A complete getting started](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365).
+Here is [rst syntax for documentation](https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html).
+And here [napoleon Support for NumPy and Google style docstrings](http://www.sphinx-doc.org/es/stable/ext/napoleon.html).
+
+##How to separate de output folder
+
+You can check in [here](https://stackoverflow.com/questions/16617347/separate-sphinx-build-and-source-directories-for-version-control).
+
+
+##Path para la web sphinx
+https://pipelinebuilder.antaruxa.com/

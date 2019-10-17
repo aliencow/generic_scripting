@@ -29,3 +29,10 @@ git push -u origin master
 Un clonado simple:
 
 git clone http://gitlab.antaruxa.com:30000/setup/vbsstudiolib.git .
+
+
+
+
+Para buscar iconitos para los projectos:
+
+https://www.pngfly.com/  #buscador de pngs free

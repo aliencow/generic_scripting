@@ -29,6 +29,7 @@ markdown-preview - para visualizar markdown md files on preview
 
 Herramientas de interface:
 
+save-workspace - para guardar y recuperar entornos de trabajo
 file-icons  - para que se muestren los iconos por tipos de archivo
 color-picker - para seleccionar un color css por paleta interactiva
 pigments - muestra los hexadecimales de códigos de color con el color de fondo del código

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# json validator https://codebeautify.org/jsonvalidator
+
 import json
 import os
 

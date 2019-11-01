@@ -1,4 +1,5 @@
-
+## ayuda programadores MAYA
+# https://www.maya-dev.com/index.php/category/maya-api/maya-api-c/maya-api-c-comandos/
 
 """
 ___  ___                                           _      ______                     _

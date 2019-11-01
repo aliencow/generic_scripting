@@ -15,3 +15,6 @@ va a quitar sobre todo sobre el paquete de packagename, [...]
 Particularmente útil cuando usted quiere 'empezar' con una aplicación, ya que mal estado de la configuración.
 
 Fuente: https://www.enmimaquinafunciona.com/pregunta/24038/cual-es-la-diferencia-entre-apt-get-purge-y-apt-get-remove
+
+Comando systemctl - Activa-desactiva lista y muestra servicios
+https://manpages.debian.org/stretch/systemd/systemctl.1.en.html

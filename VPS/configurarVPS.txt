@@ -59,6 +59,7 @@ https://networklessons.com/uncategorized/iptables-example-configuration
 
 He instalado un firewall básico siguiendo este tutorial:
 https://www.atareao.es/tutorial/servidor-virtual/primeros-pasos-con-tu-vps/
+para desinstalar sudo https://askubuntu.com/questions/275998/can-i-uninstall-ufw-completely
 OJOOo ! LABOR INCONCLUSA aqui con el puerso ssh configurado (8870 en lugar de
 22 ver mas abajo)
 
@@ -69,6 +70,21 @@ ssh movil Mosh
 https://www.atareao.es/software/internet/mosh-ssh-movil/
 
 
+## ATENCION ATENCION DESPUES DE VER LA COMPLEJIDAD ME DECIDO POR INSTALAR UN PANEL DE CONTROL
+De los disponibles para linode  https://www.linode.com/docs/websites/cms/how-to-choose-a-control-panel/
+He preferido escoger
+    Vesta CP
+    Manual en español: https://raiolanetworks.es/blog/manual-completo-de-vestacp/#como_instalar_vestacp
+    Manual de instalacion linode: https://vestacp.com/install/
+    Como instalar desinstalar https://vestacp.com/docs/
+______  ___ _____ _____ _____       _                         __ _                            _
+|  _  \/ _ \_   _|  _  /  ___|     | |                       / _(_)                          (_)
+| | | / /_\ \| | | | | \ `--.    __| | ___    ___ ___  _ __ | |_ _  __ _ _   _ _ __ __ _  ___ _  ___  _ __
+| | | |  _  || | | | | |`--. \  / _` |/ _ \  / __/ _ \| '_ \|  _| |/ _` | | | | '__/ _` |/ __| |/ _ \| '_ \
+| |/ /| | | || | \ \_/ /\__/ / | (_| |  __/ | (_| (_) | | | | | | | (_| | |_| | | | (_| | (__| | (_) | | | |
+|___/ \_| |_/\_/  \___/\____/   \__,_|\___|  \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\___|_|\___/|_| |_|
+                                                                    __/ |
+                                                                   |___/
 ### DATOS DEL SERVIDOR
 
 Datos de servidor LINODE
@@ -177,6 +193,9 @@ ssh my-server
     https://downloads.mariadb.org/mariadb/repositories/#distro=Debian&distro_release=stretch--stretch&mirror=marwan&version=10.4
     https://www.linode.com/docs/databases/mariadb/mariadb-setup-debian/
 
+1b - Desisntalar
+    https://www.londonappdeveloper.com/how-to-completely-uninstall-mariadb-from-a-debian-7-server/
+
 2 - test
     sudo systemctl status mariadb
     udo systemctl stop mariadb.service      # To Stop MariaDB service
@@ -194,6 +213,7 @@ ssh my-server
 1 - Instalar:
     https://www.linode.com/docs/databases/mongodb/install-mongodb-on-ubuntu-16-04/
     https://linuxize.com/post/how-to-install-mongodb-on-debian-9/
+    https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
     First, install the packages required for adding a new repository:
         sudo apt install software-properties-common dirmngr
 
@@ -216,6 +236,14 @@ ssh my-server
         mongodb-org-mongos - The mongos daemon.
         mongodb-org-shell - The mongo shell is an interactive JavaScript interface to MongoDB. It is used to perform administrative tasks through the command line.
         mongodb-org-tools - Contains several MongoDB tools for to importing and exporting data, statistics, as well as other utilities.
+
+1.b - Desinstalar:
+    https://www.anintegratedworld.com/uninstall-mongodb-in-ubuntu-via-command-line-in-3-easy-steps/
+    Step 1: Stop the service:   sudo service mongod stop
+    Step 2: Remove packages:    sudo apt-get purge mongodb-org*
+    Step 3: Remove data directories:
+        sudo rm -r /var/log/mongodb
+        sudo rm -r /var/lib/mongodb
 
 2 - Start the MongoDB daemon and enable it to start on boot by typing:
         sudo systemctl start mongod

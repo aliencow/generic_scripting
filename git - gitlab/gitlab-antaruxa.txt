@@ -31,6 +31,9 @@ Un clonado simple:
 git clone http://gitlab.antaruxa.com:30000/setup/vbsstudiolib.git .
 
 
+cuando se resite un ficherito como por ejemplo el shelves.mel
+git stash save --keep-index
+git reset --hard
 
 
 Para buscar iconitos para los projectos:

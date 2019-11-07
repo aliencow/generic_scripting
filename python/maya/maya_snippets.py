@@ -187,7 +187,11 @@ ______      __                                       _____                      
                                                                                                                                                                                                                |___/
 """
 
+# Poner el undo infinite
+import pymel.core as pm
 
+# Turn undo on, with an infinite queue length
+pm.undoInfo( state=True, infinity=True )
 
 
 # OBTENER EL NOMBRE DEL FICHERO de la referencesInSceneArray

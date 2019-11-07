@@ -18,6 +18,8 @@ los fonts estan aquí:	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejem
 #pymel info: https://help.autodesk.com/cloudhelp/2016/ENU/Maya-Tech-Docs/PyMel/generated/functions/pymel.core.system/pymel.core.system.loadPlugin.html
 
 # RECOPILATORIO DE SNIPPETS PYTHON PARA COSAS
+# Creación de shelves dese python
+#https://bindpose.com/scripting-custom-shelf-in-maya-python/
 
 """
  _____ _               _                            _            _                           _         ___  ___  _____   _____

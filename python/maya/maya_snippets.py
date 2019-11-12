@@ -21,6 +21,29 @@ los fonts estan aquí:	http://patorjk.com/software/taag/#p=display&f=Doom&t=Ejem
 # Creación de shelves dese python
 #https://bindpose.com/scripting-custom-shelf-in-maya-python/
 
+""" Deleting unused nodes (por ejemplo mental ray u otro plugin que venga en el fichero)
+"""
+# con cmds
+import maya.cmds as cmds
+unknownNodes=cmds.ls(type = "unknown")
+unknownNodes+=cmds.ls(type = "unknownDag")
+for item in unknownNodes:
+    if cmds.objExists(item):
+        print item
+        cmds.lockNode(item, lock=False)
+        cmds.delete(item)
+
+# con pymel
+import pymel.core as pm
+unknownNodes=pm.ls(type = "unknown")
+unknownNodes+=pm.ls(type = "unknownDag")
+for item in unknownNodes:
+    if pm.objExists(item):
+        print item
+        pm.lockNode(item, lock=False)
+        pm.delete(item)
+
+
 """
  _____ _               _                            _            _                           _         ___  ___  _____   _____
 /  ___| |             | |                  ___     | |          | |                         (_)        |  \/  | / _ \ \ / / _ \

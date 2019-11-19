@@ -43,6 +43,32 @@ for item in unknownNodes:
         pm.lockNode(item, lock=False)
         pm.delete(item)
 
+""" Load and Unload Plugins
+"""
+plugin = 'lookdevKit'
+QALoadPlugin (plugin, True)
+QAUnloadPlugin (plugin)
+def QALoadPlugin(plugin, auto=True):
+    if pm.pluginInfo(plugin, q=True, r = True):
+        if not pm.pluginInfo(plugin, q=True, loaded=True): # si no está cargado
+            pm.loadPlugin( plugin) # cargarlo
+        if auto: # si se llama con autoload ponerlo
+            pm.pluginInfo( plugin, q=True, autoload=True ) # pone el autoload
+    else: # no esta registrado
+        print 'ANTARUXA WARNING!!! No existe el plugin: ' + plugin
+
+def QAUnloadPlugin(plugin):
+    if pm.pluginInfo(plugin, q=True, r = True):
+        if pm.pluginInfo(plugin, q=True, loaded=True): # si está cargado
+            pm.pluginInfo( plugin, edit=True, autoload=False ) # quitarle el autoload primero
+            pm.unloadPlugin( plugin )
+    else: # no esta registrado
+        print 'ANTARUXA WARNING!!! No existe el plugin: ' + plugin
+
+""" Listar plugins instalados
+"""
+pm.pluginInfo( query=True, listPlugins=True )
+
 
 """
  _____ _               _                            _            _                           _         ___  ___  _____   _____

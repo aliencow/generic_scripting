@@ -201,7 +201,7 @@ def copytree(src, dst, symlinks=False, ignore=None):
         else:
             shutil.copy2(s, d)
 
-""" Comprobar si existe directorio o path """
+""" Comprobar si si es fichero o  directorio  """
 
 #this is arguably the easiest way to check if both a file exists and if it is a file.
 
@@ -248,12 +248,11 @@ def createFolder(path):
     """
     try:
         if not os.path.exists(path):
-            print ('hola hola')
             os.makedirs(path)
     except OSError:
-        print ('Error: Creating the directory ' +  path)
+        print ('Error: Creating this folder ' +  path)
     else:
-        print ('Successfully created the directory ' + path)
+        print ('Successfully created this folder ' + path)
 
 
 def save_file_from_list(path, filename, list):

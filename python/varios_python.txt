@@ -1,0 +1,3 @@
+Encription decription in phython:
+https://nitratine.net/blog/post/encryption-and-decryption-in-python/#installing-cryptography
+https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/

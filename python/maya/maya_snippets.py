@@ -312,7 +312,7 @@ for ref_in in refs_in:
 def leer_referencias_escena():
     """
     Localiza las referencias que existen en la escena y las devuelve en un array de arrays
-    en el elemento 0 del array devuelve el namespace y en el 1
+    en el elemento 0 del array devuelve el namespace y en el 1 un objeto de tipo FileReference
     """
     return pm.listReferences(namespaces = True)
 
@@ -369,7 +369,7 @@ unresolved_paths = [ref.unresolvedPath() for ref in pm.listReferences()]
 
 # ejemplo en pymel de fileReference y su uso
 #  info about https://forums.cgsociety.org/t/edit-reference-file-attributes/1702955
-
+# https://help.autodesk.com/cloudhelp/2016/ENU/Maya-Tech-Docs/PyMel/generated/classes/pymel.core.system/pymel.core.system.FileReference.html
 import pymel.core as pm
 FR = pm.FileReference(namespace='myNamespace')
 current_path = FR.path

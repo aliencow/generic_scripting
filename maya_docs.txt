@@ -31,3 +31,21 @@ Manipulacion de arranque y end con OpenMaya tutorial
 ----------------------------------------------------
 
 Consultar este link: https://www.toadstorm.com/blog/?p=427
+
+
+Distribucion mediante modulos en maya:
+--------------------------------------
+
+https://around-the-corner.typepad.com/adn/2012/07/distributing-files-on-maya-maya-modules.html
+
+PlayBlast capture
+
+https://github.com/abstractfactory/maya-capture
+
+qtdesigner UI import from maya
+
+https://benmorgananimation.wordpress.com/2017/09/13/making-a-picker-gui-for-maya-with-pyside-and-qtdesigner/
+
+Delete unused nodes tipo Vray etc.
+
+https://forums.autodesk.com/t5/maya-forum/how-to-delete-old-unwanted-missing-maya-plug-ins/m-p/8639712#M69921

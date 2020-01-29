@@ -39,3 +39,9 @@ git reset --hard
 Para buscar iconitos para los projectos:
 
 https://www.pngfly.com/  #buscador de pngs free
+
+
+uso de git stash https://code.tutsplus.com/es/tutorials/quick-tip-leveraging-the-power-of-git-stash--cms-22988
+git stash guarda cambios sin stagear
+git pull actualizamos
+git stash pop recupera los cambios

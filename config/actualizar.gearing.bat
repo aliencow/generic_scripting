@@ -19,3 +19,34 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\tablasdir
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\aom_playblast
 git pull
+
+
+REM updatear en local los proyectos antaruxa pipeline
+
+C:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\pipeline
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\nomen
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\treelib
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun_tools
+git pull
+
+REM updatear en local los proyectos antaruxa ved_tools
+
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\ved_tools
+git stash
+git pull
+git stash pop
+
+
+
+REM en local updatear los proyectos antaruxa ved_tools
+
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\startup_local
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsstudiolib
+git pull

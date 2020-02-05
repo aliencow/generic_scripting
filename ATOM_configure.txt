@@ -44,6 +44,7 @@ browser-plus - ejecuta el html seleccionado en una ventana de atom
 open-in-browser - ejecuta el html seleccionado en el default browser
 atom-runner - ejecuta codigos de distintos tipos
 atom-python-run - ejecuta codigo en pyhton
+script - ejecuta codigo de muchas clases EL MEJOR quitar los otros.
 
 
 Terminal
@@ -61,6 +62,11 @@ language-powershell - reconoce la sintaxis de powershell windows
 Go language
 
 go-plus - para manipular el lenguaje go
+
+
+Correccion error en script (ejecution de python module):
+https://github.com/rgbkrk/atom-script/issues/1997#issuecomment-557993478
+El error se produce al cerrar la consola.
 
 
 Abreviaturas de teclado útiles:

@@ -37,9 +37,9 @@ REM updatear en local los proyectos antaruxa ved_tools
 
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\ved_tools
-git stash
+rem git stash
 git pull
-git stash pop
+rem git stash pop
 
 
 

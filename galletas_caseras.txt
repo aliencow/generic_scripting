@@ -1,0 +1,463 @@
+https://programtalk.com/python-examples/flask_mongoengine.MongoEngine/ samples
+
+RED DE CASA
+3ad6A7sT5X
+
+Wifi casa Vodafone
+Lulita_44
+
+Mi vodafone
+usuario: juan.nouche@gmail.com
+password: Cuatro44_Vodafone
+
+Modem vodafone
+usuario: vodafone
+password: BF7KZ8M3KCUPW5
+
+//ARANXA ARANTXA ARANTXA
+
+cliente R
+usuario: 16522862f
+password: Cuatro44
+telefono contacto: 685740310
+
+usuario autorizado: 32755796T
+password: dostres2
+
+
+GMAIL ARANTXA
+
+usuario:arantxanarro@gmail.com
+password: casamunecas
+
+
+EDP ARANTXA
+
+usuario: 16522862F
+contrase�a: cinco555
+
+
+
+
+/// JUAN JUAN JUAN
+
+SGAE Sociedad General de Autores
+
+Num socio: 78176
+usuario: jnouche@gmail
+password: Cuatro44
+
+acceso ftp
+ftp.s13cd380.alojamientovirtual.com
+
+
+Dominio: nouche.net
+Usuario: s13cd380
+Password: 44Cuatro44
+Acceso a zona de clientes: http://www.masbaratoimposible.com/
+
+conexion directa desde el PC (Unidades de red)
+https://rhea.h3m.com:2078
+
+Servidor...........: rhea.h3m.com
+IP.................: 91.199.120.172
+Email de contacto..: juan.nouche@gmail.com
+
+Los servidores de nombres de los dominios(DNS) asociados a tu plan deben ser los
+siguientes:
+
+ns2.h3m.com
+ns1.h3m.com
+
+Acceso a zona de clientes: http://www.masbaratoimposible.com/
+
+correo juan@nouche.net
+password: dostres2
+
+Blog motion.nouche.net (WORDPRESS 4.8.3)
+administrador: adminouche
+password: jrn210763
+
+
+BASE DE DATOS PARA JOOMLA
+nombre: dbjnouche
+usuario: nouche
+servidor: localhost
+password: jrn210763
+
+### DATOS DEL SERVIDOR LINODE
+
+Datos de servidor LINODE
+linode user: nouche
+e-mail: juan.nouche@gmail.com
+password: 44_cUATRO_44
+
+milinode
+usuario: root
+password: 55_Cincuenta&cinco_55
+
+usuariod de trabajo (sudo)
+usuario: updatelinode
+password: 66_Sesenta&seis_66
+
+ipv4: 139.162.170.222
+ipv6: 2a01:7e01::f03c:92ff:fedf:a680
+
+Datos de entrada para VestaCP:
+    https://139.162.170.222:8083
+    username: admin
+    password: 44_cUATRO_44
+
+### DATOS DEL SERVIDOR LINODE FIN
+
+Bienvenido a ARGONTE. (THE GEARING)
+Puede apuntar su navegador hacia http://192.168.0.25:6565/, http://argonte.antaruxa.com:6565/ para modificar su perfil personal.
+(Si no puede conectar con el servidor, contacte con el administrador.)
+
+Su nombre de usuario: juan.nouche
+Su password: 44_cUATRO_44
+
+DONDOMINIO - nouche.app
+
+usuario: juannouche
+password: Siete777
+
+PROTONMAIL ACCOUNT - CORREO CONFIDENCIAL
+
+jnouche.aliencow@protonmail.com
+password: 44_cUATRO_44
+sitioweb: mail.protonmail.com
+
+BRICO GEEK
+
+usuario:juan.nouche@gmail.com
+password: Cuatro44
+
+Wodpress mio:
+
+quesecueceaqui.nouche.net
+administrador: cocidowp
+password: Cuatro44
+
+
+THEMEFUSION AVADA USER
+usuario: juan.nouche
+email: juan.nouche@gmail.com
+password: 44_cUATRO_44
+
+Avada Token
+W5ez9XQyZtOaRN7xyog5oAmckcvqMlbw
+
+VNC Tight
+password for remote access: Siete777
+passowrd for administrative: Siete777
+
+CGPEERS para download de programas
+
+email: jnouche.aliencow@protonmail.com
+usuario: vaca.espacial
+password: 44_cUATRO_44
+
+ENVATO MARKET
+usuario: juan_nouche
+email: juan.nouche@gmail.com
+password: cuatro44
+
+
+XAMPP
+
+usuario: root
+password: 2ventidos2
+
+PAYPAL:
+
+usuario: juan.nouche@gmail.com
+password: 44_cUATRO_44
+
+
+AMAZON:
+usuario: juan.nouche@gmail.com
+password: S_iete777
+
+LINKEDIN:
+
+USUARIO: jnouche@gmail.com
+password: DosTres2
+
+FACEBOOK:
+
+ususario: jnouche@gmail.com
+password: DosTres2
+
+TWITTER:
+
+usuario: jnouche@gmail.com
+password: DosTres2
+
+GMAIL:
+
+usuario: juan.nouche@gmail.com
+password: dostres2
+
+
+usuario: jnouche@gmail.com
+password: DosTres2
+
+
+INSTAGRAM:
+usuario: juannouche
+email: jnouche@gmail.com
+pass: Siete777
+
+
+
+DROPBOX :
+usuario: juan.nouche@gmail.com
+password: cuatro44
+
+
+ADOBE ID
+usuario: jnouche@gmail.com
+password: Cuatro44
+
+APPLE ID
+GMAIL:
+
+usuario: juan.nouche@gmail.com
+password: Cuatro44
+
+VirtualBox Capitan IDEM anterior
+
+
+HOOTSUITE:
+
+usuario:jnouche@gmail.com
+password: dostres2
+
+SKYPE:
+usuario:juan.nouche
+password: DosTres2
+
+Pinterest:
+usuario:juan.nouche@gmail.com
+password: cuatro44
+
+PCCOMPONENTES:
+usuario:juan.nouche@gmail.com
+password: cuatro44
+
+CIRCUITLAB (generador de circuitos)
+e-mail: juan.nouche@gmail.com
+usuario: aliencow
+password: Cinco555
+
+github:
+
+usuario: aliencow o juan.nouche@gmail.com
+password: 44_cUATRO_44
+
+codigofacilito.com
+
+usuario: aliencow o juan.nouche@gmail.com
+password: cuatro44
+
+
+stackoverflow
+
+usuario: juan.nouche@gmail.com
+password: Cuatro44_
+
+PythonAnyWhere:  https://www.pythonanywhere.com
+
+usuario: juan.nouche@gmail.com
+password: Siete777
+
+
+
+Hackintosh Zone
+
+usuario: aliencow o juan.nouche@gmail.com
+password: cuatro44
+
+
+INSANELY MAC
+usuario: juan.nouche
+e-mail: juan.nouche@gmail.com
+password: cuatro44
+
+tonymacx86.com
+usuario: juan.nouche
+e-mail: juan.nouche@gmail.com
+password: cuatro44
+
+appleosx86
+usuario: juan.nouche
+e-mail: juan.nouche@gmail.com
+password: Cuatro44
+
+
+
+SPOTIFY
+
+usuaro: jnouche o jnouche@gmail.com
+password: cuatro44
+
+
+CERTIFICADOS DIGITALES
+
+certificado_juan pass: cuatro44
+ceritificado_arantxa pass: Cuatro44
+
+
+
+RECAMBIOSCOCHE.ES
+
+Usuario: juan.nouche@gmail
+Password: dostres2
+
+CARREFOUR PASS
+
+WWW.PASS.CARREFOUR.ES
+
+usuaro: 32755496T
+password: cuatro4
+
+TRAVEL CLUB EROSKI
+
+WWW.TRAVELCLUB.ES
+
+usuaro: 32755496T
+password: Cuatro44
+
+
+UDACITY (formacion)
+usuario: juan.nouche@gmail
+password: cuatro44
+
+processing forum
+http://forum.processing.org/two/
+
+e-mail: juan.nouche@gmail.com
+usuario: jnouche
+password: cuatro44g
+
+
+INES moddle universidad:
+
+usuario: ines.rodriguez.marin
+password: inesita19
+
+
+GUINDILLAS TARVIS
+usuario: juan.nouche@gmail.com
+passowrd: juantarvis44
+
+
+ALIEXPRESS Y ALIBABA
+usuario: juan.nouche@gmail.com
+password: cuatro44
+
+
+CLOUDINARY
+User: juan.nouche@gmail.com
+password: cuatro44
+
+Cloud name:	jnouche
+API Key: 688595233149498
+API Secret:	xVnwUKNozXjXY_700gVOmNxG014
+Environment variable: CLOUDINARY_URL=cloudinary://688595233149498:xVnwUKNozXjXY_700gVOmNxG014@jnouche
+
+ANIME STUDIO TUTOR
+http://www.animestudiotutor.com/
+e-mail: jnouche@gmail.com
+Username: jnouche
+Password: dostres2
+
+KOBO
+
+usuario: juan.nouche@gmail.com
+password: cuatro44
+
+EPIC GAMES - UNREAL
+
+usuario: juan.nouche@gmail.com
+nombre: jnouche
+password: cuatro44
+
+
+WINRAR
+usuario: juan.nouche@gmail.com
+password: 8haheck8
+
+
+INTEL TRUE KEY
+
+usuario:juan.nouche@gmail.com
+password: 2ventidos2
+
+INTEL REALSENSE DEVOLOPER USER
+
+email: juan.nouche@gmail.com
+usuario: juan.nouche
+password: @Cuatro44
+
+
+USUARIO NVIDIA
+
+usuario: juan.nouche@gmail.com
+password: Cuatro444
+
+
+TURBOSQUID
+
+usuario: jnouche
+e-mail: jnouche@gmail.com
+password: cuatro44
+
+VISUAL STUDIO
+usuario: juan@nouche.net
+pasword: Cuatro44
+
+EBAY
+
+usuario: juan.nouche@gmail.com
+password: Cuatro44
+
+MLAB bases de datos mongoDB
+
+https://mlab.com/home
+account:  juan.nouche
+user: juan.nouche@gmail.com
+password: cuatro44
+
+DataTables user
+user: juan.nouche
+email: juan.nouche@gmail.com
+password: cuatro44
+
+ZOHO mail
+user: juan.nouche@gmail
+passowrd: Siete777
+
+Thomman music:
+user: juan.nouche@gmail
+password: Siete777
+
+Substance
+user: jnouche
+e-mail: juan.nouche@gmail
+password: guardada en google
+www: https://www.substance3d.com/
+
+FNAC
+usuario: juan.nouche@gmail.com
+password: 44_cUATRO_44
+
+El Corte Ingles
+usuario: juan.nouche@gmail.com
+password: Siete777
+
+
+
+
+

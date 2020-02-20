@@ -30,7 +30,9 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\nomen
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\treelib
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun_tools
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\maya_tools
 git pull
 
 REM updatear en local los proyectos antaruxa ved_tools
@@ -41,7 +43,9 @@ rem git stash
 git pull
 rem git stash pop
 
-
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
+git pull
 
 REM en local updatear los proyectos antaruxa ved_tools
 

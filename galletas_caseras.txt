@@ -423,8 +423,7 @@ EBAY
 usuario: juan.nouche@gmail.com
 password: Cuatro44
 
-MLAB bases de datos mongoDB
-
+MLAB bases de datos mongoDB     ---- PASSED
 https://mlab.com/home
 account:  juan.nouche
 user: juan.nouche@gmail.com
@@ -435,29 +434,31 @@ user: juan.nouche
 email: juan.nouche@gmail.com
 password: cuatro44
 
+TeamViewer
+email: juan.nouche@gmail.com
+password: Siete777
+
+
+
 ZOHO mail
 user: juan.nouche@gmail
 passowrd: Siete777
 
-Thomman music:
+Thomman music:                  ---- PASSED
 user: juan.nouche@gmail
 password: Siete777
 
-Substance
+Substance                       ---- PASSED
 user: jnouche
 e-mail: juan.nouche@gmail
-password: guardada en google
+password: KrGnewajR.4pFNa
 www: https://www.substance3d.com/
 
-FNAC
+FNAC                            ---- PASSED
 usuario: juan.nouche@gmail.com
 password: 44_cUATRO_44
 
-El Corte Ingles
+El Corte Ingles                 ---- PASSED
+www: https://www.elcorteingles.es/?foreing_redirect=no
 usuario: juan.nouche@gmail.com
 password: Siete777
-
-
-
-
-

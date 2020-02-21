@@ -1,0 +1,45 @@
+{
+	"HOME\r\n" : {
+		"<add name>" : ""
+	},
+	"PROGRAMMING\r\n\r\n" : {
+		"<add name>" : ""
+	},
+	"SHOPPING\r\n" : {
+		"EL-CORTE-INGLES" : {
+			"www" : "https://www.elcorteingles.es/",
+			"user" : "juan.nouche@gmail.com",
+			"password" : "Siete777"
+		},
+		"FNAC\r\n" : {
+			"www" : "https://www.fnac.es/",
+			"user" : "juan.nouche@gmail.com",
+			"password" : "44_cUATRO_44"
+		},
+		"THOMMAN MUSIC\r\n\r\n" : {
+			"www" : "https://www.thomann.de/es/",
+			"user" : "juan.nouche@gmail.com",
+			"password" : "Siete777",
+			"SavedOnGoogle" : "True"
+		}
+	},
+	"WEB-HOSTING\r\n" : {
+		"<add name>" : ""
+	},
+	"TECH-CGI\r\n" : {
+		"SUBSTANCE\r\n" : {
+			"www" : "https://www.substance3d.com/",
+			"user" : "jnouche",
+			"email" : "juan.nouche@gmail",
+			"password" : "KrGnewajR.4pFNa",
+			"SavedOnGoogle" : "True"
+		},
+		"MLAB MONDODB\r\n" : {
+			"www" : "https://mlab.com/home",
+			"user" : "juan.nouche",
+			"email" : "juan.nouche@gmail",
+			"password" : "cuatro44",
+			"SavedOnGoogle" : "False"
+		}
+	}
+}

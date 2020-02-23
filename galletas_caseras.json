@@ -23,9 +23,7 @@
 			"SavedOnGoogle" : "True"
 		}
 	},
-	"WEB-HOSTING\r\n" : {
-		"<add name>" : ""
-	},
+	"WEB-HOSTING\r\n" : {},
 	"TECH-CGI\r\n" : {
 		"SUBSTANCE\r\n" : {
 			"www" : "https://www.substance3d.com/",

@@ -390,6 +390,11 @@ usuario: juan.nouche@gmail.com
 password: 8haheck8
 
 
+PATREON Chris Zurbrigg
+https://www.patreon.com/m/1846452/membership
+usuario: juan.nouche@gmail.com
+password: Siete777
+
 INTEL TRUE KEY
 
 usuario:juan.nouche@gmail.com
@@ -418,8 +423,7 @@ VISUAL STUDIO
 usuario: juan@nouche.net
 pasword: Cuatro44
 
-EBAY
-
+EBAY                            ---- PASSED
 usuario: juan.nouche@gmail.com
 password: Cuatro44
 
@@ -429,18 +433,19 @@ account:  juan.nouche
 user: juan.nouche@gmail.com
 password: cuatro44
 
-DataTables user
+DataTables user                 ---- PASSED
+https://datatables.net/
 user: juan.nouche
 email: juan.nouche@gmail.com
 password: cuatro44
 
-TeamViewer
+
+TeamViewer                      ---- PASSED
 email: juan.nouche@gmail.com
 password: Siete777
 
 
-
-ZOHO mail
+ZOHO mail                 <<<<< NEED REVIEW
 user: juan.nouche@gmail
 passowrd: Siete777
 

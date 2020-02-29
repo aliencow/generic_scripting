@@ -197,11 +197,11 @@ password: DosTres2
 GMAIL:
 
 usuario: juan.nouche@gmail.com
-password: dostres2
+password: 22_Ventidos_22
 
 
 usuario: jnouche@gmail.com
-password: DosTres2
+password: 22_Ventidos_22
 
 
 INSTAGRAM:
@@ -254,7 +254,7 @@ password: Cinco555
 github:
 
 usuario: aliencow o juan.nouche@gmail.com
-password: 44_cUATRO_44
+password: 22_Ventidos_22
 
 codigofacilito.com
 
@@ -440,9 +440,9 @@ email: juan.nouche@gmail.com
 password: cuatro44
 
 
-TeamViewer                      ---- PASSED
+TeamViewer                <<<<< NEED REVIEW
 email: juan.nouche@gmail.com
-password: Siete777
+password: Oito8oito
 
 
 ZOHO mail                 <<<<< NEED REVIEW

@@ -419,6 +419,10 @@ usuario: jnouche
 e-mail: jnouche@gmail.com
 password: cuatro44
 
+KITE  - SINTAX FOR Python
+user:juan.nouche@thegearing.com
+password: Siete777
+
 VISUAL STUDIO
 usuario: juan@nouche.net
 pasword: Cuatro44

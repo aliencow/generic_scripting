@@ -420,8 +420,10 @@ e-mail: jnouche@gmail.com
 password: cuatro44
 
 KITE  - SINTAX FOR Python
+https://kite.com/python/docs
 user:juan.nouche@thegearing.com
 password: Siete777
+guardada en google
 
 VISUAL STUDIO
 usuario: juan@nouche.net

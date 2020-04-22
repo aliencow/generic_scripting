@@ -25,4 +25,3 @@ MongoDB
     documents: https://docs.mongodb.com/manual/
     database structure: https://docs.mongodb.com/manual/core/data-modeling-introduction/
                         https://www.youtube.com/watch?v=4rhKKFbbYT4
-    

@@ -54,3 +54,7 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\startup_local
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsstudiolib
 git pull
+
+REM looger
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\logger
+git pull

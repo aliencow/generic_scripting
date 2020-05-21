@@ -58,3 +58,7 @@ git pull
 REM looger
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\logger
 git pull
+
+REM deadline
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\deadline
+git pull

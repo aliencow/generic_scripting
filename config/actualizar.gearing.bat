@@ -20,6 +20,12 @@ git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\aom_playblast
 git pull
 
+REM antaruxa startup
+
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\startup_local
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsstudiolib
+git pull
 
 REM updatear en local los proyectos antaruxa pipeline
 

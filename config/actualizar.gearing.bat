@@ -41,9 +41,12 @@ c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\ved_tools
 rem git stash
 git pull
-rem git stash pop
 
+rem git stash pop
 c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\new_concatenator
+
+yc:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
 git pull
 

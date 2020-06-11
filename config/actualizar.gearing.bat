@@ -36,10 +36,6 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\nomen
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\treelib
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun
-git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\maya_tools
-git pull
 
 REM updatear en local los proyectos antaruxa ved_tools
 
@@ -47,27 +43,22 @@ c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\ved_tools
 rem git stash
 git pull
-
 rem git stash pop
+
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\new_concatenator
 
-yc:
+REM custom maya plug-ins
+c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
 git pull
 
-REM en local updatear los proyectos antaruxa ved_tools
-
-c:
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\startup_local
+REM custom studio tools
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsstudiolib
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\maya_tools
 git pull
-
-REM looger
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\logger
 git pull
-
-REM deadline
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\deadline
 git pull

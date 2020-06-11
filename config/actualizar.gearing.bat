@@ -5,7 +5,6 @@ REM Queda guardado C:\Users\JUAN\AppData\Roaming\Microsoft\Windows\Start Menu\Pr
 REM lo ejecuta al arranque de windows para buscar la carpeta de inicio de windows en el ejecutor de comandos
 REM Alt+R teclar shell:startup (usuario local) o shell:common startup (todos los usuarios)
 
-
 REM updatear los proyectos que pueden actualizarse desde fuera
 
 C:
@@ -47,6 +46,7 @@ rem git stash pop
 
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\new_concatenator
+git pull
 
 REM custom maya plug-ins
 c:

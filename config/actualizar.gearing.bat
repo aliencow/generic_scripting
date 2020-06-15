@@ -54,6 +54,7 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
 git pull
 
 REM custom studio tools
+c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\shotgun
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\maya_tools

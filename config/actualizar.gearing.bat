@@ -44,6 +44,7 @@ rem git stash
 git pull
 rem git stash pop
 
+rem cambiar nombre cuando deje windows a out_of_maya
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\new_concatenator
 git pull

@@ -64,3 +64,5 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\logger
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\deadline
 git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\sysutils
+git pull

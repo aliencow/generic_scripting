@@ -53,6 +53,8 @@ REM custom maya plug-ins
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
 git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\plug-ins_maya\skin_bones
+git gull
 
 REM custom studio tools
 c:

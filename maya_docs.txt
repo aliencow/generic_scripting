@@ -37,6 +37,13 @@ Distribucion mediante modulos en maya:
 --------------------------------------
 
 https://around-the-corner.typepad.com/adn/2012/07/distributing-files-on-maya-maya-modules.html
+http://rodolphe-vaillant.fr/?e=97
+http://techartsurvival.blogspot.com/2014/01/mayas-mildy-magical-modules.html
+
+-creacion plugins mod distributed https://learncreategame.com/techart/maya-environment-setup/
+
+-ejecutar modulos desde dentro de maya http://technicaldirector.nl/projects/maya_module_installer/
+
 
 PlayBlast capture
 

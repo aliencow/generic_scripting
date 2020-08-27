@@ -19,5 +19,9 @@ Acceso a las variables de entorno de windows.
 https://stackoverflow.com/questions/1085852/interface-for-modifying-windows-environment-variables-from-python
 
 
-Installing pyside app with pyinstaller 
+PySide2  Section
+Installing pyside app with pyinstaller
 https://www.learnpyqt.com/courses/packaging-and-distribution/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
+
+Setting stylesheets to Pyside
+https://stackoverflow.com/questions/48256772/dark-theme-for-qt-widgets

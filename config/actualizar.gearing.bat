@@ -29,11 +29,11 @@ git pull
 REM updatear en local los proyectos antaruxa pipeline
 
 C:
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\pipeline
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\pipeline\pipeline
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\nomen
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\pipeline\nomen
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\pipeline\treelib
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\pipeline\treelib
 git pull
 
 REM updatear en local los proyectos antaruxa ved_tools

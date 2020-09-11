@@ -25,3 +25,16 @@ https://www.learnpyqt.com/courses/packaging-and-distribution/packaging-pyqt5-pys
 
 Setting stylesheets to Pyside
 https://stackoverflow.com/questions/48256772/dark-theme-for-qt-widgets
+
+Sample tutorial PySide2
+https://codeloop.org/python-tutorial-create-messagebox-with-pyside2/
+
+
+
+Pyinstaller Section
+Instrucciones de uso
+https://pyinstaller.readthedocs.io/en/stable/usage.html
+Empaquetar ficheros mid pass con pyinstaller
+https://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+Error al empaquetar pyside2 con pyinstalller hidden libs
+https://stackoverflow.com/questions/50580039/creating-pyinstaller-from-my-script-missing-pyside2-qtxml-in-the-result

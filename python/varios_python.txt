@@ -29,7 +29,10 @@ https://stackoverflow.com/questions/48256772/dark-theme-for-qt-widgets
 Sample tutorial PySide2
 https://codeloop.org/python-tutorial-create-messagebox-with-pyside2/
 
-
+''' label con imagen en PySide2
+https://www.learnpyqt.com/blog/adding-images-to-pyqt5-applications/
+https://stackoverflow.com/questions/50209879/how-to-load-an-image-with-qlabel-in-pyside2
+'''
 
 Pyinstaller Section
 Instrucciones de uso

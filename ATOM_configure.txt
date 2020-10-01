@@ -82,13 +82,15 @@ c5449561e8159b1d23ebefa48510e3a4
 
 Abreviaturas de teclado útiles:
 
-ctrl-shift-p --  Command Palette
-cmd-shift-p (en mac)
-ctrl-alt-o   --  ejecuta el browser-plus
-ctrl-alt-o  (en mac)
-ctrl-,      -- settings and Plugins
-cmd-,       (en mac)
-ctrl-`      -- platformio Terminal
-ctrl-`      (en mac)
-ctrl-shit-b -- ejecutar scrpits de python (win)
-ctrk-p      -- busqueda de ficheros
+ctrl-shift-p  --  Command Palette
+cmd-shift-p   (en mac)
+ctrl-alt-o    --  ejecuta el browser-plus
+ctrl-alt-o    (en mac)
+ctrl-,        -- settings and Plugins
+cmd-,         (en mac)
+ctrl-`        -- platformio Terminal
+ctrl-`        (en mac)
+ctrl-shit-b   -- ejecutar scrpits de python (win)
+ctrl-p        -- busqueda de ficheros
+ctrl-f        -- busca en el fichero actual
+ctrl-shift-f  -- busqueda en todos los ficheros.

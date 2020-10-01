@@ -1,0 +1,4 @@
+como crear un link simbolico en WINDOWS (permisos de admin)
+https://help.kite.com/article/97-adding-libraries-from-pythonpath-to-the-kite-index
+
+mklink /D %USERPROFILE%\AppData\Local\Kite\libraries\my_env \path\to\my_env\site-packages

@@ -18,6 +18,9 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\tablasdir
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\aom_playblast
 git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\node_editor
+git pull
+
 
 REM antaruxa startup
 
@@ -54,7 +57,7 @@ c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\QA_antaruxa
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\plug-ins_maya\skin_bones
-git gull
+git pull
 
 REM custom studio tools
 c:

@@ -39,7 +39,15 @@ git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\pipeline\treelib
 git pull
 
-REM updatear en local los proyectos antaruxa ved_tools
+REM GRS  --- updatear en local los proyectos antaruxa grs_tools
+
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\grs\maya\grs_tools
+rem git stash
+git pull
+rem git stash pop
+
+REM VED --- updatear en local los proyectos antaruxa ved_tools
 
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\ved_tools
@@ -47,9 +55,9 @@ rem git stash
 git pull
 rem git stash pop
 
-rem cambiar nombre cuando deje windows a out_of_maya
+rem VED --- cambiar nombre cuando deje windows a out_of_maya
 c:
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\new_concatenator
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\out_of_maya
 git pull
 
 REM custom maya plug-ins

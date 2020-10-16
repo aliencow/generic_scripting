@@ -24,6 +24,12 @@ rem concatenator update versions etc
 cd F:\pipeline\config\tools\projects\ved\out_of_maya
 git pull
 
+rem grisu
+Y:
+cd F:\pipeline\config\tools\projects\grs\maya\grs_tools
+git pull
+
+
 rem pipeline
 F:
 cd F:\pipeline\config\lib\python\studio\nomen

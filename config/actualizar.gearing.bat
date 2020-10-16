@@ -20,7 +20,10 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\aom_playblast
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\node_editor
 git pull
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 REM antaruxa startup
 

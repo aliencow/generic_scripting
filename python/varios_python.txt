@@ -33,6 +33,11 @@ https://codeloop.org/python-tutorial-create-messagebox-with-pyside2/
 https://www.learnpyqt.com/blog/adding-images-to-pyqt5-applications/
 https://stackoverflow.com/questions/50209879/how-to-load-an-image-with-qlabel-in-pyside2
 '''
+Events and Signals in PySide
+http://zetcode.com/gui/pysidetutorial/eventsandsignals/
+https://www.pythoncentral.io/pysidepyqt-tutorial-creating-your-own-signals-and-slots/
+
+
 Drawing in PySide
 http://zetcode.com/gui/pysidetutorial/drawing/
 https://gist.github.com/Alquimista/1274149/ca37e497b3f2a16c9d3ec4889ed63c80986e9dba berzier curves.

@@ -1,0 +1,11 @@
+# centro de desarrollo synology
+https://www.synology.com/es-es/support/developer#tool
+
+phpMyAdmin
+https://argonte.antaruxa.com:8787/phpMyAdmin
+user: root
+pass: ministrador.32C
+
+conexion por terminal (putty) con argonte.(Desde dentro en la red)
+server: 192.168.0.12
+ssh port: 2367

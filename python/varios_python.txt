@@ -51,3 +51,9 @@ Empaquetar ficheros mid pass con pyinstaller
 https://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
 Error al empaquetar pyside2 con pyinstalller hidden libs
 https://stackoverflow.com/questions/50580039/creating-pyinstaller-from-my-script-missing-pyside2-qtxml-in-the-result
+Installing pyside app with pyinstaller
+https://www.learnpyqt.com/courses/packaging-and-distribution/packaging-pyqt5-pyside2-applications-windows-pyinstaller/
+
+USAR LA ALTERNATIVA A PYINSTALER NUITKA
+http://nuitka.net/doc/user-manual.html
+https://forum.learnpyqt.com/t/how-to-compile-pyqt5-or-pyside2-code-with-nuitka/422 con PySide

@@ -1,0 +1,19 @@
+Encription decription in phython:
+https://nitratine.net/blog/post/encryption-and-decryption-in-python/#installing-cryptography
+https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/
+
+
+pythonpath sys import etc. explicacion sencilla
+
+https://www.devdungeon.com/content/python-import-syspath-and-pythonpath-tutorial
+
+unittest (gestion de depuracion de software en maya)
+https://mykolbe.wordpress.com/2020/07/26/continuous-integration-for-maya-scripts/
+
+Acceso al registro de windows desde python 2
+https://stackoverflow.com/questions/5227107/python-code-to-read-registry
+Acceso al registro de windows dese python 3
+https://stackoverflow.com/questions/53686411/windows-registry-access-for-python-script
+
+Acceso a las variables de entorno de windows.
+https://stackoverflow.com/questions/1085852/interface-for-modifying-windows-environment-variables-from-python

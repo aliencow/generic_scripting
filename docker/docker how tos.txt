@@ -35,6 +35,8 @@ origen esta presentacion https://mherman.org/presentations/dockercon-2018/#32 (p
 How do I create a new Docker image for my application?
 https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
 
+How To Deploy And Manage MongoDB With Docker
+https://phoenixnap.com/kb/docker-mongodb
 COMMANDOS utiles
 comando para ejecutar una venntana interactiva en la imagen de mongodb
 docker exec -it mongodb bash

@@ -22,3 +22,6 @@ http://zetcode.com/gui/pysidetutorial/drawing/
 https://gist.github.com/Alquimista/1274149/ca37e497b3f2a16c9d3ec4889ed63c80986e9dba berzier curves.
 https://github.com/eyllanesc/stackoverflow/tree/master/questions/46142167 conected nodes
 https://doc.qt.io/qtforpython/overviews/graphicsview.html graphicsview framework
+
+Sintaxis path SVG
+https://css-tricks.com/svg-path-syntax-illustrated-guide/

@@ -1,0 +1,21 @@
+
+Variable de entorno FLASK_APP
+=============================
+
+para indicar a flask la aplicación que debe ejecutarse se indica en la variable
+de entorno FLASK_APP
+export FLASK_APP=app.py (linux)
+set FLASK_APP=app.py (Windows tambien se puede setear como variable de usuario)
+
+el nombre app.py puede ser cualquier aplicación en python.
+
+Una vez seteada esta variable la aplicación será la que se ejecuta con la orden
+flast run en linea de comandos
+
+
+main para procucción:
+====================
+lo normal en development seria app.run()
+para producción seria:
+app.run(host='128.0.0.1', port=80)
+en produccion host='0.0.0.0' para que haga de mascara en docker, por ejemplo.

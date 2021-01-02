@@ -1,2 +1,47 @@
 getting starting with WSL on WINDOWS
 https://docs.microsoft.com/en-us/learn/modules/get-started-with-windows-subsystem-for-linux/
+
+Usando docker con windos WSL (linux)
+https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
+
+
+
+Installing wsl. Activar WSL (Powershell as admin):
+=================================================
+
+Este comando activa linux wsl (viene preactivo en las versiones de windows)
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+
+Acceso a C: desde command line linux:
+=====================================
+
+cd /mnt/c para C:
+cd /mnt/c/Users/juan.nouche/Desktop para escritorio
+cd /mnt/d para D:
+
+Create and modify the new WSL configuration file: (docker)
+
+sudo nano /etc/wsl.conf
+
+# Now make it look like this and save the file when you're done:
+[automount]
+root = /
+options = "metadata"
+
+We need to set root = / because this will make your drives mounted at /c or /e instead of /mnt/c or /mnt/e.
+
+Aplicando la configuración anterior las unidades quedaran en /c o /d en lugar de /mnt/c o /mnt/d
+
+
+Uso del bash.exe de Linux:
+===========================
+
+WSL instala un bash.exe para ejecutar en windows que accede directamente a unbuntu
+Si no funciona en powershell o en windows usar los siguientes comandos.
+
+wslconfig /L (ver los shell instalados)
+wslconfig /setdefault Ubuntu-20.04 (o la version de linux que sea)
+
+Ocurre porque docker crea sus propias verisones de linux

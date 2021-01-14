@@ -44,4 +44,4 @@ Si no funciona en powershell o en windows usar los siguientes comandos.
 wslconfig /L (ver los shell instalados)
 wslconfig /setdefault Ubuntu-20.04 (o la version de linux que sea)
 
-Ocurre porque docker crea sus propias verisones de linux
+Ocurre porque docker crea sus propias versiones de linux

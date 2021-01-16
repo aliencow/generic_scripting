@@ -69,6 +69,9 @@ https://github.com/rgbkrk/atom-script/issues/1997#issuecomment-557993478
 El error se produce al cerrar la consola.
 
 
+desinstalar atom:
+https://stackoverflow.com/questions/29606833/how-to-uninstall-atom-text-editor-on-windows
+
 ATENCION IMPRESCINCIBLE: SYNC-SETTINGS                ---<<<<<<---<<<<<<---<<<<< OJO LEER
 https://atom.io/packages/sync-settings
 Este package permite sincronicar la instalacion de atom entre equipos. Para ello

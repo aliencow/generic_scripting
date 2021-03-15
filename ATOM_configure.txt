@@ -78,7 +78,8 @@ Este package permite sincronicar la instalacion de atom entre equipos. Para ello
 hay que usar un gist en git-hub para almacenar la información que se comparte.
 
 Parámetros para sync-settings GIHUB_TOKEN:
-f25b9be6be54b4ee5c97a9ce1107b79ea70d379c
+f25b9be6be54b4ee5c97a9ce1107b79ea70d379c #the gearing
+95344faaca6935976a396064adcd3d9aa8f77b0b #casa
 Gist ID:
 c5449561e8159b1d23ebefa48510e3a4
 

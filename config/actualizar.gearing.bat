@@ -59,6 +59,9 @@ rem VED --- cambiar nombre cuando deje windows a out_of_maya
 c:
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\out_of_maya
 git pull
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\ved\fusion_tools
+git pull
 
 REM custom maya plug-ins
 c:
@@ -75,7 +78,10 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\maya_tools
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\logger
 git pull
-cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\deadline
-git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\sysutils
+git pull
+REM fusion y deadline
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\lib\fusion
+git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\lib\deadline
 git pull

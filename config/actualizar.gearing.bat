@@ -85,3 +85,8 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\lib\fusio
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\studio\lib\deadline
 git pull
+
+REM Antaruxa web
+c:
+cd C:\Users\juan.nouche\Documents\juan\web_antaruxa\work\code\Avada-Child-Theme
+git pull

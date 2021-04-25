@@ -107,8 +107,8 @@ usuariod de trabajo (sudo)
 usuario: updatelinode
 password: 66_Sesenta&seis_66
 
-ipv4: 139.162.170.222
-ipv6: 2a01:7e01::f03c:92ff:fedf:a680
+ipv4: 139.177.179.186
+ipv6: 2a01:7e01::f03c:92ff:feb8:0b5c/128
 
 Datos de entrada para VestaCP:
     https://139.162.170.222:8083
@@ -122,13 +122,16 @@ En windows configurar crear la ssh key con Putty y conectar con la misma. Ver tu
 
 En Mac directamente desde el terminal
 
-SSH Access:  ssh root@139.162.170.222
+SSH Access:  ssh root@139.177.179.186
 
 SSH Access desde el Mac para root: (por que la clave ssh no tiene el nombre standard)
 ssh -i ~/.ssh/id_rsamac4096 root@139.162.170.222
+LISH ACCESS
+ssh -t nouche@lish-frankfurt.linode.com ubuntu-eu-central
 
 para updatelinode:
 ssh -i ~/.ssh/id_rsamac4096 updatelinode@139.162.170.222
+
 
 en ambos casos la passphrase para root es:
 lulaperro.

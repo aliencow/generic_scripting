@@ -56,3 +56,5 @@ updates the list of available packages and their versions.
 sudo apt upgrade
 installs newer versions of the packages you already have installed
 >>>>>>> Stashed changes
+
+MONGO DB UNINSTALL EN UBUNTU

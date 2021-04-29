@@ -209,6 +209,7 @@ ssh my-server
 1b - Desisntalar
     https://www.londonappdeveloper.com/how-to-completely-uninstall-mariadb-from-a-debian-7-server/
 
+
 2 - test
     sudo systemctl status mariadb
     udo systemctl stop mariadb.service      # To Stop MariaDB service
@@ -221,7 +222,7 @@ ssh my-server
 4 - Usuario: root contraseña: 77_Setenta&siete_77
 
 
-#como instalar MongoDB en debian9
+#como instalar MongoDB en debian9 (o en ubuntu)
 
 1 - Instalar:
     https://www.linode.com/docs/databases/mongodb/install-mongodb-on-ubuntu-16-04/
@@ -257,6 +258,9 @@ ssh my-server
     Step 3: Remove data directories:
         sudo rm -r /var/log/mongodb
         sudo rm -r /var/lib/mongodb
+    Step 3 alternative:
+        sudo apt-get autoremove
+
 
 2 - Start the MongoDB daemon and enable it to start on boot by typing:
         sudo systemctl start mongod
@@ -282,3 +286,8 @@ ssh my-server
 
 4 - Ver en el tutorial de 1 como se configura. Para acceder como admin:
     mongo -u usuariolinode -p --authenticationDatabase admin
+
+
+#COMO INSTALAR MONGO DB EN UBUNTU
+
+2 - Desintalar:

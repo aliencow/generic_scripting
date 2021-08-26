@@ -1,0 +1,42 @@
+﻿Basado en los tutoriales de zurbrigg
+https://www.patreon.com/posts/maya-python-api-54381072?utm_medium=post_notification_email&utm_source=post_link&utm_campaign=patron_engagement&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWRpc19rZXkiOiJpbnN0YW50LWFjY2VzczphZjk2ZjcxMS02NTFlLTRjMjYtYjY2Zi1lNWZmNTNkZWNjNzgifQ.Sy_JVPO_q7hozWFsbmiIc5LK7SF5spt72yRh_hgAHRU
+Maya Python API (Vol. 3) - Maya Modules (Part 1)
+
+Estructura de .mod en maya
+Se usa este sistema en maya para distribuir plugins y código para que pueda
+ejecutarse en cualquier máquina.
+
+Linea de declaración (obligatoria).
+- Empieza con el signo +
+- Lleva el nombre del plug-in y la version. Ejemplo ved_tools 1.0.0
+- Y el path a donde apunta el módulo.
+  Ejemplo //argonte/pipeline/config/tools/projects/ved/maya.
+  En el caso de apuntar a la misma ruta ./ (directorio actual)
+
+Un ejemplo de declaración válida:
++ <modulo> <version> <path>
++ ved_tools 1.0.0 ./
+
+Así ya funcionaría, si los contenidos del plugin estan el el mismo path.
+Imaginaos que el directorio donde estan los ficheros es C:/ved_tools.
+Dentro de esta ruta guardaremos un fichero de texto con extensión .mod y
+con el mismo nombre que tenga el plugin. En este caso C:/ved_tools/ved_tools.mod
+El contenido de este fichero sería la línea de declaración que vimos antes:
+  + ved_tools 1.0.0 ./
+
+Para que maya reconozca el modulo debemos incluir la ruta en la variable
+de maya MAYA_MODULE_PATH. Para ello se puede usar el maya.env o activarla
+en el user setup de maya o creando en el sistema esta variable de entorno.
+En cualquier caso es necesario resetear maya.
+Para comprobar si el módulo ha funcionado usando este mel desde el Script editor:
+
+getenv MAYA_MODULE_PATH;
+getModulePath -moduleName "ved_tools"
+
+Se puede indicar ademas en esta línea el software y la plataforma. Ejemplo:
++ MAYAVERSION:<version> PLATFORM:<plataforma> <modulo> <version> <path>
+para nuestro modulo: 
++ MAYAVERSION:2018 PLATFORM:win64 ved_tools 1.0.0 ./
+
+
+

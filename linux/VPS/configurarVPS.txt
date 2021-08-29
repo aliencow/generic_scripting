@@ -102,10 +102,16 @@ password: 44_cUATRO_44
 milinode
 usuario: root
 password: 55_Cincuenta&cinco_55
+passfrase ssh: lulaperro
 
 usuariod de trabajo (sudo)
 usuario: updatelinode
 password: 66_Sesenta&seis_66
+passfrase ssh: lulaperro
+
+ubicacion sshkeys en equipo de casa:
+C:\Users\juan.nouche\Documents\juan\ssh
+son las dos claves fechadas en ABRIL.2021
 
 ipv4: 139.177.179.186
 ipv6: 2a01:7e01::f03c:92ff:feb8:0b5c/128

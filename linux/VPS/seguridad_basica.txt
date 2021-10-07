@@ -1,0 +1,47 @@
+acceso SSH segun este tutorial
+https://www.linode.com/docs/guides/securing-your-server/
+se quita el acceso a root por ssh editanto desde sudo el fichero
+/etc/ssh/sshd_config y poniendo el parámetro:
+PermitRootLogin no
+AdressFamily inet (para IPv4)
+
+Los valores por defecto eran
+PermitRootLogin proyectos
+AdressFamily any
+
+
+
+FAIL2BAN
+Protector de seguridad que evita los asaltos por fuerza bruta
+https://www.linode.com/docs/guides/using-fail2ban-to-secure-your-server-a-tutorial/
+
+
+1- Instalamos (UBUNTU)
+>sudo apt-get install fail2ban
+2- Buscamos la configuracion
+>sudo cd /etc/fail2ban
+3- Copiamos fail2ban.conf a fail2ban.local y jail.conf a jail.startup_local
+>sudo cp fail2ban.conf fail2ban.local
+>sudo cp jail.conf jail.local
+4- Editamos jail.local
+>sudo nano jail.local
+
+5- En la seccion "ignoreip" habilitamos nuestra ip habitual para evitar que la bannee
+
+# "ignoreip" can be a list of IP addresses, CIDR masks or DNS hosts. Fail2ban
+# will not ban a host which matches an address in this list. Several addresses
+# can be defined using space (and/or comma) separator.
+ignoreip = 127.0.0.1/8 ::1 139.177.179.186
+
+6 - Parametros importantes:
+'bantime' - La cantidad de tiempo que se ignora a un host.
+'findtime' - Se ignora el host si ha generado el maxretry durante este tiempo.
+'maxretry' - Numero de fallos antes de que se ignore un host.
+
+#Esstos dos los deje sin poner. Hay que hacerlo
+'destemail' - Correo al que se envía los baneos
+'sender' - Correo desde el que se envian
+
+Hay que pegar una revision al tutorial de arriba..
+
+Instalado el linode cloud firewall.. Falta configurar las reglas.

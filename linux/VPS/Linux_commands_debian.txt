@@ -18,3 +18,8 @@ Fuente: https://www.enmimaquinafunciona.com/pregunta/24038/cual-es-la-diferencia
 
 Comando systemctl - Activa-desactiva lista y muestra servicios
 https://manpages.debian.org/stretch/systemd/systemctl.1.en.html
+
+
+## UPDATE ALTERNATIVES
+https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-8-on-ubuntu-18-04-lts/
+sudo update-alternatives --config python3 #Selecciona la version de python3 que queremos usar (ver link superior)

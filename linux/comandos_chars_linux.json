@@ -1,0 +1,18 @@
+{
+	"uname" : {
+		"comando" : "uname",
+		"funcionalidad" : "no requiere argumentos. Muestras información del sistema. Por defecto opcion -s nombe del Kernel (Linux)\r\n",
+		"opciones\r\n" : {
+			"-s" : "nombre del nucleo",
+			"-r" : "version del nucleo",
+			"-v" : "version del sistema operativo",
+			"-n" : "nombre de la maquina",
+			"-m" : "bits del nucleo",
+			"-a" : "toda la información"
+		}
+	},
+	"cd\r\n" : {
+		"comando" : "cd",
+		"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles "
+	}
+}

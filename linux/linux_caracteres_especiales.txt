@@ -8,14 +8,10 @@
 <   redireccionar entrada
 ;   separa comandos en la misma linea comando1; comando2; etc
 &   ejecución en segundo plano comando1 &
-&&  ejecución consecutiva de comandos: comando1 && comando2
-      el segundo se ejecuta solo si el primero acabo sin errores
-|   Pasa la salida del primer comando a la entrada del segundo.
-      muy importante es el comando pipe comando1 | comando2
-||  ejecución consecutiva de comandos: comando1 || comando2
-      el segundo se ejecuta solo si el primero ha fallado.
+&&  ejecución consecutiva de comandos: comando1 && comando2. El segundo se ejecuta solo si el primero acabo sin errores
+|   Pasa la salida del primer comando a la entrada del segundo. Muy importante es el comando pipe comando1 | comando2
+||  ejecución consecutiva de comandos: comando1 || comando2. El segundo se ejecuta solo si el primero ha fallado.
 ~   Identifica el directorio home del usuario: ls ~ (Alt gr +  4)
 ``   Ejecutar el comando incluido `comando`
 $   Identifica varialbes del sitema ej. $HOME o ejecuta comandos $(comando1)
-!   Ejecuta el comando indicado del buffer !5 (comando cinco del buffer)
-      caso especial !! ultimo comando ejecutado.
+!   Ejecuta el comando indicado del buffer !5 (comando cinco del buffer). Caso especial !! ultimo comando ejecutado.

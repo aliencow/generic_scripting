@@ -54,15 +54,42 @@ installs newer versions of the packages you already have installed
 >>>>>>> Stashed changes
 
 prompt terminado en $ usuario # root
-patron de comando linux: 
+patron de comando linux:
 prompt$ comando opciones argumentos   ej. ls -l /etc/
 
 
-pwd         muestra el directorio actual
-whoami      muestra el usuario actual
-hostname    muestra el servidor actual
+
+cat       muestra el contenido de fichero en el la pantalla. Puede mostrar el contenido de varios ficheros
+              opción -n muestra el número de línea
+              opción -b igual que -n pero no numera líneas vacias o en blanco.
+
 cd          cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . directorio actual
+
 clear       o ctrl+L limpia de comandos la pantalla.
 
 history     muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
-              opciones: -c limpia -w escribe de nuevo.
+              opción -c limpia el historial pero no borra .bash_history
+              opción -w comienza la escritura del historial en .bash_history
+
+hostname    muestra el servidor actual
+
+man         manual de comando. Sintaxis man [sección] comando o directorio. Ejemplo: man 5 passwd
+              seccion 1 - comandos generales
+              seccion 2 - llamadas al sistema
+              seccion 3 - biblioteca (funciones)
+              seccion 4 - Fiheros especiales
+              seccion 5 - Formato de ficheros
+              seccion 6 - Juegos y salvapantallas
+              seccion 7 - miscelánea
+              seccion 8 - comandos de administracion sistema
+
+pwd         muestra el directorio actual
+
+uname       información del sistema. Por defecto opcion -s nombre del kernel (Linux)
+              opción -s nombre del núcleo
+              opción -r version del núcleo
+              opción -v versión del sistema operativo
+              opción -m muesra bits del nucleo
+              opcion -a muestra toda la información
+
+whoami      muestra el usuario actual

@@ -1,18 +1,85 @@
 {
-	"uname" : {
-		"comando" : "uname",
-		"funcionalidad" : "no requiere argumentos. Muestras información del sistema. Por defecto opcion -s nombe del Kernel (Linux)\r\n",
-		"opciones\r\n" : {
-			"-s" : "nombre del nucleo",
-			"-r" : "version del nucleo",
-			"-v" : "version del sistema operativo",
-			"-n" : "nombre de la maquina",
-			"-m" : "bits del nucleo",
-			"-a" : "toda la información"
+	"comandos" : {
+		"cat" : {
+			"comando" : "cat",
+			"funcionalidad" : "muestra el contenido de fichero en el la pantalla. Puede mostrar el contenido de varios ficheros",
+			"opciones" : {
+				"-n" : "muestra el número de línea",
+				"-b" : "igual que -n pero no numera líneas vacias o en blanco."
+			}
+		},
+		"cd" : {
+			"comando" : "cd",
+			"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles."
+		},
+		"clear\r\n" : {
+			"comando" : "clear",
+			"funcionalidad" : "o ctrl+L limpia de comandos la pantalla."
+		},
+		"history" : {
+			"comando" : "history",
+			"funcionalidad" : "No requiere argumentos. Muestras información del sistema. Por defecto muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)",
+			"opciones" : {
+				"-c" : "limpia el historial pero no borra .bash_history",
+				"-w" : "comienza la escritura del historial en .bash_history"
+			}
+		},
+		"hostname\r\n" : {
+			"comando" : "hostname",
+			"funcionalidad" : "muestra el servidor actual"
+		},
+		"man" : {
+			"comando" : "man",
+			"funcionalidad" : " manual de comando. Sintaxis man [sección] comando o directorio. Ejemplo: man 5 passwd",
+			"secciones\r\n" : {
+				"1" : "comandos generales",
+				"2" : "llamadas al sistema",
+				"3" : "biblioteca (funciones)",
+				"4" : "Fiheros especiales",
+				"5" : " Formato de ficheros",
+				"6" : "Juegos y salvapantallas",
+				"7" : "miscelánea",
+				"8" : "comandos de administracion sistema"
+			}
+		},
+		"pwd\r\n" : {
+			"comando" : "pwd",
+			"funcionalidad" : "muestra el directorio actual"
+		},
+		"uname" : {
+			"comando" : "uname",
+			"funcionalidad" : "No requiere argumentos. Muestras información del sistema. Por defecto opcion -s nombe del Kernel (Linux).",
+			"opciones" : {
+				"-s" : "nombre del nucleo",
+				"-r" : "version del nucleo",
+				"-v" : "version del sistema operativo",
+				"-n" : "nombre de la maquina",
+				"-m" : "bits del nucleo",
+				"-a" : "toda la información"
+			}
+		},
+		"whoami\r\n" : {
+			"comando" : "muestra el usuario actual",
+			"funcionalidad" : "muestra el directorio actual"
 		}
 	},
-	"cd\r\n" : {
-		"comando" : "cd",
-		"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles "
+	"specialchar" : {
+		"\\" : "escape para caracteres especiales individuales",
+		"*" : " comodín multiples caracteres",
+		"?" : "comodín caracter simple",
+		"[]" : " especificacion de rangos",
+		"\"\"" : "escapes para strings",
+		"''" : "escapes para strings",
+		">" : "redireccionar salida",
+		"<" : "redireccionar entrada",
+		";" : "separa comandos en la misma linea comando1; comando2; etc",
+		"&" : " ejecución en segundo plano comando1 &",
+		"&&" : "ejecución consecutiva de comandos: comando1 && comando2. El segundo se ejecuta solo si el primero acabo sin errores",
+		"|" : "Pasa la salida del primer comando a la entrada del segundo. Muy importante es el comando pipe comando1 | comando2",
+		"||" : "ejecución consecutiva de comandos: comando1 || comando2. El segundo se ejecuta solo si el primero ha fallado.",
+		"~" : "Identifica el directorio home del usuario: ls ~ (Alt gr +  4)",
+		"``" : "Ejecutar el comando incluido `comando`. Util en batch.",
+		"$" : "Identifica varialbes del sitema ej. $HOME o ejecuta comandos $(comando1)",
+		"!" : "Ejecuta el comando indicado del buffer !5 (comando cinco del buffer). Caso especial !! ultimo comando ejecutado."
 	}
 }

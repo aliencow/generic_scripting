@@ -83,7 +83,12 @@ man         manual de comando. Sintaxis man [sección] comando o directorio. Eje
               seccion 7 - miscelánea
               seccion 8 - comandos de administracion sistema
 
+nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
+              opción -ba si se pone numera también líneas en blanco
+
 pwd         muestra el directorio actual
+
+tac         igual que cat pero muestra las lineas del fichero en orden inverso
 
 uname       información del sistema. Por defecto opcion -s nombre del kernel (Linux)
               opción -s nombre del núcleo

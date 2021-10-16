@@ -42,9 +42,20 @@
 				"8" : "comandos de administracion sistema"
 			}
 		},
+		"nl\r\n" : {
+			"comando" : "nl",
+			"funcionalidad" : "muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b",
+			"opciones" : {
+				"-ba" : "si se pone numera también líneas en blanco"
+			}
+		},
 		"pwd\r\n" : {
 			"comando" : "pwd",
 			"funcionalidad" : "muestra el directorio actual"
+		},
+		"tac" : {
+			"comando" : "tac",
+			"funcionalidad" : "igual que cat pero muestra las lineas del fichero en orden inverso"
 		},
 		"uname" : {
 			"comando" : "uname",

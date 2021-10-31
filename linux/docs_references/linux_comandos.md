@@ -1,27 +1,28 @@
-Listar comandos disponibles.
-You can use compgen
+## Info sobre comandos linux
 
-compgen -c # will list all the commands you could run.
+1. Listar comandos disponibles. You can use compgen:
+
+  compgen -c # will list all the commands you could run.
 
 
-FYI:
+  FYI:
 
-compgen -a # will list all the aliases you could run.
-compgen -b # will list all the built-ins you could run.
-compgen -k # will list all the keywords you could run.
-compgen -A function # will list all the functions you could run.
-compgen -A function -abck # will list all the above in one go.
+  compgen -a # will list all the aliases you could run.
+  compgen -b # will list all the built-ins you could run.
+  compgen -k # will list all the keywords you could run.
+  compgen -A function # will list all the functions you could run.
+  compgen -A function -abck # will list all the above in one go.
 
 comandos synology
 https://forum.synology.com/enu/viewtopic.php?t=126516#p464447
 
-version instalada de linux
+2. version instalada de linux
 uname -r
 uname -a
 cat /proc/version
 
 <<<<<<< Updated upstream
-* any text
+\* any text
 -r recursive
 -v verbose
 pueden usarse acumuladas. ej -rv (recursive and verbose)
@@ -64,8 +65,16 @@ cat       muestra el contenido de fichero en el la pantalla. Puede mostrar el co
               opción -b igual que -n pero no numera líneas vacias o en blanco.
 
 cd          cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . directorio actual
+              opción /ruta/o/path Se cambia  de directorio a la ruta indicada que puede ser absoluta o relativa.
+              sin opciones. Sin argumentos se cambiará al directorio HOME del usuario actual.
+
 
 clear       o ctrl+L limpia de comandos la pantalla.
+
+cut       corta o separa por columnas el contenido de un fichero
+              opción -d indica el delimitador entre columnas. ej. si es ';' la opción -d;
+              opción -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
+              opción -c especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
 
 history     muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
               opción -c limpia el historial pero no borra .bash_history

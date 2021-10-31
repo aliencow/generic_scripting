@@ -10,24 +10,11 @@
 		},
 		"cd" : {
 			"comando" : "cd",
-			"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles.",
-			"opciones" : {
-				"/ruta/o/path" : "Se cambia  de directorio a la ruta indicada que puede ser absoluta o relativa",
-				"no args" : "sin argumentos se cambiará al directorio HOME del usuario actual."
-			}
+			"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles."
 		},
 		"clear\r\n" : {
 			"comando" : "clear",
 			"funcionalidad" : "o ctrl+L limpia de comandos la pantalla."
-		},
-		"cut\r\n" : {
-			"comando" : "cut",
-			"funcionalidad" : "corta o separa por columnas el contenido de un fichero",
-			"opciones" : {
-				"-c" : "especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.",
-				"-d" : "indica el delimitador entre columnas. ej. si es ';' la opción -d;",
-				"-g" : "selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc."
-			}
 		},
 		"history" : {
 			"comando" : "history",

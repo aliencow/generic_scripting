@@ -16,6 +16,13 @@
 			"comando" : "clear",
 			"funcionalidad" : "o ctrl+L limpia de comandos la pantalla."
 		},
+		"cp\r\n" : {
+			"comando" : "cp",
+			"funcionalidad" : "Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.",
+			"opciones\r\n" : {
+				"-r" : "copia recursivamente el contenido de las carpetas a copiar"
+			}
+		},
 		"cut\r\n" : {
 			"comando" : "cut",
 			"funcionalidad" : "corta o separa por columnas el contenido de un fichero",

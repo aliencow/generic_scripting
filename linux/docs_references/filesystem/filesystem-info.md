@@ -52,3 +52,7 @@ Visualizer gratuito de regular expressions https://regex101.com/
   * option `-ri` hace lo mismo que la anterior pero preguntando si queremos eliminar cada directorio.
 
 * `rmdir`. Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
+
+### Deleting files and folders
+* `cp`. Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.
+  * option `-t`. copia recursivamente el contenido de las carpetas a copiar

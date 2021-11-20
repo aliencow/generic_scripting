@@ -71,6 +71,10 @@ cd          cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . dir
 
 clear       o ctrl+L limpia de comandos la pantalla.
 
+cp          Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.
+              option -t copia recursivamente el contenido de las carpetas a copiar
+
+
 cut       corta o separa por columnas el contenido de un fichero
               opción -d indica el delimitador entre columnas. ej. si es ';' la opción -d;
               opción -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
@@ -109,6 +113,7 @@ rm          Elimina ficheros admite opciones y multiples files. Admite paths abs
                 opción -r borra recursivamente directorios y todo.
                 opcion -ri igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
 
+rmdir       Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
 
 tac         igual que cat pero muestra las lineas del fichero en orden inverso
 

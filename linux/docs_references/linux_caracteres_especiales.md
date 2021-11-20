@@ -5,7 +5,7 @@
 3. `?`  comodín caracter simple
 4. `[]`  especificacion de rangos
 5. `""` y `''` escapes para strings (ambos)
-6. `>`   redireccionar salida
+6. `>`   redireccionar salida. `>>` Lo mismo pero con actualizacion
 7. `<`   redireccionar entrada
 8. `;`   separa comandos en la misma linea comando1; comando2; etc
 9. `&`   ejecución en segundo plano comando1&

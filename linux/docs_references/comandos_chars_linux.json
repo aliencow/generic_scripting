@@ -16,6 +16,19 @@
 			"comando" : "clear",
 			"funcionalidad" : "o ctrl+L limpia de comandos la pantalla."
 		},
+		"cut\r\n" : {
+			"comando" : "cut",
+			"funcionalidad" : "corta o separa por columnas el contenido de un fichero",
+			"opciones\r\n" : {
+				"-d" : "indica el delimitador entre columnas. ej. si es ';' la opción -d;",
+				"-f" : "selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.",
+				"-c" : "especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20."
+			}
+		},
+		"echo" : {
+			"comando" : "echo",
+			"funcionalidad" : " Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo \"hello\" > myfile.txt`."
+		},
 		"history" : {
 			"comando" : "history",
 			"funcionalidad" : "No requiere argumentos. Muestras información del sistema. Por defecto muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)",
@@ -42,6 +55,13 @@
 				"8" : "comandos de administracion sistema"
 			}
 		},
+		"mkdir" : {
+			"comando" : "mkdir",
+			"funcionalidad" : "Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.",
+			"opciones" : {
+				"-p" : "Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos"
+			}
+		},
 		"nl\r\n" : {
 			"comando" : "nl",
 			"funcionalidad" : "muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b",
@@ -53,9 +73,25 @@
 			"comando" : "pwd",
 			"funcionalidad" : "muestra el directorio actual"
 		},
+		"rm\r\n\r\n" : {
+			"comando" : "rm",
+			"funcionalidad" : "Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos. Admite wildcards o patterns para filtrar ficheros. ",
+			"opciones" : {
+				"-r" : "borra recursivamente directorios y todo.",
+				"-ri" : "borrado interactivo pero preguntando en interactivo si quermos eliminar cada carpeta"
+			}
+		},
+		"rmdir\r\n\r\n" : {
+			"comando" : "rmdir",
+			"funcionalidad" : "Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacias."
+		},
 		"tac" : {
 			"comando" : "tac",
 			"funcionalidad" : "igual que cat pero muestra las lineas del fichero en orden inverso"
+		},
+		"touch" : {
+			"comando" : "touch",
+			"funcionalidad" : "Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto."
 		},
 		"uname" : {
 			"comando" : "uname",

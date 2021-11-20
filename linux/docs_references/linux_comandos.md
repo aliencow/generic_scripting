@@ -76,6 +76,9 @@ cut       corta o separa por columnas el contenido de un fichero
               opción -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
               opción -c especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
 
+echo        Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
+
+
 history     muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
               opción -c limpia el historial pero no borra .bash_history
               opción -w comienza la escritura del historial en .bash_history
@@ -92,12 +95,24 @@ man         manual de comando. Sintaxis man [sección] comando o directorio. Eje
               seccion 7 - miscelánea
               seccion 8 - comandos de administracion sistema
 
+mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
+              option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
+
+
 nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
               opción -ba si se pone numera también líneas en blanco
 
 pwd         muestra el directorio actual
 
+rm          Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos.
+            Admite wildcards o patterns para filtrar ficheros.
+                opción -r borra recursivamente directorios y todo.
+                opcion -ri igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
+
+
 tac         igual que cat pero muestra las lineas del fichero en orden inverso
+
+touch       Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto.
 
 uname       información del sistema. Por defecto opcion -s nombre del kernel (Linux)
               opción -s nombre del núcleo

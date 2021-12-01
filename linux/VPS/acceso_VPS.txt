@@ -37,12 +37,59 @@ Datos de entrada para VestaCP:
 
 
 ### ACCESO CON SSH
-Es necesario descargar Putty en windows en mac no
+TUTORIALES
+
+Using SSH on windows
+https://www.linode.com/docs/networking/ssh/using-ssh-on-windows/
+SSH keys in linode
+https://linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
+
+
+Es necesario descargar Putty en windows en mac o linux no hace falta
 En windows configurar crear la ssh key con Putty y conectar con la misma. Ver tutoriales abajo
 
-En Mac directamente desde el terminal
+En Mac o linux directamente desde el terminal
 
-SSH Access:  ssh root@139.177.179.186
+crear el fichero de claves ssh:
+ ssh-keygen -b 4096 -f <filename>
+ - ejecutar el comando anterior desde la carpeta ~/.ssh
+ - se crearan dos ficheros uno llamado <filename> (clave privada) y otro llamado <filename>.pub con la pública.
+ - Ahora debemos copiar la clave pública al servidor (la clave privada NUNCA sale de nuestro equipo).
+        - comando ssh-copy-id -i <filename> root@139.177.179.186 (nos pide contraseña)
+        - luego entrar con ssh a ver si funciona
+
+
+claves privadas en Antaruxa windows:
+
+wsl ubuntu:
+path formato windows c:\Users\juan.nouche\.ssh\
+/c/Users/juan.nouche/.ssh/milinode_antaruxa_linode    para updatelinode
+conectar:
+ssh -i /c/Users/juan.nouche/.ssh/milinode_antaruxa_linode updatelinode@139.177.179.186
+
+o usando este config guardado en .ssh/ EN LA CARPETA $HOME
+Host mi_updatelinode
+    HostName 139.177.179.186
+    User updatelinode
+    IdentityFile /c/Users/juan.nouche/.ssh/milinode_antaruxa_linode
+
+y tecleando ssh mi_updatelinode
+
+putty:
+para updatelinode
+path formato windows c:\Users\juan.nouche\Documents\juan\personal\ssh_keys\
+/c/Users/juan.nouche/Documents/juan/personal/ssh_keys/linodekey-07.10.2021.txt
+/c/Users/juan.nouche/Documents/juan/personal/ssh_keys/linodekey-07.10.2021.ppk
+"rsa-key-20211007"
+cargando milinode en putty y conectando.. poniendo usuario updatelinode
+
+para todos passfrase lulaperro
+
+
+claves privadas en casa Windows:
+
+
+Claves privadas en casa par MAC (revisar very old):
 
 SSH Access desde el Mac para root: (por que la clave ssh no tiene el nombre standard)
 ssh -i ~/.ssh/id_rsamac4096 root@139.162.170.222
@@ -50,7 +97,7 @@ LISH ACCESS
 ssh -t nouche@lish-frankfurt.linode.com ubuntu-eu-central
 
 para updatelinode:
-ssh -i ~/.ssh/id_rsamac4096 updatelinode@139.162.170.222
+ssh i ~/.ssh/id_rsamac4096 updatelinode@139.162.170.222
 
 
 en ambos casos la passphrase para root es:

@@ -68,6 +68,8 @@ conectar:
 ssh -i /c/Users/juan.nouche/.ssh/milinode_antaruxa_linode updatelinode@139.177.179.186
 
 o usando este config guardado en .ssh/ EN LA CARPETA $HOME
+ServerAliveInterval 120
+ServerAliveCountMax 3
 Host mi_updatelinode
     HostName 139.177.179.186
     User updatelinode

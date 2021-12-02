@@ -101,7 +101,8 @@ man         manual de comando. Sintaxis man [sección] comando o directorio. Eje
 
 mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
               option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
-
+              
+mv            Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no   afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
 
 nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
               opción -ba si se pone numera también líneas en blanco

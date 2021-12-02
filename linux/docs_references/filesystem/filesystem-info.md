@@ -53,6 +53,11 @@ Visualizer gratuito de regular expressions https://regex101.com/
 
 * `rmdir`. Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
 
-### Deleting files and folders
+### Copy and paste files and and folders
+
 * `cp`. Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.
   * option `-t`. copia recursivamente el contenido de las carpetas a copiar
+
+### Moving and renaming files and and folders
+
+* `mv`. Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.

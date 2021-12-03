@@ -1,5 +1,5 @@
-### Control del sistema (todo requiere privilegios root)
-## systemctl - Control de procesos
+## Control del sistema (todo requiere privilegios root)
+### systemctl - Control de procesos
 
 * `systemctl`. Sirve para iniciar, terminar, recargar (reload), reiniciar (restart), terminar, listar etc. los procesos que ejecuta el sistema.
   * option `status`+` <nombreproceso>` muestra el stado del proceso.
@@ -9,23 +9,23 @@
   * option `reload`+` <nombreproceso>` recarga el proceso (mientras esta funcionando ) no funciona en algunos casos no todos los procesos lo incorporan
   * option `restart`+` <nombreproceso>` reinicia el proceso (ejetuca `stop` + `start`)
 
-## reboot
+### reboot
 
 * `reboot`. Este comando reinicia el sistema. Ojo al hacerlo perderemos la conexión y tendremos que esperar a que reinicie para volver a conectar.
 
-## crontab - Programar tareas
+### crontab - Programar tareas
 
 * `crontab`. Este comando permite programar tareas periódicamente guardando en un fichero de configuración.
   * option `-e`. Crea un fichero de texto que se puede abrir en nano donde introducimos los comandos y el pattern de periodicidad. Ver en https://crontab.guru la sintaxis de dicho pattern. El fichero se guarda por defecto en un lugar específico y debe accederse con usuario root.
 
-## Crear y remover cuentas de usuario
+### Crear y remover cuentas de usuario
 
 * `adduser`+` <username>`. Sirve para añadir un usuario nuevo, crea un grupo, el usuario (con el mismo nombre <username>) y una carpeta `/home/<username>`. Va a pedir una contraseña y varios datos del usuario se rellenan y punto.
 * `deluser`+` <username>`. Sirve para remover una cuenta de usuario. Remueve usuario y grupo.
   * option `--remove-home` Elimina además del usuario sus carpetas y spool de correo.
 * `adduser <username> sudo`. Agrega un usario ya creado al grupo sudo, lo que le proporcionará privilegios de root.
 
-## Claves ssh (las instrucciones van en formato linux y sirve para windows wsl, mac o Ubuntu)
+### Claves ssh (las instrucciones van en formato linux y sirve para windows wsl, mac o Ubuntu)
 
 Es un sistema de claves seguras que permite acceder a equipos remotos de modo muy fácil. El sistema consiste en dos claves:
 
@@ -46,3 +46,5 @@ Es decir:
 2. En el equipo remoto copiamos la public key en una sola linea del fichero `~/.ssh/authorized_keys` haciendo copy paste y editando en nano por ejemplo.
 3. Una vez completado el proceso accedemos con el comando ssh al equipo remoto.
 4. Repetiremos el proceso por cada equipo local que utilicemos para conectarnos.
+
+### Permisos de ficheros

@@ -113,3 +113,15 @@ Una vez guardado este fichero y OJO IMPORTANTE: reiniciado el equipo o el termin
 los aliases se pueden integrar en el pipping y con el resultado hacer un nuevo alias, por lo que se puede prever su potencia. por ejemplo:
 
 	alias1 | tee mifichero | alias2 | alias3 | xargs echo
+
+
+### Links en linux
+
+Ha dos tipos de enlaces en linux:
+1. Simbólicos. Funcionan como un acceso directo en windows. Sirven para ficheros y directorios en cualquier partición. Si se mueve el fichero o archivo (o se cambia de nombre) el enlace ya no funciona. Si se recupera el nombre original vuelve a funcionar. A nivel permisos etc. mantiene los permisos del archivo o carpeta referenciado. A todos los demas efectos funciona como un fichero/archivo normal. con pwd -P podemos ver la
+carpeta de origen si el enlace es a un directorio, o tambien con ls -l o ll podemos ver a donde apuntan tanto carpetas como ficheros.
+
+2. Duros. Hacen referencia unicamente a ficheros que estén en la misma partición de disco. Hacen referencia fisicamente al fichero. con ls -li podemos ver que ambos apuntan a la misma dirección física.
+
+* comando `ln`. Crear enlaces simbólicos o duros. Si no se especifican opciones crea un enlace duro.
+	* option `-s`. Junto con la ruta del fichero o directorio para crear enlaces simbólicos. Ejemplo: ln -s <fichero o carpeta ref> <fichero simbólico.

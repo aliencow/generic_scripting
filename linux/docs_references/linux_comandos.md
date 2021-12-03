@@ -89,6 +89,12 @@ history     muestra historial de comandos (se almacena en .bash_history oculto e
 
 hostname    muestra el servidor actual
 
+ls          Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
+              opción `-l` Muestra una lista ordenada.
+              opción `-a` Muestra ficheros y carpetas ocultos (en linux empiezan por .)
+              opción `-i` Muestra la ubicación física del archivo en la primera columna
+              opcion `-R` Recursivo
+
 man         manual de comando. Sintaxis man [sección] comando o directorio. Ejemplo: man 5 passwd
               seccion 1 - comandos generales
               seccion 2 - llamadas al sistema
@@ -101,13 +107,14 @@ man         manual de comando. Sintaxis man [sección] comando o directorio. Eje
 
 mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
               option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
-              
+
 mv            Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no   afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
 
 nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
               opción -ba si se pone numera también líneas en blanco
 
 pwd         muestra el directorio actual
+              opción -P muestra el directorio de origen en el caso de un simbolic link.
 
 rm          Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos.
             Admite wildcards o patterns para filtrar ficheros.

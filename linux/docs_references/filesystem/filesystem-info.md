@@ -3,17 +3,21 @@
 https://www.cyberciti.biz/tips/understanding-unixlinux-file-system-part-i.html
 https://askubuntu.com/questions/94734/what-is-the-templates-folder-in-the-home-directory-for
 
-#### Filesystem commands:
+### Filesystem commands:
 
 * `pwd`. Imprime en el terminal el directorio actual
 * `~`. = `$HOME` Indica la carpeta home del usuario actual
 * `ls`. Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
+  * option `-l`. Muestra una lista ordenada.
+  * option `-a`. Muestra ficheros y carpetas ocultos (en linux empiezan por .)
+  * option `-i`. Muestra la ubicación física del archivo en la primera columna
+  * option `-R`. Recursivo
 * `cd`. Cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . directorio actual. Sin argumentos nos lleva al direcTorio HOME.
 * Tecla `tab`. Sirve para autocompletar el nombre de las carpetas
 * `file`. Comando que muestra el tipo de archivo ej. `file prueba.text`
 
 
-#### File extensions:
+### File extensions:
 
 Las extensiones en linux no determinan el tipo de archivo.
 Hay que textear los ficheros con el comando `file` para ver su contenido en terminal.
@@ -21,7 +25,7 @@ Hay que textear los ficheros con el comando `file` para ver su contenido en term
 A linux no le importan las extensiones, se pueden usar las que se quieran.
 Sin embargo a algún programa instalado si le pueden importar: ejemplo pdf reader.
 
-### Wildcards o comodines (regular expressions)
+#### Wildcards o comodines (regular expressions)
 
 Las regular expressions trabajan contra el código ascii  y ordenan por ese orden
 https://www.asciitable.com/
@@ -87,3 +91,4 @@ If you find you are having issues, try installing the locate  and mlocate packag
   * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
   * option `-l` o `--limit`. Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).
   * option `-S` obtiene la ubicación de la base de datos que usa mlocate.
+  * option `-e` antes de mostrar resultados comprueba que los ficheros existan por si la base no está actualizada.

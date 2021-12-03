@@ -45,3 +45,6 @@ wslconfig /L (ver los shell instalados)
 wslconfig /setdefault Ubuntu-20.04 (o la version de linux que sea)
 
 Ocurre porque docker crea sus propias versiones de linux
+
+Run WSL Linux Distro as Specific User in Windows 10
+https://winaero.com/run-wsl-linux-distro-as-specific-user-in-windows-10/

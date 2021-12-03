@@ -48,6 +48,16 @@
 			"comando" : "hostname",
 			"funcionalidad" : "muestra el servidor actual"
 		},
+		"ls\r\n" : {
+			"comando" : "ls",
+			"funcionalidad" : "Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.",
+			"opciones" : {
+				"-l" : "Muestra una lista ordenada",
+				"-a" : "Muestra ficheros y carpetas ocultos (en linux empiezan por .)",
+				"-i" : "Muestra la ubicación física del archivo en la primera columna",
+				"-R" : "Muestra resultados recursivos dendro de la carpeta que se solicite\r\n"
+			}
+		},
 		"man" : {
 			"comando" : "man",
 			"funcionalidad" : " manual de comando. Sintaxis man [sección] comando o directorio. Ejemplo: man 5 passwd",
@@ -82,7 +92,10 @@
 		},
 		"pwd\r\n" : {
 			"comando" : "pwd",
-			"funcionalidad" : "muestra el directorio actual"
+			"funcionalidad" : "muestra el directorio actual",
+			"opciones\r\n" : {
+				"-P" : " muestra el directorio de origen en el caso de un simbolic link."
+			}
 		},
 		"rm\r\n\r\n" : {
 			"comando" : "rm",

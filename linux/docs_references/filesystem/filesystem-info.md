@@ -61,3 +61,29 @@ Visualizer gratuito de regular expressions https://regex101.com/
 ### Moving and renaming files and and folders
 
 * `mv`. Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
+
+### Info about nano text editor
+
+El fichero de configuración de nano esta en `/etc/nanorc`
+
+Nota: la combinación de teclas para reemplazar `^\` (`Ctrl+\`) no se encuentra en teclado español. En su defecto usaremos el atajo de teclado `Alt+r` que hace la misma función.
+Lo mismo (parecido) pasa con buscar línea columna `^_` (`Ctrl+_`)para la que hay que seleccionar `Ctrl+Shift+_` o bien simplemente `Alt+g`
+
+los simbolos de teclas son:
+ `^` Se refiere a `Ctrl`
+ `M-` Se refiere a `Alt`, `Esc` o `Cmd` segun el sstema operativo y teclado en nuestro caso es `Alt`.
+
+### The locate comand
+
+NOTA RESPECTO A LOCATE:
+Depending on what distribution you are running the locate command may not come pre-installed. Ubuntu 20.04 appears to have this issue, for example, but Ubuntu 18.04 does not.
+
+If you find you are having issues, try installing the locate  and mlocate packages from your repositories.
+
+`sudo apt install locate`
+`sudo apt install mlocate`
+
+* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`
+  * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
+  * option `-l` o `--limit`. Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).
+  * option `-S` obtiene la ubicación de la base de datos que usa mlocate.

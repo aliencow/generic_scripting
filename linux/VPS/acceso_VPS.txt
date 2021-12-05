@@ -63,19 +63,25 @@ claves privadas en Antaruxa windows:
 
 wsl ubuntu:
 path formato windows c:\Users\juan.nouche\.ssh\
-/c/Users/juan.nouche/.ssh/milinode_antaruxa_linode    para updatelinode
+/home/juannouche/.ssh/milinode_antaruxa_linode    para updatelinode antaruxa
+/home/juannouche/.ssh/milinode_casa_linode        para updatelinode casa
 conectar:
-ssh -i /c/Users/juan.nouche/.ssh/milinode_antaruxa_linode updatelinode@139.177.179.186
+ssh -i /home/juannouche/.ssh/milinode_antaruxa_linode updatelinode@139.177.179.186    desde antaruxa
+ssh -i /home/juannouche/.ssh/milinode_antaruxa_linode updatelinode@139.177.179.186    desde casa
 
-o usando este config guardado en .ssh/ EN LA CARPETA $HOME
+para conectar mas rápido desde wsl podemos crear el fichero
+`/home/juannouche/.sll/config` con este contenido:
+
 ServerAliveInterval 120
 ServerAliveCountMax 3
 Host mi_updatelinode
     HostName 139.177.179.186
     User updatelinode
-    IdentityFile /c/Users/juan.nouche/.ssh/milinode_antaruxa_linode
+    IdentityFile /home/juannouche/.ssh/milinode_antaruxa_linode  desde antaruxa
+    IdentityFile /home/juannouche/.ssh/milinode_casa_linode  desde casa
 
-y tecleando ssh mi_updatelinode
+Para acceder con el fichero config creado seria teclear:
+`ssh mi_updatelinode`
 
 putty:
 para updatelinode
@@ -86,9 +92,6 @@ path formato windows c:\Users\juan.nouche\Documents\juan\personal\ssh_keys\
 cargando milinode en putty y conectando.. poniendo usuario updatelinode
 
 para todos passfrase lulaperro
-
-
-claves privadas en casa Windows:
 
 
 Claves privadas en casa par MAC (revisar very old):

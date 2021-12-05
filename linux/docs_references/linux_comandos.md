@@ -60,42 +60,53 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
 
 
 
-cat       muestra el contenido de fichero en el la pantalla. Puede mostrar el contenido de varios ficheros
-              opción -n muestra el número de línea
-              opción -b igual que -n pero no numera líneas vacias o en blanco.
+* `cat`.Muestra el contenido de fichero en el la pantalla. Puede mostrar el contenido de varios ficheros
+  * option `-n` muestra el número de línea
+  * option `-b` igual que -n pero no numera líneas vacias o en blanco.
 
-cd          cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . directorio actual
-              opción /ruta/o/path Se cambia  de directorio a la ruta indicada que puede ser absoluta o relativa.
-              sin opciones. Sin argumentos se cambiará al directorio HOME del usuario actual.
+* `cd`. Cambiar de directorio \ raiz ..\ baja un nivel ..\..\ baja dos . directorio actual
+  * option /ruta/o/path Se cambia  de directorio a la ruta indicada que puede ser absoluta o relativa.
+  * Sin opciones. Sin argumentos se cambiará al directorio HOME del usuario actual.
 
+* `chmod`. Cambia los permisos de ficheros o directorios. La sintaxis es `chmod <permisos> <fichero/carpeta>` donde permiso puede ser octal (en número) o modo (letra). Ejemplo: `chmod 750 <filename>` o `chmod u=rwx,g=rx,g= <filename>`
+  * option `-R`. Aplica los cambios de modo recursivo
+  * option `-v`. Verbose
+  * option `-c`. Muestra cambios realizados
 
-clear       o ctrl+L limpia de comandos la pantalla.
+* `chgroup`. Change group. Igual que `chown` pero solo para grupos.
 
-cp          Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.
-              option -t copia recursivamente el contenido de las carpetas a copiar
+* `chown`. Change owner. Sirve para modificar los permisos de un archivo carpeta o archivo. La sintaxis es `chown <propietario>:<grupo> <ficheros/carpetas>`. Ejemplo `chown juan:juan micarpeta`. Opciones de usuario grupo pueden ser: <usuario>, <ususario>:<grupo>, <usuario>.<grupo>, .<grupo> o :<grupo>. Solo lo puede ejecutar un usuario root.
+    * option `-R`. Recursivo
+    * option `-v`. Verbose
+    * option `-c`. Muestra los cambios realizados
+
+* `clear`.  o ctrl+L limpia de comandos la pantalla.
+
+* `cp`. Copia de fuente a destino archivos se pueden especificar varios origenes y un destino.
+  * option `-t` copia recursivamente el contenido de las carpetas a copiar.
 
 
 cut       corta o separa por columnas el contenido de un fichero
-              opción -d indica el delimitador entre columnas. ej. si es ';' la opción -d;
-              opción -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
-              opción -c especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
+              option -d indica el delimitador entre columnas. ej. si es ';' la option -d;
+              option -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
+              option -c especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
 
 echo        Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
 
 
 history     muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
-              opción -c limpia el historial pero no borra .bash_history
-              opción -w comienza la escritura del historial en .bash_history
+              option -c limpia el historial pero no borra .bash_history
+              option -w comienza la escritura del historial en .bash_history
 
 hostname    muestra el servidor actual
 
 ls          Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
-              opción `-l` Muestra una lista ordenada.
-              opción `-a` Muestra ficheros y carpetas ocultos (en linux empiezan por .)
-              opción `-i` Muestra la ubicación física del archivo en la primera columna
+              option `-l` Muestra una lista ordenada.
+              option `-a` Muestra ficheros y carpetas ocultos (en linux empiezan por .)
+              option `-i` Muestra la ubication física del archivo en la primera columna
               opcion `-R` Recursivo
 
-man         manual de comando. Sintaxis man [sección] comando o directorio. Ejemplo: man 5 passwd
+man         manual de comando. Sintaxis man [section] comando o directorio. Ejemplo: man 5 passwd
               seccion 1 - comandos generales
               seccion 2 - llamadas al sistema
               seccion 3 - biblioteca (funciones)
@@ -111,14 +122,14 @@ mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede 
 mv            Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no   afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
 
 nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
-              opción -ba si se pone numera también líneas en blanco
+              option -ba si se pone numera también líneas en blanco
 
 pwd         muestra el directorio actual
-              opción -P muestra el directorio de origen en el caso de un simbolic link.
+              option -P muestra el directorio de origen en el caso de un simbolic link.
 
 rm          Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos.
             Admite wildcards o patterns para filtrar ficheros.
-                opción -r borra recursivamente directorios y todo.
+                option -r borra recursivamente directorios y todo.
                 opcion -ri igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
 
 rmdir       Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
@@ -127,11 +138,13 @@ tac         igual que cat pero muestra las lineas del fichero en orden inverso
 
 touch       Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto.
 
-uname       información del sistema. Por defecto opcion -s nombre del kernel (Linux)
-              opción -s nombre del núcleo
-              opción -r version del núcleo
-              opción -v versión del sistema operativo
-              opción -m muesra bits del nucleo
-              opcion -a muestra toda la información
+* `umask`. Muestra o modifica la máscara utilizada cuando creamos ficheros o directorios. Cada usuario tiene una máscara para creación de ficheros. Solo `umask` muestra la máscara actual y con `umask <mascara>` cambia a la especificada. La máscara son 4 dígitos tomamos los ultimos 3 y de ellos el primero esta asociado a usuario el segundo a grupo y el tercero a otros. Esos tres dígitos se restan de 666 (máximos permisos) para ficheros y de 777 (maximos permisos) para carpetas y nos darán los permisos. Ej. si la umask es 022 los permisos para ficheros son 666-022 = 644 y para carpetas 777-022 = 755. Se aplica a los ficheros creados después de ejecutar umask.
 
-whoami      muestra el usuario actual
+* `uname`. Information del sistema. Por defecto opcion -s nombre del kernel (Linux)
+  * option `-s` nombre del núcleo
+  * option `-r` version del núcleo
+  * option `-v `versión del sistema operativo
+  * option `-m` muesra bits del nucleo
+  * option `-a` muestra toda la information
+
+* `whoami`. Muestra el usuario actual

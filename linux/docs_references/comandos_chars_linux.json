@@ -12,6 +12,33 @@
 			"comando" : "cd",
 			"funcionalidad" : "Sirve para cambiar de directorio / raiz ../ direcorio anterior  ../../ baja dos niveles."
 		},
+		"chgroup\r\n" : {
+			"comando" : "chgroup",
+			"funcionalidad" : "Change group, igual que chown pero solo con grupos.",
+			"opciones\r\n" : {
+				"-R" : "Aplica los cambios de modo recursivo",
+				"-v" : "verbose",
+				"-c" : "Muestra los cambios realizados."
+			}
+		},
+		"chmod\r\n" : {
+			"comando" : "chmod",
+			"funcionalidad" : "Cambia los permisos de ficheros o directorios. La sintaxis es `chmod <permisos> <fichero/carpeta>` donde permiso puede ser octal (en número) o modo (letra). Ejemplo: `chmod 750 <filename>` o `chmod u=rwx,g=rx,g= <filename>`",
+			"opciones\r\n" : {
+				"-R" : "Aplica los cambios de modo recursivo",
+				"-v" : "verbose",
+				"-c" : "Muestra los cambios realizados."
+			}
+		},
+		"chown\r\n" : {
+			"comando" : "chown",
+			"funcionalidad" : "Change owner. Sirve para modificar los permisos de un archivo carpeta o archivo. La sintaxis es `chown <propietario>:<grupo> <ficheros/carpetas>`. Ejemplo `chown juan:juan micarpeta`. Opciones de usuario grupo pueden ser: <usuario>, <ususario>:<grupo>, <usuario>.<grupo>, .<grupo> o :<grupo>. Solo lo puede ejecutar un usuario root.",
+			"opciones\r\n" : {
+				"-R" : "Aplica los cambios de modo recursivo",
+				"-v" : "verbose",
+				"-c" : "Muestra los cambios realizados."
+			}
+		},
 		"clear\r\n" : {
 			"comando" : "clear",
 			"funcionalidad" : "o ctrl+L limpia de comandos la pantalla."

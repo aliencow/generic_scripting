@@ -24,6 +24,7 @@
 * `deluser`+` <username>`. Sirve para remover una cuenta de usuario. Remueve usuario y grupo.
   * option `--remove-home` Elimina además del usuario sus carpetas y spool de correo.
 * `adduser <username> sudo`. Agrega un usario ya creado al grupo sudo, lo que le proporcionará privilegios de root.
+* `sudo su`. Va a permitir desde el grupo sudo acceder como usuario su.
 
 ### Claves ssh (las instrucciones van en formato linux y sirve para windows wsl, mac o Ubuntu)
 
@@ -48,3 +49,53 @@ Es decir:
 4. Repetiremos el proceso por cada equipo local que utilicemos para conectarnos.
 
 ### Permisos de ficheros
+
+Si listamos con ll o ls -la nos aparecerán en el listado a la derecha de todo los permisos de los archivos tal que así.
+
+    ...
+    drwxr-xr-x 107 root root  4096 Dec  2 18:58 etc/
+    drwxr-xr-x   3 root root  4096 Dec  2 18:58 home/
+    lrwxrwxrwx   1 root root     7 Oct 22  2020 lib -> usr/lib/
+    lrwxrwxrwx   1 root root     9 Oct 22  2020 lib32 -> usr/lib32/
+    ...
+
+Vemos que hay grupos de 10 caracteres con este formato o parecido.. `drwxrwxrwx `.La primera letra indica si es una carpeta (`d`) o un fichero (`-`) - Nota los links (`l`) y el resto de las letras van en grupos de 3 y hay 3 grupos. Estos grupos serían (empezando por la izquierda)
+
+1. Permisos del propietario del archivo o carpeta.
+2. Permisos para el grupo al que pertenezca el propietario del archivo o carpeta
+3. Permisos para el resto de usuario.
+
+el comando ll o ls -la nos muestra en la tercera y cuarta columna el propietario y el grupo al que pertenece el fichero/carpeta respectivamente.
+
+Dentro de los permisos en cada caso tenemos tres tipos
+* `r`- lectura. Con equivalente numérico `4`.
+* `w`- escritura. Con equivalente numérico `2`.
+* 'x'- ejecución. Con equivalente numérico `1`.
+* '-'- nulo. Sin pemiso. Con equivalente numérico `0`
+
+Veamos como funciona con un ejemplo:
+
+Queremos que en determinado fichero
+El usuario tenga todos los permisos       en letra `rwx` en número `4 + 2 + 1 = 7`
+El grupo solo lectura y ejecución         en letra `r-x` en número `4 + 0 + 1 = 5`
+El resto ningun permiso                   en letra `---` en número `0 + 0 + 0 = 0`
+Es decir tendría en letra `rwxr-x---` y en numero `750`
+
+Para asignar en comandos se usan tres letras `u` para usuario `g` para grupo y `o` para otros:
+ejemplos
+
+    mkdir -m u=rwx,g=rx,o= <dirname>
+    mkdir -m 750 <dirname>
+
+Creaarían ambos un folder con los permisos especificados.
+
+* `chmod`. Cambia los permisos de ficheros o directorios. La sintaxis es `chmod <permisos> <fichero/carpeta>` donde permiso puede ser octal (en número) o modo (letra). Ejemplo: `chmod 750 <filename>` o `chmod u=rwx,g=rx,g= <filename>`
+  * option `-R`. Aplica los cambios de modo recursivo
+  * option `-v`. Verbose
+  * option `-c`. Muestra cambios realizados
+
+* `chown`. Change owner. Sirve para modificar los permisos de un archivo carpeta o archivo. La sintaxis es `chown <propietario>:<grupo> <ficheros/carpetas>`. Ejemplo `chown juan:juan micarpeta`. Opciones de usuario grupo pueden ser: <usuario>, <ususario>:<grupo>, <usuario>.<grupo>, .<grupo> o :<grupo>. Solo lo puede ejecutar un usuario root.
+  * option `-R`. Recursivo
+  * option `-v`. Verbose
+  * option `-c`. Muestra los cambios realizados
+* `umask`. Muestra o modifica la máscara utilizada cuando creamos ficheros o directorios. Cada usuario tiene una máscara para creación de ficheros. Solo `umask` muestra la máscara actual y con `umask <mascara>` cambia a la especificada. La máscara son 4 dígitos tomamos los ultimos 3 y de ellos el primero esta asociado a usuario el segundo a grupo y el tercero a otros. Esos tres dígitos se restan de 666 (máximos permisos) para ficheros y de 777 (maximos permisos) para carpetas y nos darán los permisos. Ej. si la umask es 022 los permisos para ficheros son 666-022 = 644 y para carpetas 777-022 = 755. Se aplica a los ficheros creados después de ejecutar umask.

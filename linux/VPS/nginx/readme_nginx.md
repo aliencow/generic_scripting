@@ -3,11 +3,12 @@
 En este fichero se anota todo lo necesario para configurar el servidor web
 en linode (nginx)
 
-#### Como instalar y configurar nginx en VPS linode
+### Como instalar y configurar nginx en VPS linode
 
 Dentro de este tutorial hay una explicación sobre como instalar nginx:
 
 https://www.linode.com/docs/guides/set-up-web-server-host-website/
+
 
 Este es mi fichero de configuración nginx para el dominio nouche.me
 
@@ -28,8 +29,11 @@ Este es mi fichero de configuración nginx para el dominio nouche.me
 
 Una vez instalado nginx ya queda listo para funcionar. Instala un firewall automáticamente.
 
+comprobar status nginx: `sudo nginx -t`
+recargar el servicio `sudo systemctl reload nginx.service`
 
-#### Robots.txt para evitar que nos accedan los crawlers.
+
+### Robots.txt para evitar que nos accedan los crawlers.
 
 Configurar robots.txt para que no accedan crawlers
 https://moz.com/learn/seo/robotstxt

@@ -75,7 +75,24 @@
 			"comando" : "hostname",
 			"funcionalidad" : "muestra el servidor actual"
 		},
-		"ls\r\n" : {
+		"locate\r\n" : {
+			"comando" : "locate",
+			"funcionalidad" : "Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ojo en algunas versiones de linux no viene instalado. Para instalarlo estas dos líneas con sudo `sudo apt install locate` y `sudo apt install mlocate`. Ver `updatedb` ",
+			"opciones" : {
+				"-i" : "Localiza sin tener en cuenta mayusculas o minusculas.",
+				"-l" : "(--limit) Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).",
+				"-S" : "obtiene la ubicación de la base de datos que usa mlocate.",
+				"-e" : "antes de mostrar resultados comprueba que los ficheros existan por si la base no está actualizada.\r\n"
+			}
+		},
+		"ln" : {
+			"comando" : "ln",
+			"funcionalidad" : "Crear enlaces simbólicos o duros. Si no se especifican opciones crea un enlace duro.",
+			"opciones" : {
+				"-s" : "Junto con la ruta del fichero o directorio para crear enlaces simbólicos. Ejemplo: ln -s <fichero o carpeta ref> <fichero simbólico."
+			}
+		},
+		"ls" : {
 			"comando" : "ls",
 			"funcionalidad" : "Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.",
 			"opciones" : {
@@ -136,13 +153,30 @@
 			"comando" : "rmdir",
 			"funcionalidad" : "Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacias."
 		},
+		"stat\r\n" : {
+			"comando" : "stat",
+			"funcionalidad" : "Nos muestra información sobre un fichero concreto. Fecha de creación de acceso propietario etc."
+		},
 		"tac" : {
 			"comando" : "tac",
 			"funcionalidad" : "igual que cat pero muestra las lineas del fichero en orden inverso"
 		},
 		"touch" : {
 			"comando" : "touch",
-			"funcionalidad" : "Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto."
+			"funcionalidad" : "Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto. Si el fichero ya existe cambia la fecha de creación del fichero. Usando opciones se pueden modificar las fechas de fichero.",
+			"opciones" : {
+				"-a" : "Cambia la fecha de acceso.",
+				"-m" : "Cambia la fecha de modificación.",
+				"`-d` + ` <fecha>`" : "especifica una fecha concreta."
+			}
+		},
+		"updatedb" : {
+			"comando" : "updatedb",
+			"funcionalidad" : "Funciona conjuntamente con `locate` sirve para actualizar la base de datos de búsqueda de ficheros. Solo lo puede ejecutar su."
+		},
+		"umask" : {
+			"comando" : "umask",
+			"funcionalidad" : "Muestra o modifica la máscara utilizada cuando creamos ficheros o directorios. Cada usuario tiene una máscara para creación de ficheros. Solo `umask` muestra la máscara actual y con `umask <mascara>` cambia a la especificada. La máscara son 4 dígitos tomamos los ultimos 3 y de ellos el primero esta asociado a usuario el segundo a grupo y el tercero a otros. Esos tres dígitos se restan de 666 (máximos permisos) para ficheros y de 777 (maximos permisos) para carpetas y nos darán los permisos. Ej. si la umask es 022 los permisos para ficheros son 666-022 = 644 y para carpetas 777-022 = 755. Se aplica a los ficheros creados después de ejecutar umask."
 		},
 		"uname" : {
 			"comando" : "uname",

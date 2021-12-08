@@ -86,35 +86,45 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-t` copia recursivamente el contenido de las carpetas a copiar.
 
 
-cut       corta o separa por columnas el contenido de un fichero
-              option -d indica el delimitador entre columnas. ej. si es ';' la option -d;
-              option -f selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
-              option -c especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
+* `cut`. Corta o separa por columnas el contenido de un fichero.
+  * option -d indica el delimitador entre columnas. ej. si es ';' la option -d;
+  * option `-f`. selecciona el número de columnas a visualizar ej. -f3 tercera columna -f3,4 tercera y cuarta, -f2-5 de la dos a la cinco, etc.
+  * option `-c`. especifica los caracteres a cortar ej. -c 2 coge dos caracteres -c 9-10 coge los caracteres del 9 al 20.
 
-echo        Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
+* `echo`. Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
 
 
-history     muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
-              option -c limpia el historial pero no borra .bash_history
-              option -w comienza la escritura del historial en .bash_history
+* `history`. Muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
+  * option `-c` limpia el historial pero no borra .bash_history
+  * option `-w` comienza la escritura del historial en .bash_history
 
-hostname    muestra el servidor actual
+* `hostname`. Muestra el servidor actual
 
-ls          Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
-              option `-l` Muestra una lista ordenada.
-              option `-a` Muestra ficheros y carpetas ocultos (en linux empiezan por .)
-              option `-i` Muestra la ubication física del archivo en la primera columna
-              opcion `-R` Recursivo
+* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ojo en algunas versiones de linux no viene instalado. Para instalarlo estas dos líneas con sudo `sudo apt install locate` y `sudo apt install mlocate`. Ver `upadatedb`
+  * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
+  * option `-l` o `--limit`. Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).
+  * option `-S` obtiene la ubicación de la base de datos que usa mlocate.
+  * option `-e` antes de mostrar resultados comprueba que los ficheros existan por si la base no está actualizada.
 
-man         manual de comando. Sintaxis man [section] comando o directorio. Ejemplo: man 5 passwd
-              seccion 1 - comandos generales
-              seccion 2 - llamadas al sistema
-              seccion 3 - biblioteca (funciones)
-              seccion 4 - Fiheros especiales
-              seccion 5 - Formato de ficheros
-              seccion 6 - Juegos y salvapantallas
-              seccion 7 - miscelánea
-              seccion 8 - comandos de administracion sistema
+* comando `ln`. Crear enlaces simbólicos o duros. Si no se especifican opciones crea un enlace duro.
+	* option `-s`. Junto con la ruta del fichero o directorio para crear enlaces simbólicos. Ejemplo: ln -s <fichero o carpeta ref> <fichero simbólico.
+
+
+* `ls`. Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
+  * option `-l`. Muestra una lista ordenada.
+  * option `-a`. Muestra ficheros y carpetas ocultos (en linux empiezan por .)
+  * option `-i`. Muestra la ubication física del archivo en la primera columna
+  * opcion `-R`. Recursivo
+
+* `man`. Manual de comandos. Sintaxis man [section] comando o dire  * ctorio. Ejemplo: man 5 passwd
+  * seccion 1 - comandos generales
+  * seccion 2 - llamadas al sistema
+  * seccion 3 - biblioteca (funciones)
+  * seccion 4 - Fiheros especiales
+  * seccion 5 - Formato de ficheros
+  * seccion 6 - Juegos y salvapantallas
+  * seccion 7 - miscelánea
+  * seccion 8 - comandos de administracion sistema
 
 mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
               option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
@@ -132,11 +142,19 @@ rm          Elimina ficheros admite opciones y multiples files. Admite paths abs
                 option -r borra recursivamente directorios y todo.
                 opcion -ri igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
 
-rmdir       Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
+* `rmdir`. Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
 
-tac         igual que cat pero muestra las lineas del fichero en orden inverso
+* `stat`. Nos muestra información sobre un fichero concreto. Fecha de creación de acceso propietario etc.
 
-touch       Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto.
+* `tac`. Igual que cat pero muestra las lineas del fichero en orden inverso
+
+* `touch`. Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto. Si el fichero ya existe cambia la fecha de creación del fichero. Usando opciones se pueden modificar las fechas de fichero.
+  * option `-a`. Cambia la fecha de acceso.
+  * option `-m`. Cambia la fecha de modificación.
+  * option `-d` + ` <fecha>`. especifica una fecha concreta.
+
+* `updatedb`. Funciona conjuntamente con `locate` sirve para actualizar la base de datos de búsqueda de ficheros. Solo lo puede ejecutar su.
+
 
 * `umask`. Muestra o modifica la máscara utilizada cuando creamos ficheros o directorios. Cada usuario tiene una máscara para creación de ficheros. Solo `umask` muestra la máscara actual y con `umask <mascara>` cambia a la especificada. La máscara son 4 dígitos tomamos los ultimos 3 y de ellos el primero esta asociado a usuario el segundo a grupo y el tercero a otros. Esos tres dígitos se restan de 666 (máximos permisos) para ficheros y de 777 (maximos permisos) para carpetas y nos darán los permisos. Ej. si la umask es 022 los permisos para ficheros son 666-022 = 644 y para carpetas 777-022 = 755. Se aplica a los ficheros creados después de ejecutar umask.
 

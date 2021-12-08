@@ -42,7 +42,11 @@ Visualizer gratuito de regular expressions https://regex101.com/
 
 ### Creating files and folders
 
-* `touch`. Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto.
+* `touch`. Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto. Si el fichero ya existe cambia la fecha de creación del fichero. Usando opciones se pueden modificar las fechas de fichero.
+  * option `-a`. Cambia la fecha de acceso.
+  * option `-m`. Cambia la fecha de modificación.
+  * option `-d` + ` <fecha>`. especifica una fecha concreta.
+* `stat`. Nos muestra información sobre un fichero concreto. Fecha de creación de acceso propietario etc.
 * `echo`. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
 * `mkdir`. Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
   * option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
@@ -87,8 +91,13 @@ If you find you are having issues, try installing the locate  and mlocate packag
 `sudo apt install locate`
 `sudo apt install mlocate`
 
-* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`
+* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ver `updatedb`
   * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
   * option `-l` o `--limit`. Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).
   * option `-S` obtiene la ubicación de la base de datos que usa mlocate.
   * option `-e` antes de mostrar resultados comprueba que los ficheros existan por si la base no está actualizada.
+* `updatedb`. Funciona conjuntamente con `locate` sirve para actualizar la base de datos de búsqueda de ficheros. Solo lo puede ejecutar su. Ver `locate`
+
+
+### Busquedas en ficheros comando find.
+Find es uno de los mas importantes comandos de linux.

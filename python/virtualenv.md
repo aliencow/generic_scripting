@@ -1,13 +1,33 @@
-
-____    ____  __  .______     .___________. __    __       ___       __       _______ .__   __. ____    ____
-\   \  /   / |  | |   _  \    |           ||  |  |  |     /   \     |  |     |   ____||  \ |  | \   \  /   /
- \   \/   /  |  | |  |_)  |   `---|  |----`|  |  |  |    /  ^  \    |  |     |  |__   |   \|  |  \   \/   /
-  \      /   |  | |      /        |  |     |  |  |  |   /  /_\  \   |  |     |   __|  |  . `  |   \      /
-   \    /    |  | |  |\  \----.   |  |     |  `--'  |  /  _____  \  |  `----.|  |____ |  |\   |    \    /
-    \__/     |__| | _| `._____|   |__|      \______/  /__/     \__\ |_______||_______||__| \__|     \__/
+# Virtualenv
 
 
-Método tradicional para usar virtualenv:
+### Virtual env creation on python3 (lo trae incorporado)
+
+Make a project directory(folder) and cd into it. To make a virtual environment type the command:
+
+#### Creating a virtualenv folder
+
+    #cd to the project folder
+
+    python -m venv <envmane>
+    #<envmane> is the name of virtual env folder you will create
+
+#### Now activate the virtual environment.
+
+* In Windows
+  * From CMD - `.\<envname>\Scripts\activate`
+  * From Powershell - `.\env\Scripts\Activate.ps1`. If it doesn't work try to activate current user execution policy with: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
+
+* In linux (or Mac) use  `. env/bin/activate`
+
+#### Deactivating the virtual environment
+
+* In all platforms: `deactivate`
+
+
+
+
+### Método tradicional para usar virtualenv:
 
 
 VirtualEnv se usa para crear un entorno virtual para trabajar en python sin contaminar lo demas

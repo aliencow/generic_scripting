@@ -64,13 +64,17 @@ Ejecutando `curl http://localhost:8080` accede al contenido del container.
       * option `-f`. Muestra los logs en tiempo real
 
 ### Trabajar con imágenes
-* `docker images`. Lista las imágenes disponibles en el servidor.
+* `docker image ls`. Lista las imágenes disponibles en el servidor.
 * `docker search` + ` <nombreimagen>`. Busca una imagen en el repositorio de docker. Si ponemos `<nombreimagen>|head` limita la búsqueda a las cabeceras.
 * `docker pull` + ` <nombreimagen>`. Descargamos una imagen concreta del respositorio de docker.
 * `docker commit` + ` <idcontenedor>` + ` <nombreimagen>`. Convierte un contenedor en una nueva imagen. Ejemplo ejecutamos un contedor debian instalamos el vim u otra cosa y sobre ese contenedor generamos nuestra propia imagen.
 * `docker history` + ` <nombreimagen>`. Muestra el historial sobre esa imagen.
 * `docker tag` + ` <nombreimagen>` + ` <etiqueta>`. Permite etiquetar una imagen. Crea una nueva imagen con esa etiqueta copia de la etiquetada si añadimos `<etiqueta>:<version>` añade la versión que indiquemos (por defecto `latest`).
 * `docker rmi` + ` <nombreimagen>` + `[:<version]`. Elimina la imagen con la versión especificada (opcional). Fallará si hay algún contenedor con la imagen en ejecución.
+* `docker image prune`. Elimina todas las imágenes no utilizadas.
+  * option `--all` o `-a`. Elimina todas las imágenes no utilizadas
+  * option `--force` o `-f`. Elimina sin pedir confirmación.
+  * option
 
 ### Comunicando contenedores
 * `docker run`+`[<opciones>]`. Este es el comando de docker mas extenso tiene muchas opciones que nos permitirán trabajar con los contenedores de varias maneras.
@@ -80,6 +84,9 @@ Ejecutando `curl http://localhost:8080` accede al contenido del container.
   * option `-d` run dettached.
   * option `-t` Alocate pseudo tty
   * option `-i` Keep STDIN open
+  * option `-v`, `--volume` + ` <dirlocal>:<dircontainer>` + ` [<otros>:<volumenes> ...]`. Bind mount a volume. Montará un volumen externo. Ejemplo: `docker run -v /data:/var/www` montará el volumen del contenedor `/var/www` en la carpeta local `/data`.
+  Se pueden especificar varios volúmenes si no se especifica el `<dirlocal>` el volumen se creará DENTRO del contenedor (Ejemplo` -v /var/www`) Este contenedor no será exteno pero puede ser compartido o reutilizado por otros contenedores. Si se actualiza la imagen del contendor (`pull`) no se modificará el volumen. Al eliminar el contenedor no se elimina el volumen.
+  * option `--volumes-from` + `<containerid>`. Permite usar los volúmenes utilizados por un contenedor desde otro distinto.
 
 #### Redes internas docker para contectar containers entre si
 
@@ -96,4 +103,29 @@ Docker permite crear una red interna propia con los contenedores, dentro de la r
 ### Donde se almacenan los contenedores
 Depende del tipo de driver que tenga la unidad de almacenamiento. El directorio principal el `/var/lib/docker`.
 Para ver que driver de almacenamiento tenemos ejecutaremos el comando `docker info` y en la salida buscamos la etiqueta `Storage driver:`
-En el caso de synology el almacen esta en /volume1/@docker En WSL hay que investigarlo
+En el caso de synology el almacen esta en /volume1/@docker
+En WSL - Windows en alguno de estas carpetas:
+/wsl/docker-desktop/
+/wsl/docker-desktop-bind-mounts/
+/wsl/docker-desktop-data/
+
+### Volumenes en docker almacenar los datos fuera del contenedor
+Los volúmenes sirven para tener un almacenamiento permanente.
+Se alojan en el servidor y se comparte con uno a varios contenedores.
+Se crean cuando se ejecuta `docker run` Ejemplo: `docker run -v /data:/var/www` montará el volumen del contenedor `/var/www` en la carpeta local `/data`.  Se pueden especificar varios volúmenes a continuación de -v. Si no se especifica el `<dirlocal>` el volumen se creará DENTRO del contenedor (Ejemplo` -v /var/www`) Este contenedor no será exteno pero puede ser compartido o reutilizado por otros contenedores. Si se actualiza la imagen del contendor (`pull`) no se modificará el volumen. Al eliminar el contenedor no se elimina el volumen.
+Si usamos la opcion `--volumes-from` + `<containerid>`. `docker run` Permite usar los volúmenes utilizados por un contenedor desde otro distinto.
+
+* `docker volume`. Comando con varios usos para manejar volumenes
+  * option `create`. Create a volume
+  * option `inspect`. Display detailed information on one or more volumes
+  * option `ls`. List volumes
+  * option `prune`. Remove all unused local volumes
+  * option `rm`. Remove one or more volumes
+
+### docker inspect
+Este comando sirve para obtener informacion de contenedores e imágenes. En el caso de contedores permite obtener el id, el comando a ejecutar (y lo argumentos), estados, imagen, nombre, rutas (resol.conf, hostname, hosts..), volumenes, red.
+
+* `docker inspect`.
+  * option `-f, --format` string   Format the output using the given Go template, Esta opción permite filtrar valores de la configuración. Ejemplo: `docker inspect -f "{{ .NetworkSettings.Networks.<container>.IPAddress }}" <container>`
+  * option `-s, --size`            Display total file sizes if the type is container
+  * option `--type` string     Return JSON for specified type

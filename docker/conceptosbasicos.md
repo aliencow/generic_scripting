@@ -1,4 +1,4 @@
-### Contenedor
+## Contenedor
 * Virtualización a nivel de sistema operativo. (No hardware).
 * Contiene todo lo necesario para ejecutar aplicaciones.
   * Codigo.
@@ -37,7 +37,7 @@ Ver las instrucciones de docker: https://docs.docker.com/engine/install/
       * option `--name` + ` <nombre_que_queremos>` pone ese nombre específico al contendor que queremos.
 * `docker rm <container>`. Elimina el contendor especificaod
 
-### Exponer puertos
+#### Exponer puertos
 Nos permite acceder a los contenedores desde fuera de docker. Opcion -p
 Para comprobar los puertos expuestos de un contenedor podemos usar este comando:
 `docker inspect -f "{{ .ContainerConfig.ExposedPorts }}" <contendor>`
@@ -81,7 +81,7 @@ Ejecutando `curl http://localhost:8080` accede al contenido del container.
   * option `--name` + ` <customname>`. Con esta opción el contenedor generado se creará con el nombre indicado
   * option `--hostname` + ` <customname>`. Con esta opcion el ID del usuario que aparecera en el bash del contenedor, y que servirá de alias si está en una rede de contenedores.
   * option `--network` + ` <customname>`. Conecta el contenedor creado a la red que se especifica.
-  * option `-d` run dettached.
+  * option `-d` run dettached (segundo plano).
   * option `-t` Alocate pseudo tty
   * option `-i` Keep STDIN open
   * option `-v`, `--volume` + ` <dirlocal>:<dircontainer>` + ` [<otros>:<volumenes> ...]`. Bind mount a volume. Montará un volumen externo. Ejemplo: `docker run -v /data:/var/www` montará el volumen del contenedor `/var/www` en la carpeta local `/data`.
@@ -122,10 +122,14 @@ Si usamos la opcion `--volumes-from` + `<containerid>`. `docker run` Permite usa
   * option `prune`. Remove all unused local volumes
   * option `rm`. Remove one or more volumes
 
-### docker inspect
-Este comando sirve para obtener informacion de contenedores e imágenes. En el caso de contedores permite obtener el id, el comando a ejecutar (y lo argumentos), estados, imagen, nombre, rutas (resol.conf, hostname, hosts..), volumenes, red.
+### Inspeccionar contenedores e imágnes - > docker inspect
+Este comando sirve para obtener informacion de contenedores e imágenes.
+En el caso de contedores permite obtener el id, el comando a ejecutar (y lo argumentos), estados, imagen, nombre, rutas (resol.conf, hostname, hosts..), volumenes, red.
+En el caso de las imágenes permite obtener el id, tamaño, comando por defecto entre otras.
 
 * `docker inspect`.
-  * option `-f, --format` string   Format the output using the given Go template, Esta opción permite filtrar valores de la configuración. Ejemplo: `docker inspect -f "{{ .NetworkSettings.Networks.<container>.IPAddress }}" <container>`
+  * option `-f, --format` string   Format the output using the given Go template, Esta opción permite filtrar valores de la configuración. Ejemplo: `docker inspect -f "{{ .NetworkSettings.Networks.<red>.IPAddress }}" <container>`
   * option `-s, --size`            Display total file sizes if the type is container
   * option `--type` string     Return JSON for specified type
+* `docker image inspect`.
+  * option `-f, --format` string   Format the output using the given Go template.

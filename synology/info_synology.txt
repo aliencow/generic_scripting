@@ -20,7 +20,8 @@ sudo -i
 direccion ip argonte:
 83.165.42.243
 
-
+conectar con ssh desde terminal a argonte
+ssh juan.nouche@192.168.0.12 -p 2367
 
 Usar fastCGI con django en Synology
 https://ilizaran.blogspot.com/2014/09/instalacion-django-en-nas-synology-con.html

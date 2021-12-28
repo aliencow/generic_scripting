@@ -58,7 +58,7 @@ Ejecutando `curl http://localhost:8080` accede al contenido del container.
       * no options. Muestra los contenedores en ejecución.
       * option `-a`. Muestra todos los contenedores cargados.
       * option `-l`. Muestra el ultimo contenedor ejecutado.
-    * `docker stats`. Muestra estadisticas de los contenedores en ejecución. (consumo de recursos).
+    * `docker stats`. Muestra estadexitisticas de los contenedores en ejecución. (consumo de recursos).
     * `docker top` + ` <idcontenedor>`. Muestra un historial de utilización del contenedor
     * `docker logs` + ` <idcontenedor>`. Muestra los logs del contenedor
       * option `-f`. Muestra los logs en tiempo real

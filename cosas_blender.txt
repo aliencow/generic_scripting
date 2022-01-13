@@ -15,7 +15,7 @@ Posicionar la camera a un viewport
 3. Pulsamos n para que aparezca el menú lateral y en view marcamos Lock Camera to View
 
 
-Recursos - Blender
+Recursos - Blender001
 ==================
 
 Grease Pencil https://cloud.blender.org/p/gallery/5cb249bf808c0e1b8eb7ea21

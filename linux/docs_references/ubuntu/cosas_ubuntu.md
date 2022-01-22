@@ -11,3 +11,10 @@ Atajos teclado UBUNTU
 
 
 [Consulta formato Mark Down](https://www.markdownguide.org/cheat-sheet/).
+
+curl no viene por defecto en Ubuntu
+hay que instalarlo:
+
+`sudo apt-get update`
+`sudo apt-get upgrade`
+`sudo apt-get install curl `

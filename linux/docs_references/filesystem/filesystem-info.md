@@ -91,7 +91,7 @@ If you find you are having issues, try installing the locate  and mlocate packag
 `sudo apt install locate`
 `sudo apt install mlocate`
 
-* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ver `updatedb`
+* `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ver `su `
   * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
   * option `-l` o `--limit`. Limita el muestreo de resultados al número indicado detras (`-l 3` tres resultados).
   * option `-S` obtiene la ubicación de la base de datos que usa mlocate.
@@ -100,4 +100,14 @@ If you find you are having issues, try installing the locate  and mlocate packag
 
 
 ### Busquedas en ficheros comando find.
-Find es uno de los mas importantes comandos de linux.
+Find es uno de los mas importantes comandos de linux. Permite busquedas de ficheros entre otras cosas y es un poco más lento que locate ya que realiza una búsqueda REAL por el filesystem.
+
+* `find`. Este comando busca cualquier archivo si no se ponen parametros busca recursivamente todas las carpetetas y ficheros  a partir del directorio actual. Si se indica una carpeta concreta a continuación busca desde esa carpeta recursivamente.
+  * option `<start_path>`. `<start-path>` es el nombre del directorio a partir del que queremos realizar la búsqueda.
+  * option `-maxdepth <number>`. Especifica el nivel de profundidad (en cuanto a directorios) sobre el que queremos realizar la búsqueda `<number>` indica la profundidad (1 dir actual, 2 carpetas 'hijas', 3 carpetas 'nietas' y así sucesivamente). Si se especifica esta opción debe ir de primera.
+  * option `-type <tipo>`. Especifica el tipo de búsqueda. `<tipo>` puede ser `f` para files o `d` para folders (directory).
+  * option `-name "<pattern>"`. Busca por nombre en el arbol especificado. `<pattern>` va entrecomillado y puede ser el literal del nombre o un patron concreto ej. "*.txt". Es decir permite usar regular expressions.
+  * option `-iname "<pattern>"`. Busca por nombre en el arbol especificado, en este caso no es CASE SENSITIVE (sensible a mayusculas). `<pattern>` va entrecomillado y puede ser el literal del nombre o un patron comcreto ej. "*.txt". Es decir permite usar regular expressions.
+  * option `-size -<tam>k o +<tam>M`. Filtra los resultados por tamaño del fichero donde tam es un número que indica los k (kilobytes), M (megabyte) o G(gibabyte) que debe tener el fichero y `+` indica que buscará mayores que y `-` indica que buscará menores que. Puede haber mas de una opción `-size`. Ej: `file /home -type f -size -10M -size +50k` filtrará los ficheros dentro de `/home` que tengan un tamaño menor de 10M o mayor que 50k.
+  * option `-exec <command> \;`. Permite ejecutar un comando con la salida de find. Es importante indicar `\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio.
+  * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.

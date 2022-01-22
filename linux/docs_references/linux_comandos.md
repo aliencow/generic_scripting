@@ -93,6 +93,16 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
 
 * `echo`. Muestra en la salida extandar el texto o file que se indique. Se puede usar este comando para crear un fichero redireccionando la salida. ej. `echo "hello" > myfile.txt`.
 
+* `find`. Este comando busca cualquier archivo si no se ponen parametros busca recursivamente todas las carpetetas y ficheros  a partir del directorio actual. Si se indica una carpeta concreta a continuación busca desde esa carpeta recursivamente.
+  * option `<start_path>`. `<start-path>` es el nombre del directorio a partir del que queremos realizar la búsqueda.
+  * option `-maxdepth <number>`. Especifica el nivel de profundidad (en cuanto a directorios) sobre el que queremos realizar la búsqueda `<number>` indica la profundidad (1 dir actual, 2 carpetas 'hijas', 3 carpetas 'nietas' y así sucesivamente). Si se especifica esta opción debe ir de primera.
+  * option `-type <tipo>`. Especifica el tipo de búsqueda. `<tipo>` puede ser `f` para files o `d` para folders (directory).
+  * option `-name "<pattern>"`. Busca por nombre en el arbol especificado. `<pattern>` va entrecomillado y puede ser el literal del nombre o un patron concreto ej. "*.txt". Es decir permite usar regular expressions.
+  * option `-iname "<pattern>"`. Busca por nombre en el arbol especificado, en este caso no es CASE SENSITIVE (sensible a mayusculas). `<pattern>` va entrecomillado y puede ser el literal del nombre o un patron comcreto ej. "*.txt". Es decir permite usar regular expressions.
+  * option `-size -<tam>k o +<tam>M`. Filtra los resultados por tamaño del fichero donde tam es un número que indica los k (kilobytes), M (megabyte) o G(gibabyte) que debe tener el fichero y `+` indica que buscará mayores que y `-` indica que buscará menores que. Puede haber mas de una opción `-size`. Ej: `file /home -type f -size -10M -size +50k` filtrará los ficheros dentro de `/home` que tengan un tamaño menor de 10M o mayor que 50k.
+  * option `-exec <command> \;`. Permite ejecutar un comando con la salida de find. Es importante indicar `\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio.
+  * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.
+
 
 * `history`. Muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
   * option `-c` limpia el historial pero no borra .bash_history
@@ -165,4 +175,9 @@ rm          Elimina ficheros admite opciones y multiples files. Admite paths abs
   * option `-m` muesra bits del nucleo
   * option `-a` muestra toda la information
 
-* `whoami`. Muestra el usuario actual
+* `wc`. Acrónimo de word count. Devuelve el número de líneas palabras o caracteres que contiene el fichero especificado o que devuelve el comando anterior si se usa con pipe (`|`). Ej: `wc <mifichero>` devolverá `17 40 239 <mifichero>` es decir, el fichero tiene 17 lineas, 40 palabras y 239 caracteres.
+* option `l`. Muestra solo numero de líneas.
+* option `w`. Muestra solo numero de palabras.
+* option `m`. Muestra solo numero de caracteres.
+
+* `whoami`. Muestra el usuario actual.

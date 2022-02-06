@@ -111,3 +111,9 @@ Find es uno de los mas importantes comandos de linux. Permite busquedas de fiche
   * option `-size -<tam>k o +<tam>M`. Filtra los resultados por tamaño del fichero donde tam es un número que indica los k (kilobytes), M (megabyte) o G(gibabyte) que debe tener el fichero y `+` indica que buscará mayores que y `-` indica que buscará menores que. Puede haber mas de una opción `-size`. Ej: `file /home -type f -size -10M -size +50k` filtrará los ficheros dentro de `/home` que tengan un tamaño menor de 10M o mayor que 50k.
   * option `-exec <command> \;`. Permite ejecutar un comando con la salida de find. Es importante indicar `\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio.
   * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.
+
+### Viewing Files
+
+* `cat`. Comando que sirve para mostrar el contenido de un fichero en el terminal o concatenar varios ficheros. Ej: `cat file1.txt` muestra el fichero en pantalla, `cat file1.txt file2.txt file3.txt > file4.txt` concatena los tres primeros ficheros en un solo archivo.
+* `tac`. Similar que cat pero revirtiendo el orden de filas de cada archivo. Es decir las muestra en orden inverso.
+* `rev`. Igual que cat pero pone el orden inverso los caracteres de cada línea.

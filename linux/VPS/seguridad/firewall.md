@@ -3,7 +3,9 @@ Un firewall sirve para evitar accesos no deseados. Una barrera que impide que se
 ## UFW (uncomplicated fire wall)
 Antes de activarlo comprobar si nuestra conexión esta deshabilitada en en firewall
 
-usando `sudo ufw alloy "OpenSSH"` habilitamos el accesos mediante ssh exclusivamente.
+usando `sudo ufw allow "OpenSSH"` habilitamos el accesos mediante ssh exclusivamente.
+
+si usamos nginx hay que havilitar Nginx con `sudo ufw app list` lo buscamos en la lista de aplicaciones y se habilita para el firewall con `sudo ufw allow "Nginx Full"`
 
 ### FAIL2BAN
 Permite bloquear accesos repetitivos o incorrectos. Para instalarlo `sudo apt install fail2ban`

@@ -1,7 +1,9 @@
-## **Como configurar nginx en VPS**
+## Como configurar nginx en VPS
 
 En este fichero se anota todo lo necesario para configurar el servidor web
 en linode (nginx)
+
+
 
 ### Como instalar y configurar nginx en VPS linode
 
@@ -42,6 +44,15 @@ Este es el robots.txt de `/var/www/nouche.me`
 
     User-agent: *
     Disallow: /
+
+
+###K Configuracion nginx
+Usuario nginx: `user www-data;`
+recargar nginx: `sudo systemctl reload nginx.service`
+carpeta instalacion: `/etc/nginx`
+carpeta sitios disponibles: `/etc/nginx/modules-available`
+carpeta sitios activos:`/etc/nginx/modules-enabled`
+Los enabled son simplemente enlaces directos (links con `ln`) a algunos de los archivos de configuración existentes en available.
 
 
 

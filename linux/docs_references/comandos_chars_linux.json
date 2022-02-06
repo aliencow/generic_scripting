@@ -155,7 +155,11 @@
 				"-P" : " muestra el directorio de origen en el caso de un simbolic link."
 			}
 		},
-		"rm\r\n\r\n" : {
+		"rev\r\n" : {
+			"comando" : "rev",
+			"funcionalidad" : "Igual que cat pero pone el orden inverso los caracteres de cada línea."
+		},
+		"rm\r\n" : {
 			"comando" : "rm",
 			"funcionalidad" : "Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos. Admite wildcards o patterns para filtrar ficheros. ",
 			"opciones" : {

@@ -1,4 +1,6 @@
-## **Algunas particularidades de Ubunto**
+## Algunas particularidades de Ubuntu
+Consultar la versión de ubuntu
+`lsb_release -a`
 
 Tutorial como instalar ubuntu en virtual box:
 https://osl.ugr.es/2020/09/29/como-instalar-ubuntu-en-virtual-box/

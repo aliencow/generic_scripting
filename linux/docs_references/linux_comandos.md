@@ -117,7 +117,7 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-e` antes de mostrar resultados comprueba que los ficheros existan por si la base no está actualizada.
 
 * comando `ln`. Crear enlaces simbólicos o duros. Si no se especifican opciones crea un enlace duro.
-	* option `-s`. Junto con la ruta del fichero o directorio para crear enlaces simbólicos. Ejemplo: ln -s <fichero o carpeta ref> <fichero simbólico.
+	* option `-s`. Junto con la ruta del fichero o directorio para crear enlaces simbólicos. Ejemplo: ln -s <fichero o carpeta ref> <fichero simbólico>.
 
 
 * `ls`. Lista los contenidos del directorio actual o de otro si se le indica, ejemplo `ls /lib`.
@@ -136,21 +136,22 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * seccion 7 - miscelánea
   * seccion 8 - comandos de administracion sistema
 
-mkdir       Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
-              option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
+* `mkdir`. Crea una carpeta sintaxis `mkdir foldername` donde foldername puede ser un path relativo o absoluto.
+  * option `-p`. Crea la carpeta aunque no exista el folder contenedor. Es decir, crea la ruta completa que especifiquemos.
 
-mv            Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no   afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
+* `mv`. Se utiliza para renombrar ficheroa mv oldname.txt newname.txt se aplica tambien a carpetas y no   afecta a contenidos de la carpeta. Tambien se utiliza para mover ficheros o carpetas de un sitio a otro o para mover y cambiar de nombre al mismo tiempo. Es un comando superpoderoso.
 
-nl          muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b
-              option -ba si se pone numera también líneas en blanco
+* `nl`. muestra el fichero con lineas numeradas. No numera lineas en blanco igual que `cat -b`
+  * option `-ba` si se pone numera también líneas en blanco
 
-pwd         muestra el directorio actual
-              option -P muestra el directorio de origen en el caso de un simbolic link.
+* `pwd`. Muestra el directorio actual
+  * option `-P` muestra el directorio de origen en el caso de un simbolic link.
 
-rm          Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos.
-            Admite wildcards o patterns para filtrar ficheros.
-                option -r borra recursivamente directorios y todo.
-                opcion -ri igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
+* `rev`. Igual que cat pero pone el orden inverso los caracteres de cada línea.
+
+* `rm`. Elimina ficheros admite opciones y multiples files. Admite paths absolutos o relativos. Admite wildcards o patterns para filtrar ficheros.
+  * option `-r`. borra recursivamente directorios y todo.
+  * opcion `-ri` igual que la anterior pero preguntando en interactivo si quermos eliminar cada carpeta
 
 * `rmdir`. Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
 

@@ -117,3 +117,8 @@ Find es uno de los mas importantes comandos de linux. Permite busquedas de fiche
 * `cat`. Comando que sirve para mostrar el contenido de un fichero en el terminal o concatenar varios ficheros. Ej: `cat file1.txt` muestra el fichero en pantalla, `cat file1.txt file2.txt file3.txt > file4.txt` concatena los tres primeros ficheros en un solo archivo.
 * `tac`. Similar que cat pero revirtiendo el orden de filas de cada archivo. Es decir las muestra en orden inverso.
 * `rev`. Igual que cat pero pone el orden inverso los caracteres de cada línea.
+* `less`. Igual que cat pero permite ver por página y desplazarse en el contenido del fichero utilizando las arrow keys o av-rev pag. Es util ponerlo como salida de un comando que genere muchas lineas por ejemplo: `find | less` así nos mostrará la salida paginada.
+* `head`. Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.
+  * option `-n`. Indica el número de líneas que queremos mostrar.
+* `tail`.  Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.
+  * option `-n`. Indica el número de líneas que queremos mostrar.

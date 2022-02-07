@@ -77,6 +77,13 @@
 				"-exec <command> \\;" : "Permite ejecutar un comando con la salida de find. Es importante indicar `\\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \\;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio."
 			}
 		},
+		"head\r\n" : {
+			"comando" : "head",
+			"funcionalidad" : " Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.",
+			"opciones\r\n" : {
+				"-n" : "indica el numero de lineas a mostrar"
+			}
+		},
 		"history" : {
 			"comando" : "history",
 			"funcionalidad" : "No requiere argumentos. Muestras información del sistema. Por defecto muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)",
@@ -85,9 +92,13 @@
 				"-w" : "comienza la escritura del historial en .bash_history"
 			}
 		},
-		"hostname\r\n" : {
+		"hostname" : {
 			"comando" : "hostname",
 			"funcionalidad" : "muestra el servidor actual"
+		},
+		"less" : {
+			"comando" : "less",
+			"funcionalidad" : "Igual que cat pero permite ver por página y desplazarse en el contenido del fichero utilizando las arrow keys o av-rev pag. Es util ponerlo como salida de un comando que genere muchas lineas por ejemplo: `find | less` así nos mostrará la salida paginada."
 		},
 		"locate\r\n" : {
 			"comando" : "locate",
@@ -178,6 +189,13 @@
 		"tac" : {
 			"comando" : "tac",
 			"funcionalidad" : "igual que cat pero muestra las lineas del fichero en orden inverso"
+		},
+		"tail\r\n" : {
+			"comando" : "tail",
+			"funcionalidad" : " Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.",
+			"opciones\r\n" : {
+				"-n" : "indica el numero de lineas a mostrar"
+			}
 		},
 		"touch" : {
 			"comando" : "touch",

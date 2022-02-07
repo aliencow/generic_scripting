@@ -103,12 +103,17 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-exec <command> \;`. Permite ejecutar un comando con la salida de find. Es importante indicar `\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio.
   * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.
 
+* `head`. Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.
+  * option `-n`. Indica el número de líneas que queremos mostrar.
 
 * `history`. Muestra historial de comandos (se almacena en .bash_history oculto en el $HOME)
   * option `-c` limpia el historial pero no borra .bash_history
   * option `-w` comienza la escritura del historial en .bash_history
 
 * `hostname`. Muestra el servidor actual
+
+* `less`. Igual que cat pero permite ver por página y desplazarse en el contenido del fichero utilizando las arrow keys o av-rev pag. Es util ponerlo como salida de un comando que genere muchas lineas por ejemplo: `find | less` así nos mostrará la salida paginada.
+
 
 * `locate`. Este comando sirve para localizar archivos introduciendo un pattern. ejemplo `locate *.conf`. Juega en conjunto con `updatedb` para actualizar la base de datos. Ojo en algunas versiones de linux no viene instalado. Para instalarlo estas dos líneas con sudo `sudo apt install locate` y `sudo apt install mlocate`. Ver `upadatedb`
   * option `-i`. Localiza sin tener en cuenta mayusculas o minusculas.
@@ -156,6 +161,9 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
 * `rmdir`. Elimina carpetas en lugar de ficheros en SOLAMENTE si estan vacios.
 
 * `stat`. Nos muestra información sobre un fichero concreto. Fecha de creación de acceso propietario etc.
+
+* `tail`.  Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.
+  * option `-n`. Indica el número de líneas que queremos mostrar.
 
 * `tac`. Igual que cat pero muestra las lineas del fichero en orden inverso
 

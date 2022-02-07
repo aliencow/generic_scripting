@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!--
+This sample schedules a task to start notepad.exe when a user logs on.
+-->
+<Task xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+    <RegistrationInfo>
+        <Date>2022-01-29T12:29:17-08:00</Date>
+        <Author>Juan</Author>
+        <Version>1.0.0</Version>
+        <Description>Starts Notepad when a specified user logs on.</Description>
+    </RegistrationInfo>
+    <Triggers>
+        <LogonTrigger>
+            <StartBoundary>2022-01-29T12:29:17-08:00</StartBoundary>
+            <EndBoundary>2023-01-01T00:00:00-08:00</EndBoundary>
+            <Enabled>true</Enabled>
+            <UserId>DESKTOP-F27KJVL\juan.nouche</UserId>
+        </LogonTrigger>
+    </Triggers>
+    <Principals>
+        <Principal>
+            <GroupId>DESKTOP-F27KJVL\Administradores</GroupId>
+        </Principal>
+    </Principals>
+    <Settings>
+        <Enabled>true</Enabled>
+        <AllowStartOnDemand>true</AllowStartOnDemand>
+        <AllowHardTerminate>true</AllowHardTerminate>
+    </Settings>
+    <Actions>
+        <Exec>
+            <Command>notepad.exe</Command>
+        </Exec>
+    </Actions>
+</Task>

@@ -28,6 +28,9 @@ cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\startup_local
 git pull
 cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsstudiolib
 git pull
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\vbsjson
+git pull
+
 
 REM updatear en local los proyectos antaruxa pipeline
 

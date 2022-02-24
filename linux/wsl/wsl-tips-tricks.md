@@ -8,3 +8,6 @@ cd ~
 explorer.exe .
 # Se abrirá un explorador de archivos en la ruta física.
 ```
+
+Compactar el wsl
+https://terminaldelinux.com/terminal/wsl/liberar-espacio-disco-wsl/

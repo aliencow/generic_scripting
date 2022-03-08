@@ -10,3 +10,15 @@
   * `Windows+Break`(pausa). Acceso directo a configuración.
 
 dir /s /b maya.exe to find an exe if we know the name
+
+### Variables de entorno permanentes crear y borrar
+
+Para crear. Ejemplo queremos crear PYENVROOT desde CMD. Ojo la crea en el entorno del usuario activo.
+https://stackoverflow.com/questions/5898131/set-a-persistent-environment-variable-from-cmd-exe
+
+    SETX PYENVROOT \\argonte\python
+
+Para Borrar. Ejemplo queremos eliminar PYENVROOT desde CMD ojo la remueve desde el usuario activo.
+https://stackoverflow.com/questions/13222724/command-line-to-remove-an-environment-variable-from-the-os-level-configuration
+
+    SETX PYENVROOT "" & REG delete HKCU\Environment /F /V PYENVROOT

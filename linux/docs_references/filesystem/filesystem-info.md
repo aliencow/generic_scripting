@@ -113,6 +113,7 @@ Find es uno de los mas importantes comandos de linux. Permite busquedas de fiche
   * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.
 
 ### Viewing Files
+Es importante recordar que todos los comandos para visualización de ficheros funcionan muy bien con el pipe de windows.
 
 * `cat`. Comando que sirve para mostrar el contenido de un fichero en el terminal o concatenar varios ficheros. Ej: `cat file1.txt` muestra el fichero en pantalla, `cat file1.txt file2.txt file3.txt > file4.txt` concatena los tres primeros ficheros en un solo archivo.
 * `tac`. Similar que cat pero revirtiendo el orden de filas de cada archivo. Es decir las muestra en orden inverso.

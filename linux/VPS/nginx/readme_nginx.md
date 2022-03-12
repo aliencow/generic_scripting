@@ -136,5 +136,19 @@ Ojo comprobar los tamaños que necesitamos sobre todo de numero de peticiones y 
 
 ### Evitar que los sitios nginx sean secuestrados
 Hacer que nadie pueda apuntar su dominio a nuestra dirección de servidor.
+Haciendo que no se acepten redirecciones a otros dominios que nosotros no tenemos en propiedad.
+
+Añadiendo un bloque server en el dominio que tenemos configurado por defecto en mi caso nouche.me
+(/etc/nginx/sites-available/nouche.me)
+
+    server {
+            listen 80 default_server;
+            listen [::]:80 default_server;
+
+            server_name _;  #cualquier peticion externa que de cualquier servidor
+            return 301 http://nouche.me;  #la enviamos al sitio por defecto
+            # return 301 http://www.nouche.me; #opcionalmente puede enviarse con www
+    }
+
 
 [Consulta formato Mark Down](https://www.markdownguide.org/cheat-sheet/).

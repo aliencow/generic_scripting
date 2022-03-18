@@ -1,0 +1,11 @@
+Successfully deployed certificate for nouche.me to /etc/nginx/sites-enabled/nouche.me
+Successfully deployed certificate for www.nouche.me to /etc/nginx/sites-enabled/nouche.me
+Congratulations! You have successfully enabled HTTPS on https://nouche.me and https://www.nouche.me
+
+Successfully deployed certificate for nouche.net to /etc/nginx/sites-enabled/nouche.net
+Successfully deployed certificate for www.nouche.net to /etc/nginx/sites-enabled/nouche.net
+Congratulations! You have successfully enabled HTTPS on https://nouche.net and https://www.nouche.net
+
+Successfully deployed certificate for nouche.app to /etc/nginx/sites-enabled/nouche.app
+Successfully deployed certificate for www.nouche.app to /etc/nginx/sites-enabled/nouche.app
+Congratulations! You have successfully enabled HTTPS on https://nouche.app and https://www.nouche.app

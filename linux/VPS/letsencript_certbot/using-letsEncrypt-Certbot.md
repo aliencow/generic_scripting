@@ -56,3 +56,24 @@ A partir de aqui ya podemos acceder con https a nuestros sitios.
 Certbot genera una serio de cron jobs para mantenimiento de los certificados.
 Para el acceso el comando principal es `certbot` poniendo en el cli `certbot --help` veremos las opciones que tiene.
 Esta pensado para ejecutarse como sudo
+
+Con este comando comprobamos los certificados que están instalados:
+
+    sudo certbot certificates
+
+    # esta seria la salida
+
+    Certificate Name: nouche.app
+      Serial Number: 3752b586ed21878048294439cb751b5ef3f
+      Key Type: RSA
+      Domains: nouche.app www.nouche.app
+      Expiry Date: 2022-06-10 18:08:39+00:00 (VALID: 89 days)
+      Certificate Path: /etc/letsencrypt/live/nouche.app/fullchain.pem
+      Private Key Path: /etc/letsencrypt/live/nouche.app/privkey.pem
+
+Podemos ver el timer que tiene programado con. Podríamos hacerlo nosotros pero lo hace certbot cuando lo instala snap .
+
+    # Comprobar que listando todos los timers
+    sudo systemctl list-timers
+    # está instalado este
+    snap.certbot.renew.service

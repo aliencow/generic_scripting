@@ -1,4 +1,6 @@
 ## Control del sistema (todo requiere privilegios root)
+con el comando `man hier` podemos ver la jerarquia de carpetas en el sistema actual
+archivos especiales `/proc/cpuinfo` y `/proc/meminfo` contienen informacion sobre el sistema (cpu y memoria)
 ### systemctl - Control de procesos
 
 * `systemctl`. Sirve para iniciar, terminar, recargar (reload), reiniciar (restart), terminar, listar etc. los procesos que ejecuta el sistema.

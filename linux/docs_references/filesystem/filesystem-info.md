@@ -123,3 +123,22 @@ Es importante recordar que todos los comandos para visualización de ficheros fu
   * option `-n`. Indica el número de líneas que queremos mostrar.
 * `tail`.  Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.
   * option `-n`. Indica el número de líneas que queremos mostrar.
+
+### Compressing Uncompressing files (tar)
+
+Para esta labor solemos usar el comando `tar`
+El comando tar en principio no comprime lo que hace es crear un paquete, es decir, un único fichero que contiene múltiples ficheros.
+la sintaxis es simple:
+`tar <opciones> <fecherotar> <ficherosdirs>`. Es decir estar el comando las opciones el fichero tar con el que vamos a trabajar y el fichero o directorios que va a contener en el caso de que se vaya a generar. A continuación va una lista de opciones:
+* `c`. Se crea el fichero con esta opción.
+* `v`. Con esta opción se pone el modo en verbose.
+* `f`. con esta opción permite especificar el fichero.
+* `x`. Esta opción permite extraer los ficheros.
+* `t`. Esta opción lista el contenido del fichero.
+* `r`. Con esta opción se pueden añadir una lista de ficheros al fichero tar.
+* `u`. Esta opción permite actualizar el fichero tar.
+
+Por ejemplo coma si quisiéramos  crear un fichero tar utilizaríamos esta opción: `cvf`.
+O, si quisiésemos listar un fichero utilizaríamos la opción: `tvf`.
+O, Para extraer un fichero tar utilizaríamos esta opción: `xvf`.
+* `z`. Esta opción es la que indica si se trabaja con fichero comprimido o no. En los casos anteriores si trabajásemos con ficheros comprimidos añadiríamos esta letra por ejemplo: `cvf` pasaría a ser `cvzf` si trabajamos comprimiendo.

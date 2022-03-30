@@ -93,3 +93,8 @@ REM Antaruxa web
 c:
 cd C:\Users\juan.nouche\Documents\juan\web_antaruxa\work\code\Avada-Child-Theme
 git pull
+
+REM Docs etc..
+c:
+cd C:\Users\juan.nouche\Documents\juan\git_projects\the_gearing\docs-hows-tos\dokuwiki
+git pull

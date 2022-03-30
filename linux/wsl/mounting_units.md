@@ -36,3 +36,18 @@ Para unidades de red
 mkdir /mnt/share
 
 mount -t drvfs '\\server\share' /mnt/share
+
+### Montar permanentemente unidades de red
+https://askubuntu.com/questions/1119456/how-to-create-a-persistent-mounting-point-in-ubuntu-app-on-windows-10
+
+* 1. Asegurarse de que se ha creado un directorio en mount
+
+  mkdir /mnt/argontepipe
+
+* 2. editar `/etc/fstab` desde sudo `sudo nano fstab` añadiendo al fichero la siguiente línea:
+
+    \\argonte\pipeline /mnt/argontepipe drvfs defaults 0 0
+
+* 3. Resetear el servicio de linux desde PowerShell como administrador:
+
+    Get-Service LxssManager | Restart-Service

@@ -24,3 +24,15 @@ https://newbedev.com/how-to-access-mounted-network-drive-on-windows-linux-subsys
 
 `$ sudo apt install cifs-utils
 $ sudo mount -t cifs -o user=joe,pass=shmo,vers=1.0 //server/share /mnt/share`
+
+### Montar unidades de USB
+https://www.scivision.dev/mount-usb-drives-windows-subsystem-for-linux/
+
+mkdir /mnt/f
+
+mount -t drvfs f: /mnt/f
+
+Para unidades de red
+mkdir /mnt/share
+
+mount -t drvfs '\\server\share' /mnt/share

@@ -103,6 +103,17 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-exec <command> \;`. Permite ejecutar un comando con la salida de find. Es importante indicar `\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio.
   * option `-ok <command> \;` . Exactamente igual que exec y misma funcionalidad solo que nos pide que confirmemos cada vez que se ejecute el comando.
 
+* `grep`. Busca uno o varios patrones en un fichero o ficheros. Los patrones pueden ser una letra una palabra o un numero.
+  * opcion `-A <num>`. Muestra número (<num>) de líneas a continuación.
+  * opcion `-B <num>`. Muestra número (<num>) de líneas anteriores.
+  * option `-c`. Cuenta el número de coincidencias.
+  * option `-e`. Especifica un patrón concreto. Es decir permite añadir mas patrones (`-e patron1 -e patron2 -e patron3 etc.`)
+  * option `-h`. Incluye el nombre de fichero en las coincidencias.
+  * option `-H`. Excluye el nombre de fichero en las coincidencias.
+  * option `-i`. Anular la distincion de mayusculas y minúsculas.
+  * option `-r/R`. Realiza búsqueda recursiva.
+  * opcion `-v`. Búsqueda inversa
+
 * `head`. Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.
   * option `-n`. Indica el número de líneas que queremos mostrar.
 

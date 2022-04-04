@@ -77,6 +77,21 @@
 				"-exec <command> \\;" : "Permite ejecutar un comando con la salida de find. Es importante indicar `\\;` como finalización del comando Para recoger la salida de find usaremos `{}` Ej: `find  ~ -type f -size -5M -exec cp {} ~/Escritorio/copy_here \\;` copiará todos los ficheros debajo del home menores de 5M a  la carpeta `copy_here` del escritorio."
 			}
 		},
+		"grep\r\n" : {
+			"comando" : "grep",
+			"funcionalidad" : "Busca uno o varios patrones en un fichero o ficheros. Los patrones pueden ser una letra una palabra o un numero.",
+			"opciones\r\n" : {
+				"-A <num>" : "Muestra número (<num>)de líneas a continuación.",
+				"-B <num>" : " Muestra número (<num>) de líneas anteriores.",
+				"-c" : "Cuenta el número de coincidencias encontradas.",
+				"-e" : "Especifica un patrón concreto. Es decir permite añadir mas patrones (`-e patron1 -e patron2 -e patron3 etc.`)",
+				"-h" : "Incluye el nombre de fichero en las coincidencias",
+				"-H" : "Excluye el nombre de fichero en las coincidencias",
+				"-i" : "Anular la distincion de mayusculas y minúsculas.",
+				"-r/R" : "Realiza busqueda recursiva.",
+				"-v" : "Búsqueda inversa"
+			}
+		},
 		"head\r\n" : {
 			"comando" : "head",
 			"funcionalidad" : " Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.",

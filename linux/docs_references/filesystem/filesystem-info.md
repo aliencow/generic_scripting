@@ -141,4 +141,5 @@ la sintaxis es simple:
 Por ejemplo coma si quisiéramos  crear un fichero tar utilizaríamos esta opción: `cvf`.
 O, si quisiésemos listar un fichero utilizaríamos la opción: `tvf`.
 O, Para extraer un fichero tar utilizaríamos esta opción: `xvf`.
-* `z`. Esta opción es la que indica si se trabaja con fichero comprimido o no. En los casos anteriores si trabajásemos con ficheros comprimidos añadiríamos esta letra por ejemplo: `cvf` pasaría a ser `cvzf` si trabajamos comprimiendo.
+* `z`. compresion con GZIP. Esta opción es la que indica si se trabaja con fichero comprimido o no. En los casos anteriores si trabajásemos con ficheros comprimidos añadiríamos esta letra por ejemplo: `cvf` pasaría a ser `cvzf` si trabajamos comprimiendo.
+* `J`. compresión XZ, lzip y otros formatos

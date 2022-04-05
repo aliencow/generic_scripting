@@ -118,3 +118,15 @@ Una sesión de shell interactiva es una sesión de shell que está conectada a u
 Así que cada sesión de shell se clasifica como de inicio de sesión o de no inicio de sesión e interactiva o no interactiva.
 
 Una sesión normal que comienza con SSH suele ser una shell interactiva de inicio de sesión. Un script ejecutado desde la línea de comandos se ejecuta normalmente en un shell no interactivo, no de inicio de sesión. Una sesión de terminal puede ser cualquier combinación de estas dos propiedades.
+
+El hecho de que una sesión de shell se clasifique como de inicio de sesión o de no inicio de sesión tiene implicaciones en los archivos que se leen para inicializar la sesión de shell.
+
+Una sesión iniciada como sesión de inicio de sesión leerá primero los detalles de configuración del archivo /etc/profile. Luego buscará el primer archivo de configuración del shell de inicio de sesión en el directorio raíz del usuario para obtener los detalles de configuración específicos del usuario.
+
+Lee el primer archivo que puede encontrar de ~/.bash_profile, ~/.bash_login y ~/.profile y no lee ningún otro archivo.
+
+En cambio, una sesión definida como shell no interactiva leerá /etc/bash.bashrc y luego el archivo ~/.bashrc específico del usuario para construir su entorno.
+
+Los shells no interactivos leen la variable de entorno llamada BASH_ENV y leen el archivo especificado para definir el nuevo entorno.
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator

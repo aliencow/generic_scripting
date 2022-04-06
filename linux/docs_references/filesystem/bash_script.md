@@ -129,4 +129,6 @@ En cambio, una sesión definida como shell no interactiva leerá /etc/bash.bashr
 
 Los shells no interactivos leen la variable de entorno llamada BASH_ENV y leen el archivo especificado para definir el nuevo entorno.
 
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
+
+Funcionamiento de zenity para hacer msgboxes
+https://linoxide.com/bash-shell-script-show-dialog-box/

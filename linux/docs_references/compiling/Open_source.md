@@ -77,3 +77,5 @@ Para gestionar todas estas dependencias o relaciones se utilizan los 'Package Ma
   ```
   apt-cache show docx2txt | less
   ```
+  Los paquetes disponibles en apt cache se pueden buscar en la carpeta `var/lib/apt/lists`.
+  Las listas individuales se pueden explorar con nano o con grep.

@@ -92,6 +92,13 @@
 				"-v" : "Búsqueda inversa"
 			}
 		},
+		"halt" : {
+			"comando" : "halt",
+			"funcionalidad" : "Apaga el sistema",
+			"opciones\r\n" : {
+				"-f" : "Fuerza el apagado"
+			}
+		},
 		"head\r\n" : {
 			"comando" : "head",
 			"funcionalidad" : " Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.",
@@ -172,6 +179,13 @@
 			"funcionalidad" : "muestra el fichero con lineas numeradas. No numera lineas en blanco igual que cat -b",
 			"opciones" : {
 				"-ba" : "si se pone numera también líneas en blanco"
+			}
+		},
+		"poweroff" : {
+			"comando" : "poweroff",
+			"funcionalidad" : "Apaga el sistema",
+			"opciones\r\n" : {
+				"-f" : "Fuerza el apagado"
 			}
 		},
 		"pwd\r\n" : {

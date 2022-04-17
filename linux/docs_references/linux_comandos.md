@@ -114,6 +114,9 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-r/R`. Realiza búsqueda recursiva.
   * opcion `-v`. Búsqueda inversa
 
+* `halt`. Apaga el sistema
+  * option `-f`. Fuerza el apagado
+
 * `head`. Muestra por defecto las primeras 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | head` mostrara los 10 primeros ficheros que find encuentre.
   * option `-n`. Indica el número de líneas que queremos mostrar.
 
@@ -160,8 +163,16 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
 * `nl`. muestra el fichero con lineas numeradas. No numera lineas en blanco igual que `cat -b`
   * option `-ba` si se pone numera también líneas en blanco
 
+* `poweroff`. Apaga el sistema
+  * option `-f`. Fuerza el apagado
+
+
 * `pwd`. Muestra el directorio actual
   * option `-P` muestra el directorio de origen en el caso de un simbolic link.
+
+* `reboot`. Reinicia el sistema.
+  * option `-f`. Forzar reinicio
+  * option `-n`. No sincronizar los discos (no disponible en todas las distros)
 
 * `rev`. Igual que cat pero pone el orden inverso los caracteres de cada línea.
 
@@ -173,10 +184,17 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
 
 * `stat`. Nos muestra información sobre un fichero concreto. Fecha de creación de acceso propietario etc.
 
-* `tail`.  Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.
-  * option `-n`. Indica el número de líneas que queremos mostrar.
+* `shutdown`.  Apaga la máquina (o no). Se puede inditar un time: `now` apaga inmediato, `+n`(apaga en minutos) u `hh:mm`(apaga a las hh:mm)- Ejemplo `shutwown +5` apagará la máquina transcurridos 5 minutos.
+  * option `-k`. No apaga realmenbte solo avisa alos usuarios.
+  * option '-r'. Reinicia después de apagar.
+  * option `-h`. Apaga al momento (halt).
+  * option `-c`. Cancela un apagado previamente programado
 
 * `tac`. Igual que cat pero muestra las lineas del fichero en orden inverso
+
+
+* `tail`.  Muestra por defecto las ultimas 10 lineas de un fichero o de la salida del pipe de linux. Ejemplo `find | tail` mostrara los 10 últimos ficheros que find encuentre.
+  * option `-n`. Indica el número de líneas que queremos mostrar.
 
 * `touch`. Crea un archivo sintaxis `touch filename` donde filename puede ser en path relativo o absoluto. Si el fichero ya existe cambia la fecha de creación del fichero. Usando opciones se pueden modificar las fechas de fichero.
   * option `-a`. Cambia la fecha de acceso.

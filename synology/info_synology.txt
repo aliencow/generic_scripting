@@ -33,3 +33,6 @@ tutorial putty en español usar Docker
 https://www.youtube.com/watch?v=WPl9efDUONg
 Tutorial en entorno interactivo
 https://www.youtube.com/watch?v=_jQXE02WfaA
+
+SYNOLOGY UNOFICIAL PYTHON API
+https://github.com/N4S4

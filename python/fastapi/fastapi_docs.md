@@ -14,3 +14,6 @@ https://testdriven.io/blog/fastapi-mongo/
 
 Getting Started with MongoDB and FastAPI
 https://www.mongodb.com/developer/quickstart/python-quickstart-fastapi/
+
+How To Run MongoDB as a Docker Container
+https://www.bmc.com/blogs/mongodb-docker-container/

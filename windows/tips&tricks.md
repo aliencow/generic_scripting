@@ -22,3 +22,8 @@ Para Borrar. Ejemplo queremos eliminar PYENVROOT desde CMD ojo la remueve desde 
 https://stackoverflow.com/questions/13222724/command-line-to-remove-an-environment-variable-from-the-os-level-configuration
 
     SETX PYENVROOT "" & REG delete HKCU\Environment /F /V PYENVROOT
+
+### Activar desactivar fast init en WINDOWS
+
+desde ejecutar (Ventana + R) teclear
+`powercfg.cpl`  

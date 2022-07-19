@@ -21,7 +21,7 @@ Eliminar una variable de entorno en linux (en este caso wsl)
     unset CURRENT_PROJECT
 
 
-### INVOAR COMANDOS WSL DESDE LA VENTANA DE COMANDOS
+### INVOCAR COMANDOS WSL DESDE LA VENTANA DE COMANDOS
 https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/
 
 Se escribe en cmd `wsl` seguido del comando o comandos que se quieran ejecutar

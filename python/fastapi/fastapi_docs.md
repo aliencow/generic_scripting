@@ -17,3 +17,6 @@ https://www.mongodb.com/developer/quickstart/python-quickstart-fastapi/
 
 How To Run MongoDB as a Docker Container
 https://www.bmc.com/blogs/mongodb-docker-container/
+
+## Base fastAPI site
+https://fastapi.tiangolo.com/

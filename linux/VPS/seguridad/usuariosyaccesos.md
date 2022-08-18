@@ -29,7 +29,7 @@ Es decir:
 4. Repetiremos el proceso por cada equipo local que utilicemos para conectarnos.
 
 ### configuración de seguridad ssh
-La configuración de ssh se encuentra en la carpetea `/etc/ssh/sshd_config` ojo sshd_config literal no congundir con ssh_config u otros del archivo.
+La configuración de ssh se encuentra en la carpetea `/etc/ssh/sshd_config` ojo sshd_config literal no confundir con ssh_config u otros del archivo.
 
 Editanto con sudo nano:
 Ponemos `PermitRootLogin no` para que no se pueda usar root.

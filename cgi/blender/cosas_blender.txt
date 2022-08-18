@@ -21,3 +21,6 @@ Recursos - Blender001
 Grease Pencil https://cloud.blender.org/p/gallery/5cb249bf808c0e1b8eb7ea21
 
 Bendy Bones https://docs.blender.org/manual/en/latest/rigging/armatures/bones/properties/bendy_bones.html
+
+Basado en el tuorial de blender Blender 2.9 Python Addon Programming Tutorial
+https://www.youtube.com/watch?v=yNdjdmepMMQ

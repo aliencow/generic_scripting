@@ -25,7 +25,12 @@ Make a project directory(folder) and cd into it. To make a virtual environment t
 * In all platforms: `deactivate`
 
 
-
+## Exporting requirements.txt
+You can do that with pip freeze command
+``` bash
+pip3 freeze > requirements.txt  # Python3
+pip freeze > requirements.txt  # Python2
+```
 
 ### Método tradicional para usar virtualenv:
 
@@ -53,7 +58,6 @@ desde CMD: deactivate
 
 
 Método con virtualenvwrapper:
-
 
 Otro modo de poner el virtualenv mas facil es con mkvirtualenv. Previamente tenemos que ejecutar virtualenvwrapper
 
@@ -83,3 +87,6 @@ setprojectdir .   (desde dentro del directorio creado)
 con deactivate desactivamos el entorno.
 
 Para volverlo a activar:  workon nombre
+
+## Atencion virtualenv no es compatible con poetry
+Ver el tutorial de `poetry.md` para ver como funciona Poetry

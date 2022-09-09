@@ -1,3 +1,14 @@
+"""
+The script contains CR characters. The shell interprets these CR characters as arguments.
+
+Solution: Remove the CR characters from the script using the following script.
+""""
+
+with open('beak', 'rb+') as f:
+    content = f.read()
+    f.seek(0)
+    f.write(content.replace(b'\r', b''))
+    f.truncate()
 
 
 """ Excelente tutorial de python https://www.programiz.com/python-programming/keywords-identifier

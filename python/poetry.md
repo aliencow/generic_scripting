@@ -51,14 +51,24 @@ this creates a basic configuration for the project.
 It works like `pip install` adding to the project the python library we demand, `poetry add fastapi` will install fastAPI library in our project. Updating immediatly the dependencies.
 
 ## How to run python
+
 If we run the python file as usual (`python <program_name>.py`) the program won´t get the installed libraries because its behavior is global python so it can´t find the libraries added with poetry. To fix this item we could do it in one of this ways:
 * To run a .py file inside de environment the command is `poetry run python <program_name>.py`. A bit large.
 * If we use `poetry shell` instead, it will execute the environment and we can run the program like we always do in python: `python <program_name>.py`
+* To exit from `poetry shell` type `exit` in the command line.
 
 ## Extract requirements.txt from poetry
 
+Use this commands that are like `pip freeze`:
+``` bash
+# exporting with hashes
 poetry export -f requirements.txt --output requirements.txt
+# exporting without hashes
 poetry export --without-hashes --format=requirements.txt > requirements.txt
+# or
+poetry export --without-hashes --format=requirements.txt --output requirements.txt
+```
+
 
 ## Poetry help
 

@@ -2,6 +2,12 @@ MORE ABOUT THIS ON https://www.youtube.com/watch?v=HVsySz-h9r4
 
 GIT GIT GIT
 
+Obtener la ubicacion del repositorio
+https://stackoverflow.com/questions/4089430/how-to-determine-the-url-that-a-local-git-repository-was-originally-cloned-from
+git config --get remote.origin.url 
+git remote show origin
+
+
  _____              __ _                            _                          ______  ___   _____ _____ _____ _____ _____
 /  __ \            / _(_)                          (_)                         | ___ \/ _ \ /  ___|_   _/  __ \  _  /  ___|
 | /  \/ ___  _ __ | |_ _  __ _ _   _ _ __ __ _  ___ _  ___  _ __      _   _    | |_/ / /_\ \\ `--.  | | | /  \/ | | \ `--.

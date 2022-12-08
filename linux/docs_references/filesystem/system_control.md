@@ -46,8 +46,8 @@ Necesitaremos una clave (privada y pública) para cada dispositivo desde el que 
 
 Es decir:
 1. Generamos con ssh-keygen los dos ficheros de clave en el equipo local
-2. En el equipo remoto copiamos la public key en una sola linea del fichero `~/.ssh/authorized_keys` haciendo copy paste y editando en nano por ejemplo.
-3. Una vez completado el proceso accedemos con el comando ssh al equipo remoto.
+2. En el equipo remoto copiamos la public key en una sola linea del fichero `~/.ssh/authorized_keys` haciendo copy paste y editando en nano por ejemplo. 
+3. Una vez completado el proceso accedemos con el comando ssh al equipo remoto. Previo reseteo del service ssh `sudo systemctl restart ssh.service` o cambiando la configuracion en `/etc/ssh/sshd_config `
 4. Repetiremos el proceso por cada equipo local que utilicemos para conectarnos.
 
 ### Permisos de ficheros

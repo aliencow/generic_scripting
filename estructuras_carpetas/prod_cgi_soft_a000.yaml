@@ -1,0 +1,45 @@
+proyecto_animacion/
+│
+├── preproduccion/
+│   ├── concept_art/
+│   │   └── software: Photoshop, Procreate
+│   ├── storyboards/
+│   │   └── software: Toon Boom Storyboard Pro, Storyboarder
+│   ├── guion/
+│   │   └── software: Celtx, Final Draft
+│   ├── animatics/
+│   │   └── software: Toon Boom Storyboard Pro, Blender
+│   ├── diseño_personajes/
+│   │   └── software: ZBrush, Blender, Maya
+│   └── diseño_escenarios/
+│       └── software: Blender, Maya, Houdini
+│
+├── produccion/
+│   ├── modelos_3d/
+│   │   └── software: Blender, Maya, Houdini, ZBrush
+│   ├── texturas/
+│   │   └── software: Substance Painter, Mari
+│   ├── animaciones/
+│   │   └── software: Blender, Maya, Houdini
+│   ├── render/
+│   │   └── software: Arnold, V-Ray, Redshift
+│   ├── efectos_visuales/
+│   │   └── software: Houdini, Nuke, After Effects
+│   ├── iluminación/
+│   │   └── software: Arnold, V-Ray, Redshift
+│   └── sonido/
+│       └── software: Pro Tools, Logic Pro, Reaper
+│
+└── postproduccion/
+    ├── edición/
+    │   └── software: Adobe Premiere, Final Cut Pro
+    ├── composición/
+    │   └── software: Nuke, After Effects
+    ├── corrección_color/
+    │   └── software: DaVinci Resolve, Baselight
+    ├── efectos_sonido/
+    │   └── software: Pro Tools, Reaper
+    ├── mezcla_sonido/
+    │   └── software: Pro Tools, Logic Pro, Reaper
+    └── exportación/
+        └── software: Adobe Media Encoder, FFmpeg

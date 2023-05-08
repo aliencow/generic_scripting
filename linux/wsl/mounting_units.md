@@ -25,16 +25,18 @@ Si la unidad muntada está busy y queremos desmontar.There is a way to detach a 
 umount -l /PATH/OF/BUSY-DEVICE
 umount -f /PATH/OF/BUSY-NFS (NETWORK-FILE-SYSTEM)
 
-
 ### WSL2 supports CIFS (SMB) protocol. You may need to specify your network server version when mounting. E.g. on Ubuntu 20.04:
 https://newbedev.com/how-to-access-mounted-network-drive-on-windows-linux-subsystem
 
-`$ sudo apt install cifs-utils
-$ sudo mount -t cifs -o user=joe,pass=shmo,vers=1.0 //server/share /mnt/share`
+```bash
+$ sudo apt install cifs-utils
+$ sudo mount -t cifs -o user=joe,pass=shmo,vers=1.0 //server/share /mnt/share
+```
 
 ### Montar unidades de USB
 https://www.scivision.dev/mount-usb-drives-windows-subsystem-for-linux/
 
+```bash
 mkdir /mnt/f
 
 mount -t drvfs f: /mnt/f
@@ -43,6 +45,7 @@ Para unidades de red
 mkdir /mnt/share
 
 mount -t drvfs '\\server\share' /mnt/share
+```
 
 ### Montar permanentemente unidades de red
 https://askubuntu.com/questions/1119456/how-to-create-a-persistent-mounting-point-in-ubuntu-app-on-windows-10

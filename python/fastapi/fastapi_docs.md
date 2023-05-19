@@ -28,7 +28,7 @@ https://www.mongodb.com/developer/quickstart/python-quickstart-fastapi/
 1. #### Dockerizing mongoDB 
 
     1. fastApi using mongodb docker https://github.com/AtamanKit/fastapi_users_docker
-    5.  How To Run MongoDB as a Docker Container https://www.bmc.com/blogs/mongodb-docker-container/
+    5. How To Run MongoDB as a Docker Container https://www.bmc.com/blogs/mongodb-docker-container/
 
 
 2. #### FastAPI CRUD Operation with Jinja2, Bootstrap5, HTML5 and mongodb

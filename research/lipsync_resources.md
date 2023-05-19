@@ -9,4 +9,4 @@ https://github.com/feitgemel/Python-Code-Cool-Stuff/blob/master/Wav2Lip/Wav2Lip-
 Programas
 https://github.com/tracend/papagayo
 https://github.com/DanielSWolf/rhubarb-lip-sync#recognizers
-https://github.com/scaredyfish/blender-rhubarb-lipsynchttps://github.com/scaredyfish/blender-rhubarb-lipsync
+https://github.com/scaredyfish/blender-rhubarb-lipsync

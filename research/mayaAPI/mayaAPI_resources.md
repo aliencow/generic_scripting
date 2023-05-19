@@ -18,3 +18,8 @@ https://www.autodesk.com/developer-network/platform-technologies/maya
 
 Maya API programming Chad Vernon
 https://www.chadvernon.com/maya-api-programming/
+
+
+## Api training resources
+
+https://github.com/ADN-DevTech/Maya-Training-Material

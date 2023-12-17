@@ -13,6 +13,20 @@ Este comando activa linux wsl (viene preactivo en las versiones de windows)
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
+Instalacion de otro modo
+========================
+
+Installing WSL is now easier than ever. Search for Windows PowerShell in your Windows search bar, then select Run as administrator.
+
+At the command prompt type:
+
+wsl --install
+
+And wait for the process to complete.
+
+For WSL to be properly activated, you will now need to restart your computer.
+
+
 
 Acceso a C: desde command line linux:
 =====================================
@@ -48,3 +62,42 @@ Ocurre porque docker crea sus propias versiones de linux
 
 Run WSL Linux Distro as Specific User in Windows 10
 https://winaero.com/run-wsl-linux-distro-as-specific-user-in-windows-10/
+
+
+How to Uninstall WSL on Windows 10/11
+=====================================
+https://www.minitool.com/news/uninstall-wsl.html
+
+
+Step 1: Uninstall Linux Distro
+1. In Windows 11/10, press Win + I at the same time to open Settings.
+
+2. Go to Apps > Apps & features.
+
+3. Choose a Linux distribution like Ubuntu and click Uninstall (Windows 10). For Windows 11, click the three dots and click Uninstall. Then, click Uninstall again to confirm the operation.
+
+
+Step 2: Delete Windows Subsystem for Linux Components
+After uninstalling the Linux distribution from Windows 11/10, other elements of the Windows Subsystem for Linux functionality should be also removed.
+
+1. In the Settings window, go to App > Apps & features.
+
+2. Choose Windows Subsystem for Linux WSLg Preview and click Uninstall > Uninstall. In Windows 11, you need to click three dots and click Uninstall.
+
+3. Find Windows Subsystem for Linux Update and uninstall it.
+
+
+Step 3: Disable Windows Subsystem for Linux
+
+1. In Windows 11, click Apps > Optional features and click More Windows features under the Related settings section to open the Windows Features 
+   In Windows 10, navigate to Apps > Apps & features > Option features > More Windows features.
+
+    Tips:
+        Alternatively, you can type windows features into the search box and click Turn Windows features on or off.
+
+2. In the Windows Features interface, locate Virtual Machine Platform and Windows Subsystem for Linux, then uncheck the boxes of these two options.
+
+3. Click OK to save the changes and restart your computer.
+
+disable Windows Subsystem for Linux
+After the restart, you completely uninstall WSL on Windows 11/10. If you change your mind and want to run a Linux distribution like Ubuntu, you can still reinstall WSL on your computer.

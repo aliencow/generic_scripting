@@ -38,5 +38,5 @@ https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-applicat
 How To Deploy And Manage MongoDB With Docker
 https://phoenixnap.com/kb/docker-mongodb
 COMMANDOS utiles
-comando para ejecutar una venntana interactiva en la imagen de mongodb
+comando para ejecutar una ventana interactiva en la imagen de mongodb
 docker exec -it mongodb bash

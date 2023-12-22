@@ -113,3 +113,12 @@ uso de git stash https://code.tutsplus.com/es/tutorials/quick-tip-leveraging-the
 git stash guarda cambios sin stagear
 git pull actualizamos
 git stash pop recupera los cambios
+
+
+## CONFIGURACION
+
+```bash
+git config --list # lista los parametros de configuración
+git config --global <nombre_parametro> <contenido> # Cambia el parametro con nombre nombre_parametro al contenido suministrado (en global)
+git config --local <nombre_parametro> <contenido> # Cambia el parametro con nombre nombre_parametro al contenido suministrado (solamente para el repositorio local)
+```

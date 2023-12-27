@@ -24,6 +24,13 @@ Make a project directory(folder) and cd into it. To make a virtual environment t
 
 * In all platforms: `deactivate`
 
+#### Upgrading python version to the venv 
+
+python -m venv --upgrade <envname>
+
+o bien desinstalar la actual rm -r <envname>  e instalar de nuevo
+python -m venv <envmane>
+En este ultimo caso recordar que hay que actualizar las instalaciones
 
 ## Exporting requirements.txt
 You can do that with pip freeze command

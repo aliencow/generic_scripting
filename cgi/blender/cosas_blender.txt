@@ -24,3 +24,10 @@ Bendy Bones https://docs.blender.org/manual/en/latest/rigging/armatures/bones/pr
 
 Basado en el tuorial de blender Blender 2.9 Python Addon Programming Tutorial
 https://www.youtube.com/watch?v=yNdjdmepMMQ
+
+
+StudioCode
+You will need the extension Blender Development
+Once installed Ctrl+Shift+P can be used for commands like:
+- Blender: new AddOn 
+- Blender: Start

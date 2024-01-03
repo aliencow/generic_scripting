@@ -355,3 +355,47 @@ def confirmdialog(title, message):
     value = tkMessageBox.askyesno(title, message, parent = root)
 
     return value
+
+
+"""
+DATETIME FUNCTIONS
+"""
+
+# String to datetime
+from datetime import datetime
+
+# Example with the standard date and time format
+date_str = '2023-02-28 14:30:00'
+date_format = '%Y-%m-%d %H:%M:%S'
+
+date_obj = datetime.strptime(date_str, date_format)
+print(date_obj)
+
+# Example with a different format
+
+date_str = '02/28/2023 02:30 PM'
+date_format = '%m/%d/%Y %I:%M %p'
+
+date_obj = datetime.strptime(date_str, date_format)
+print(date_obj)
+
+
+# datetime to string
+from datetime import datetime
+
+now = datetime.now() # current date and time
+
+year = now.strftime("%Y")
+print("year:", year)
+
+month = now.strftime("%m")
+print("month:", month)
+
+day = now.strftime("%d")
+print("day:", day)
+
+time = now.strftime("%H:%M:%S")
+print("time:", time)
+
+date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+print("date and time:",date_time)	

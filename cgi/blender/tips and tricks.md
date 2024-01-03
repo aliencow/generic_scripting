@@ -1,4 +1,6 @@
-## Algunos tips Blender
+# Algunos tips Blender
+
+## Atajos de teclado
 
 ### View y camara
 
@@ -16,6 +18,10 @@ Numpad + '5'- Cambia de view ortoganal a perspectiva y viceversa.
 'n' - mostara ocultar opciones
 Shift + s (con 3d cursor activo) desplazar el 3dcuror
 Shift + a - Añadir cosas segun el modo activo (objeto, componentes, etc)
+SpaceBar - Permite mover las selecciones realizadas con box lasso etc. Se activará la selección al soltar                                                                                   
+Ctrl + a - Apply transformations to geometry (cuando se escala, por ejemplo) like Freeze Transformationss
+Ctrl + j - Join unifica en una dos geometrias poligonales.
+
 
 ### Modelado
 Tab - Cambia de modo activo (de objeto a componentes y viceversa)
@@ -26,10 +32,31 @@ Tab + pulsacion larga - Permite escoger el modo activo entre los existentes, sie
 '3' (Sin Numpad) - Activa para selección de faces
 
 #### Modo sculpt
-Ctrl + mouse - Cambia la orientación del brush (de saliente a entrante)
+Space Bar - Muestra los atajos de teclado de los brushes
+Ctrl + mouse - Cambia la orientación del brush (hacia adentro o hacia afuera)
 Shift + mouse - Smooth
 'f' - En modo escultura permite regular el tamaño del brush
 
+MASK
+'a' - Muestra las opciones de Mask en menú flotante.
+Ver menu 'Mask' también (Clear Mask etc.)
+Box Hide - Oculta la zona del recuedro.
+Alt + 'h' - Operación inversa, muestra lo oculto.
+
+FACE SET
+'h' (Solamente si se pinto algun Face Set) - Oculta todo excepto el face set activo.
+Alt + 'h' - Operación inversa, muestra lo oculto.
+Ctrl + mouse (Si estamos sobre un Face Set) - Continua pintando con el color del  face set seleccionado
+Ctrl + mouse (Si estamos sobre un Face Set) - Continua pintando con el color del  face set seleccionado
+Ver mnu 'Face set', para eliminar los sets pintados 'Face from visible', para crear a partir de la máscara 'Face from Mask', etc.
+
+Multires Displacement recupera la forma original.
+Box Trim - Recorta la geometría  (pone tapas)
+Line Project - aplica un plano de corte por donde se marca la línea. Hace un trim y recalcula las faces.
+
+Dyntopo y Remesh sirven para retopologizar la geometria.
+Shift + r (en este modo) Permite regular el grid para remesh (tamaño polígonos)
+Ctrl + r (en este modo) Ejecuta remesh
 
 ### Programación
 

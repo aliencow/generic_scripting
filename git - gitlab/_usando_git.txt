@@ -193,3 +193,11 @@ git branch -d cambio-codigo
 # Borra una rama en el repositorio local
 git push origin --delete cambio-codigo
 # pero hay que hacer el push del delete para borrarlo en github
+
+
+## creando un gitignore generico
+En esta página web:
+https://www.toptal.com/developers/gitignore/
+
+indicar sistemas operativos (la selección es mediante tags) y el lenguaje de progamación y nos devuelve un gitignore plantillado.
+

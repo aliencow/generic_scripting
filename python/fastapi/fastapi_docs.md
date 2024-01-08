@@ -22,6 +22,9 @@ https://www.youtube.com/watch?v=k7YRGNGi4KI
 4. Getting Started with MongoDB and FastAPI
 https://www.mongodb.com/developer/quickstart/python-quickstart-fastapi/
 
+5. Autienticacion con JWT, AOUTH2 y FASTAPI
+https://www.youtube.com/watch?v=uNl8nlnBVMc
+
 
 ### fastAPI mongoDB
 

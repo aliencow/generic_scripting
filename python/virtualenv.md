@@ -97,3 +97,14 @@ Para volverlo a activar:  workon nombre
 
 ## Atencion virtualenv no es compatible con poetry
 Ver el tutorial de `poetry.md` para ver como funciona Poetry
+
+## COMANDOS PARA ACTIVAR VENV EN DISTINTAS PLATAFORMAS
+
+| Plataforma  |  Shell | Comando para activar el entorno virtual |
+| ----------- |  ----------- | ----------- |
+| POSIX |  bash/zsh       | $ source <venv>/bin/activate |
+|    |  fish | $ source <venv>/bin/activate.fish |
+|    |  csh/tcsh | $ source <venv>/bin/activate.csh |
+|    | PowerShell | $ <venv>/bin/Activate.ps1 |
+| Windows | cmd.exe | C:\> <venv>\Scripts\activate.bat |
+|    | PowerShell | PS C:\> <venv>\Scripts\Activate.ps1 |

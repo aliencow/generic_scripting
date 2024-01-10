@@ -1,6 +1,8 @@
+
 ## Windows WSL tips and tricks
 
-Como saber en que carpeta física de windows esta el $HOME  de wsl
+### Como saber en que carpeta física de windows esta el $HOME  de wsl
+
 ```bash
 # Nos ubicamos en home (u otra carpeta)
 cd ~
@@ -9,7 +11,7 @@ explorer.exe .
 # Se abrirá un explorador de archivos en la ruta física.
 ```
 
-Compactar el wsl
+### Compactar el wsl
 https://terminaldelinux.com/terminal/wsl/liberar-espacio-disco-wsl/
 
 Copiar una variable de entorno con el mismo nombre y contenido que la de windows
@@ -19,6 +21,32 @@ Copiar una variable de entorno con el mismo nombre y contenido que la de windows
 Eliminar una variable de entorno en linux (en este caso wsl)
 
     unset CURRENT_PROJECT
+
+
+
+### Acceso a C: desde command line linux:
+
+cd /mnt/c para C:
+cd /mnt/c/Users/juan.nouche/Desktop para escritorio
+cd /mnt/d para D:
+
+Create and modify the new WSL configuration file: (docker)
+
+sudo nano /etc/wsl.conf
+
+#### Now make it look like this and save the file when you're done:
+``` bash
+[automount]
+root=/                  #<<<<<<<< importante SIN ESPACIOS (tal como esta).
+options = "metadata"
+```
+
+
+We need to set root=/ because this will make your drives mounted at /c or /e instead of /mnt/c or /mnt/e.
+Aplicando la configuración anterior las unidades quedaran en /c o /d en lugar de /mnt/c o /mnt/d
+
+https://superuser.com/questions/1780345/why-wsl-mounts-at-mnt-c-and-not-c
+
 
 
 ### INVOCAR COMANDOS WSL DESDE LA VENTANA DE COMANDOS

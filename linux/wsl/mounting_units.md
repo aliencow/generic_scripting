@@ -1,3 +1,27 @@
+## Acceso a C: desde command line linux:
+
+cd /mnt/c para C:
+cd /mnt/c/Users/juan.nouche/Desktop para escritorio
+cd /mnt/d para D:
+
+Create and modify the new WSL configuration file: (docker)
+
+sudo nano /etc/wsl.conf
+
+### Now make it look like this and save the file when you're done:
+``` bash
+[automount]
+root=/                  #<<<<<<<< importante SIN ESPACIOS (tal como esta).
+options = "metadata"
+```
+
+
+We need to set root=/ because this will make your drives mounted at /c or /e instead of /mnt/c or /mnt/e.
+Aplicando la configuración anterior las unidades quedaran en /c o /d en lugar de /mnt/c o /mnt/d
+
+https://superuser.com/questions/1780345/why-wsl-mounts-at-mnt-c-and-not-c
+
+
 ## Montar unidades en wsl
 https://dev.to/rpalo/mounting-network-drives-into-windows-subsystem-linux-3ef7
 

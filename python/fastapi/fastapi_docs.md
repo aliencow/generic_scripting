@@ -9,7 +9,29 @@
 ## Awesome fastAPI github
 https://github.com/mjhea0/awesome-fastapi
 
+
+## Deploying FastAPI apps
+
+* How to Securely Deploy a FastAPI app with NGINX and Gunicorn https://dylancastillo.co/fastapi-nginx-gunicorn/
+
+
+## Login related
+
+*  How to avoid an authentication middleware to ask credentials on swagger ui route
+https://github.com/tiangolo/fastapi/discussions/9827
+
+* Super big fastAPI tutorial
+https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-6b-linode-deploy-gunicorn-uvicorn-nginx/
+
+* Create a Authentication System Using FastApi and PostgreSql Login,Logout
+https://medium.com/@chnarsimha986/fastapi-login-logout-changepassword-4c12e92d41e2
+
+
 ## Some nice tutos
+
+### jinja2templates
+https://github.com/smartexpert/fastjinja2templates
+
 
 ### introduction tutos
 
@@ -52,6 +74,8 @@ https://www.youtube.com/watch?v=uNl8nlnBVMc
     * Introducing FARM Stack - FastAPI, React, and MongoDB https://www.mongodb.com/developer/languages/python/farm-stack-fastapi-react-mongodb/
         1. github https://github.com/mongodb-developer/mongodb-with-fastapi
 
-### Deploying FastAPI apps
+4. #### fastapi CRUD application
 
-* How to Securely Deploy a FastAPI app with NGINX and Gunicorn https://dylancastillo.co/fastapi-nginx-gunicorn/
+    1. https://testdriven.io/blog/fastapi-mongo/
+
+

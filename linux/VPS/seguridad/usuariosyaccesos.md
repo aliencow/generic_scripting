@@ -23,8 +23,22 @@ Necesitaremos una clave (privada y pública) para cada dispositivo desde el que 
   * option `-f`+` <filename>`. Permite indicar el nombre de fichero para la clave que queremos, util cuando necesitemos varias. Por defecto el comando asigna el nombre 'id_rsa'. Recordar que se crean dos files el id_rsa y el id_rsa.pub el primero es la clave privada (se queda en el equipo local) y el segundo la clave pública que tendremos que copiar al fichero `authorized_keys` del equipo remoto.
 
 Es decir:
-1. Generamos con ssh-keygen los dos ficheros de clave en el equipo local
-2. En el equipo remoto copiamos la public key en una sola linea del fichero `~/.ssh/authorized_keys` haciendo copy paste y editando en nano por ejemplo.
+1. Generamos con ssh-keygen los dos ficheros de clave en el equipo local. Crear el fichero de claves ssh:
+```bash
+#filename optional si no se pone genera un fichero por defecto id-rsa
+ssh-keygen -b 4096 -f filename
+# Create a new key with email and user name
+ssh-keygen -b 4096 -t rsa -C My-Email -f filename
+```
+este fichero se ubica en linux `~/.ssh` y en Windows en `C:\Users\<username>\.ssh`
+2. En el equipo remoto copiamos la public key en una sola linea del fichero `~/.ssh/authorized_keys` haciendo copy paste y editando en nano por ejemplo. O usando:
+```bash
+#Copy the key to a server - portnumber default 22 if you changed it put -p portnumber
+ssh-copy-id -i ~/.ssh/filename -p portnumber user@host
+ssh-copy-id -i ~/.ssh/filename user@host #nos pide la contraseña
+#Test the new key
+ssh -i ~/.ssh/mykey user@host
+```
 3. Una vez completado el proceso accedemos con el comando ssh al equipo remoto.
 4. Repetiremos el proceso por cada equipo local que utilicemos para conectarnos.
 

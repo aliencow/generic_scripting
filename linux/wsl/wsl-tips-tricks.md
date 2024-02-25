@@ -64,6 +64,11 @@ wsl cd /mnt/argonteweb/enchiridion/data; git push; git pull
 Get-Service LxssManager | Restart-Service
 ```
 
+```bash
+# desde Powershell
+wsl --shutdown
+```
+
 ### Trabajar con ventanas en wsl y ejecutar pyside
 
 Es necesario instalar VcXsrv server. https://sourceforge.net/projects/vcxsrv/ para servir xwindows.

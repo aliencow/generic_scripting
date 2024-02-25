@@ -26,6 +26,8 @@
 
         1. same using beanie https://testdriven.io/blog/fastapi-beanie/ github https://github.com/Youngestdev/fastapi-beanie
 
+    3. Construir un CRUD con FastAPI + MongoDB en containers con Docker y Docker-Compose https://alvarmaciel.gitlab.io/cyberiada/post/2021-12-29-crud-con-fastapi-mongodb-y-docker/#motor-setup
+
 3. #### Introducing mongodb use with fastAPI
 
     * Getting Started with MongoDB and FastAPI https://www.mongodb.com/developer/languages/python/python-quickstart-fastapi/

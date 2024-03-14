@@ -95,5 +95,8 @@ libGL error: No matching fbConfigs or visuals found
 libGL error: failed to load driver: swrast
 ```
 
+### Cambiar el ip automatico y la máscara de subred para wsl
 
+Se hace en el registry editor con este tutorial
 
+https://learn.microsoft.com/en-us/answers/questions/1123820/set-wsl2-subnet

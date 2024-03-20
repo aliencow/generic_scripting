@@ -100,3 +100,15 @@ libGL error: failed to load driver: swrast
 Se hace en el registry editor con este tutorial
 
 https://learn.microsoft.com/en-us/answers/questions/1123820/set-wsl2-subnet
+
+### Mover los datos de wsl a una unidad externa
+
+https://dev.to/equimancho/mover-el-sistema-de-archivos-de-wsl-a-otro-disco-3fbi
+
+tener en cuenta que el usuario de wsl es `juan_nouche` en antaruxa
+
+### Mover los datos de docker a una unidad externa
+
+https://mascandobits.es/tips/mover-docker-desktop-data-fuera-de-la-unidad-del-sistema/
+
+Importante!!! Apagar el docker desktop al principio.

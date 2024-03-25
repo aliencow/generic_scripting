@@ -72,3 +72,5 @@ class Employee(Document):
 
 class ProfilePage(Document):
     content = StringField()
+
+

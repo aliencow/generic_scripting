@@ -3,6 +3,13 @@
 * Getting Started with MongoDB and FastAPI https://www.mongodb.com/developer/quickstart/python-quickstart-fastapi/
 * Motor db asyncio https://motor.readthedocs.io/en/stable/tutorial-asyncio.html
 
+## Databases how tos
+
+### Stablishing a relationship between two collections
+
+https://www.mongodb.com/docs/manual/core/views/join-collections-with-view/
+
+
 ### fastAPI mongoDB
 
 0. #### Introduction

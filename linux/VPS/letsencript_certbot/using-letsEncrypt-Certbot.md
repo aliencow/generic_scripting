@@ -38,22 +38,22 @@ Lo primero vamos a hacer tuq certbot obtenga los certificados como nos interesan
 * `--hsts`. Indicamos que queremos que por defecto redirija sempre la la version https (segura) de nuestros dominios.
 * `--staple-ocsp`. Genera un certificado junto con el certificado de la autoridad aseguradora. Va compbinada con la opcion siguiente (`--must-staple`) no puede ir sola
 * `--must-staple`. Obliga a que el certificado de la autoridad aseguradora se chequee siempre (por seguridad). Va combinada con la opcion anterior (`--staple-ocsp`) no puede ir sola.
-* `-d`. Dominio o lista de dominios (separados por espacios) que queremos certificar. Ejemplo `-d nouche.me -d www.nouche.me -d nouche.net -d www.nouche.net etc`
+* `-d`. Dominio o lista de dominios (separados por espacios) que queremos certificar. Ejemplo `-d myname.me -d www.myname.me -d myname.net -d www.myname.net etc`
 
 el comando quedaría así:
 
     # Aunque se podría hacer en una sola vez:
-    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d nouche.me -d www.nouche.me -d nouche.net -d www.nouche.net -d nouche.app -d www.nouche.app
+    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d myname.me -d www.myname.me -d myname.net -d www.myname.net -d myname.app -d www.myname.app
 
     # Es preferible por claridad hacer un comando por cada dominio.
-    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d nouche.me -d www.nouche.me
-    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d nouche.net -d www.nouche.net
-    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d nouche.app -d www.nouche.app
+    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d myname.me -d www.myname.me
+    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d myname.net -d www.myname.net
+    sudo certbot --nginx --hsts --staple-ocsp --must-staple -d myname.app -d www.myname.app
 
 A partir de aqui ya podemos acceder con https a nuestros sitios.
 
 #### Como funciona CertBot
-Certbot genera una serio de cron jobs para mantenimiento de los certificados.
+Certbot genera una serie de cron jobs para mantenimiento de los certificados.
 Para el acceso el comando principal es `certbot` poniendo en el cli `certbot --help` veremos las opciones que tiene.
 Esta pensado para ejecutarse como sudo
 
@@ -63,13 +63,13 @@ Con este comando comprobamos los certificados que están instalados:
 
     # esta seria la salida
 
-    Certificate Name: nouche.app
+    Certificate Name: myname.app
       Serial Number: 3752b586ed21878048294439cb751b5ef3f
       Key Type: RSA
-      Domains: nouche.app www.nouche.app
+      Domains: myname.app www.myname.app
       Expiry Date: 2022-06-10 18:08:39+00:00 (VALID: 89 days)
-      Certificate Path: /etc/letsencrypt/live/nouche.app/fullchain.pem
-      Private Key Path: /etc/letsencrypt/live/nouche.app/privkey.pem
+      Certificate Path: /etc/letsencrypt/live/myname.app/fullchain.pem
+      Private Key Path: /etc/letsencrypt/live/myname.app/privkey.pem
 
 Podemos ver el timer que tiene programado con. Podríamos hacerlo nosotros pero lo hace certbot cuando lo instala snap .
 

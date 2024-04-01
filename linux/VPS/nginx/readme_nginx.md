@@ -12,15 +12,15 @@ Dentro de este tutorial hay una explicación sobre como instalar nginx:
 https://www.linode.com/docs/guides/set-up-web-server-host-website/
 
 
-Este es mi fichero de configuración nginx para el dominio nouche.me
+Este es mi fichero de configuración nginx para el dominio myname.me
 
-    #Este fichero se ubica en /etc/nginx/conf.d/nouche.me.conf
+    #Este fichero se ubica en /etc/nginx/conf.d/myname.me.conf
 
     server {
         listen         80;
         listen         [::]:80;
-        server_name    nouche.me  www.nouche.me;
-        root           /var/www/nouche.me;
+        server_name    myname.me  www.myname.me;
+        root           /var/www/myname.me;
         index          index.html;
 
         gzip             on;
@@ -40,7 +40,7 @@ recargar el servicio `sudo systemctl reload nginx.service`
 Configurar robots.txt para que no accedan crawlers
 https://moz.com/learn/seo/robotstxt
 
-Este es el robots.txt de `/var/www/nouche.me`
+Este es el robots.txt de `/var/www/myname.me`
 
     User-agent: *
     Disallow: /
@@ -138,16 +138,16 @@ Ojo comprobar los tamaños que necesitamos sobre todo de numero de peticiones y 
 Hacer que nadie pueda apuntar su dominio a nuestra dirección de servidor.
 Haciendo que no se acepten redirecciones a otros dominios que nosotros no tenemos en propiedad.
 
-Añadiendo un bloque server en el dominio que tenemos configurado por defecto en mi caso nouche.me
-(/etc/nginx/sites-available/nouche.me)
+Añadiendo un bloque server en el dominio que tenemos configurado por defecto en mi caso myname.me
+(/etc/nginx/sites-available/myname.me)
 
     server {
             listen 80 default_server;
             listen [::]:80 default_server;
 
             server_name _;  #cualquier peticion externa que de cualquier servidor
-            return 301 http://nouche.me;  #la enviamos al sitio por defecto
-            # return 301 http://www.nouche.me; #opcionalmente puede enviarse con www
+            return 301 http://myname.me;  #la enviamos al sitio por defecto
+            # return 301 http://www.myname.me; #opcionalmente puede enviarse con www
     }
 
 

@@ -21,7 +21,6 @@ uname -r
 uname -a
 cat /proc/version
 
-<<<<<<< Updated upstream
 \* any text
 -r recursive
 -v verbose
@@ -44,15 +43,6 @@ clear o ctrl+L limpia de comandos la pantalla.
 mkdir name crea un directorio
 rmdir name elimina el directorio (solo si esta vacio)
 rm -rf dir-name elimina el direcotrio y todo su contednido
-=======
-
-solo ubuntu o debian
-====================
-sudo apt update
-updates the list of available packages and their versions.
-sudo apt upgrade
-installs newer versions of the packages you already have installed
->>>>>>> Stashed changes
 
 prompt terminado en $ usuario # root
 patron de comando linux:
@@ -113,6 +103,24 @@ prompt$ comando opciones argumentos   ej. ls -l /etc/
   * option `-i`. Anular la distincion de mayusculas y minúsculas.
   * option `-r/R`. Realiza búsqueda recursiva.
   * opcion `-v`. Búsqueda inversa
+
+* `groupadd`. Añade un grupo nuevo. Sintaxis `groupadd <options> <group>`
+  * option `-g`. Permite indicar el ID del grupo. Si ya existe el ID aborta. `groupadd -g 1020 <group>`
+
+* `groupdel`. Elimina un grupo. Sintaxis `groupdel <options> <group>`
+  * option `-f`. Fuerza la eliminacion del grupo
+
+* `groupmod`. Para modificar un grupo. Sintaxis `groupmod <options> <group>`
+  * option `-g`. Permite modificar el ID del grupo. Si ya existe el ID aborta.
+  * option `-n`. Permite indicar modificar el nombre del grupo. `groupmod -n <destino> <origen>`.
+
+* `groups`. Lista los grupos que existen
+  
+* `id`. Muestra usuarios y grupos. Pero solamente para el usuario especificado. Sintaxis`id <options> <user>`
+  * option `-g`. Imprime solo el grupo efectivo 
+  * option `-G`. Imprime todos los ID de grupo
+  * option `-n`. Imprime todos los nombres de grupo.
+  * option `-u`. Imprime el id del usuario efectivo.
 
 * `halt`. Apaga el sistema
   * option `-f`. Fuerza el apagado

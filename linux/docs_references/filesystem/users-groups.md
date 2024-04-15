@@ -6,7 +6,15 @@ Va a ser un fichero de texto que luego va a ser interpretado como un fichero bat
 Normalmente los grupos se almacenan en el fichero /etc/groups
 
 ### Listar los grupos que hay
-Si queremos un listado de los grupos que hay usaremos el comando `groups`
+Si queremos un listado de los grupos que hay usaremos el comando `groups` o `id`
+
+* `groups`. Lista los grupos que existen
+  
+* `id`. Muestra usuarios y grupos. Pero solamente para el usuario especificado. Sintaxis`id <options> <user>`
+  * option `-g`. Imprime solo el grupo efectivo 
+  * option `-G`. Imprime todos los ID de grupo
+  * option `-n`. Imprime todos los nombres de grupo.
+  * option `-u`. Imprime el id del usuario efectivo.
 
 ### Crear grupos
 Si queremos crear grupos usaremos el comando `groupadd`.
@@ -38,7 +46,39 @@ sudo groupmod -n <destino> <origen>
 sudo groupmod -n test demo
 # hemos cambiado el nombre de `demo` a `test`
 ```
+### Delete a group
 
+When a group is no longer needed, you delete it by using the groupdel command:
+
+```bash
+sudo groupdel demo
+sudo groupdel -f demo #forzando la eliminaciòn
+```
+
+### Add and remove users from a group
+Suppose you have existing users named user1 and user2, and you want to add them to the demo group. Use the usermod command with the --append --groups options (-a and -G for short):
+
+```bash
+sudo usermod --append --groups demo user1
+```
+
+```bash
+sudo usermod -aG demo user2
+```
+
+Look in the /etc/group file or use the id command to confirm your changes:
+
+```bash
+id user1
+uid=1005(user1) gid=1005(user1) groups=100(users),1009(demo)
+```
+
+To remove a specific user from a group, you can use the gpasswd command to modify group information:
+
+```bash
+sudo gpasswd --delete user1 demo
+```
+Alternatively, manually edit the /etc/group file and remove the user from any number of groups.
 
 
 

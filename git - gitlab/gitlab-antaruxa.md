@@ -1,7 +1,7 @@
 
 # Uso de gitlab para trabajar
 
-## Subir un proyecto existente a gitlab antaruxa
+## Subir un proyecto existente a gitlab an????xa
 
 tutorial here: https://medium.com/@farzanajuthi08/how-to-make-a-project-into-gitlab-and-upload-your-existing-code-into-gitlab-e6ba60e81dcb
 
@@ -15,7 +15,7 @@ Nos mostrará esta información:
 
 ```bash
 git config --global user.name "juan.nouche"
-git config --global user.email "juan.nouche@antaruxa.com"
+git config --global user.email "juan.nouche@an????xa.com"
 ```
 
 * ### Create a new repository - Si queremos crear un nuevo repositorio clonable
@@ -59,7 +59,7 @@ Nos pondremos en el command line en nuestro projecto y
 
 ```bash
 git config --global user.name "juan.nouche"
-git config --global user.email "juan.nouche@antaruxa.com"
+git config --global user.email "juan.nouche@an????xa.com"
 ```
 2. Ejecutamos lo indicado en `Push existing folder`
 
@@ -67,7 +67,7 @@ git config --global user.email "juan.nouche@antaruxa.com"
 ```bash
 cd existing_folder
 git init --initial-branch=main
-git remote add origin ssh://git@gitlab.antaruxa.com:30001/web/access-template.git
+git remote add origin ssh://git@gitlab.an????xa.com:30001/web/access-template.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main
@@ -76,7 +76,7 @@ git push -u origin main
 #esta línea:
 git remote add origin ssh://git@localhost:30001/web/access-template.git
 #por esta otra:
-git remote add origin http://gitlab.antaruxa.com:30000/web/access-template.git
+git remote add origin http://gitlab.an????xa.com:30000/web/access-template.git
 
 
 ```
@@ -87,9 +87,59 @@ Listo!!!
 
 Un clonado simple:
 
-`git clone http://gitlab.antaruxa.com:30000/setup/vbsstudiolib.git .`
+`git clone http://gitlab.an????xa.com:30000/setup/vbsstudiolib.git .`
+
+## Crear nueva rama git
+
+In essence, there are two methods in Git for creating branches.
+You can use a single command to create the branch and switch to it. Or you can create the branch first using one command and then switch to it later using another command when you wish to work with it.
+
+```bash
+// create a branch and switch to the branch
+$ git checkout -b <branch-name>
+
+// create a branch only
+$ git branch <branch-name>
+```
+
+To see a list of all available branches, you can use this command:
+
+```bash
+$ git branch
+```
+
+Finally, suppose we later wish to switch to our new Git branch or any other branch we previously created. In that case, we can make use of the git checkout command.
 
 
+```bash
+$ git checkout <branch-name>
+```
+
+### COPIAR UNA NUEVA RAMA A REMOTO.
+
+First, create a new local branch:
+
+```bash
+git checkout -b my-feature-branch
+```
+
+Second, make changes and create a commit:
+
+```bash
+git add --all 
+git commit -m "Added a new feature."
+```
+Third, push your commit with the --set-upstream flag (-u for short):
+
+```bash
+git push -u origin my-feature-branch
+```
+
+### ELIMINAR UNA RAMA LOCAL
+
+```bash
+git branch --delete <branchname>
+```
 
 ## Otras cuestiones adicionales
 

@@ -23,3 +23,64 @@ WHITE="$(echo -e '\033[1;37m')"
 
 export PS1=$'\[${LIGHTBLUE}\]\u250C\u2500\u2500(\[${LIGHTGREEN}\]\\u\[${GREEN}\]@\[${LIGHTGREEN}\]\\h\[${LIGHTBLUE}\]) [\[${ORANGE}\]\\w\[${LIGHTBLUE}\]]\n\u2514\u2500\[${WHITE}\]$ '
 ```
+## Reinicializar el entorno gráfico gnome
+
+Alt+F2 + r + <intro>
+
+## Instalar python 3.10 on rocky
+https://www.atlantic.net/vps-hosting/how-to-install-python-3-10-on-rocky-linux/
+
+* Step 1 – Install Required Dependencies
+
+    First, you will need to install some dependencies required to compile Python 3.10. You can install all of them by running the following command:
+
+    ```bash 
+    dnf install tar curl gcc openssl-devel bzip2-devel libffi-devel zlib-devel wget make -y
+    ```
+    Once all the dependencies are installed, you can proceed to the next step.
+
+* Step 2 – Install Python 3.10 on Rocky Linux
+
+    First, go to the Python official download page and download the latest version of Python using the following command:
+
+    ```bash 
+    wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tar.xz
+    ```
+
+    Once the download is completed, extract the downloaded file using the following command:
+
+    ```bash 
+    tar -xf Python-3.10.0.tar.xz
+    ```
+
+    Next, change the directory to the extracted directory and configure Python using the following command:
+
+    ```bash 
+    cd Python-3.10.0
+    ./configure --enable-optimizations
+    ```
+
+    Next, start the build process using the following command:
+
+    ```bash 
+    make -j 2
+    nproc
+    ```
+
+    Finally, install Python 3.10 by running the following command:
+
+    ```bash 
+    make altinstall
+    ```
+
+    After the successful installation, verify the Python installation using the following command:
+
+    ```bash 
+    python3.10 --version
+    ```
+
+    You will get the following output:
+
+    ```bash 
+    Python 3.10.0
+    ```

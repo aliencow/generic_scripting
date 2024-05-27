@@ -22,7 +22,7 @@ You must consider that:
 2. you cannot redefine a path operation (repeat get f.e.)
 3. If you want the possible valid path parameter values to be predefined, you can use a standard Python Enum
 
-``` python
+```python
 from enum import Enum
 
 from fastapi import FastAPI
@@ -36,7 +36,7 @@ class ModelName(str, Enum):
 
 app = FastAPI()
 
-### en el navegador se pondría así http://127.0.0.1:8000/bands/gemodels/mi_modelo 
+# en el navegador se pondría así http://127.0.0.1:8000/bands/gemodels/mi_modelo 
 # suponiendo que el model_name fuera mi_modelo
 
 @app.get("/models/{model_name}")

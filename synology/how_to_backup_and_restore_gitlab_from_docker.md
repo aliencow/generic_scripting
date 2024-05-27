@@ -48,7 +48,7 @@ Como la carpeta `/home/git/data` esta mapeada mediante un volumen docker a la ca
 METODO ALTERNATIVO
 También se puede ejecutar el backup desde docker-compose
 
-		docker-compose rm -sf gitlab
+		docker-compose rm -sf gitlab  #nombre del servicio en docker-compose
 		docker-compose run --rm gitlab app:rake gitlab:backup:create
 
 
@@ -122,10 +122,10 @@ Y eso es todo. Probaremos a ver si funciona eject�ndolo en un navegador usando
 
 ### Como conectarse desde ssh a proteo y argonte
 
-a proteo:
+a argonte:
 
 	ssh juan.nouche@192.168.0.12 -p 2367
-a argonte:
+a proteo:
 
 	ssh juan.nouche@192.168.0.16 -p 2222
 

@@ -52,3 +52,14 @@ tener en cuenta que el usuario de wsl es `juan_nouche` en antaruxa
 https://mascandobits.es/tips/mover-docker-desktop-data-fuera-de-la-unidad-del-sistema/
 
 Importante!!! Apagar el docker desktop al principio.
+
+
+# docker compose: Error while loading shared libraries: libz.so.1: (SYNOLOGY)
+
+Este error se produce cuando hace tiempo que no se ejecuta nada de docker.
+
+Got it solved by re-mounting the /tmp to give the volume permission to execute (it was accessible with read-only). So this solved:
+
+```bash
+sudo mount /tmp -o remount,exec
+```

@@ -84,3 +84,9 @@ https://www.atlantic.net/vps-hosting/how-to-install-python-3-10-on-rocky-linux/
     ```bash 
     Python 3.10.0
     ```
+
+## Eliminar desde linux las carpetas @eaDir que crea synology
+
+```bash
+sudo find . -type d -name "@eaDir" -prune -exec rm -rf {} \;
+```

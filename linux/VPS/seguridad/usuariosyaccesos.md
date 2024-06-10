@@ -52,3 +52,81 @@ Ponemos `ChallengeResponseAuthentication no` por la misma razón.
 
 Tras confirmar cambios recargamos el servicio con sytemctl: `sudo systemctl reload ssh.service`
 y a partir de ese momento no se adminitán accesos como root ni con contraseña normal.
+
+#### Cambiar el puerto ssh
+
+1. Backup the Configuration File. Before making any changes, it’s always a good practice to back up your SSH configuration file.
+
+    ```bash
+    
+    ```
+2. Edit the SSH Configuration File. Open the SSHD configuration file with your preferred text editor. For this example, we’ll use nano.
+
+    ```bash
+    sudo nano /etc/ssh/sshd_config
+    ```
+3. Locate the Port Directive. Find the line that starts with Port. It should say Port 22 by default.
+
+4. Change the Port Number. Edit the line to reflect your desired port number, preferably above 1024 to avoid conflicts with other standard services. For instance, to change it to port 222 sudo netstat -tunpl2, the line would look like:
+
+    ```bash
+    Port 2222
+    ```
+
+5. Save and Close the File. If you’re using nano, press CTRL + O to write the changes, then press Enter, and CTRL + X to exit.
+
+6. Adjust Firewall Rules. If you have a firewall enabled (like UFW or Firewalld), you’ll need to update its rules to allow connections on the new SSH port.
+
+    ```bash
+    sudo ufw allow 2222/tcp
+    ```
+
+7. Restart the SSH Service. Apply the changes by restarting the SSH daemon.
+
+    ```bash
+    sudo systemctl restart sshd
+    ```
+
+8. Test the New SSH Port. Before logging out of your current session, open a new terminal or SSH client and try connecting to the server using the new port to ensure everything works correctly:
+ssh username@your_server_ip -p 2222
+
+9. DON FORGET TO CHECK.
+Don't forget to check if your ufw firewall is enabled:
+
+    ```bash
+    sudo ufw status
+    ```
+
+    if it is not enabled activate it
+
+    ```bash
+    sudo ufw enable
+    ```
+
+    If you need to check whether de port is active, do it with  or without netstat:
+
+    ```bash
+    #without netstat:
+    #list open ports (listening)
+    sudo lsof -nP -iTCP -sTCP:LISTEN
+    #check custom port
+    sudo lsof -nP -i:5054
+
+    #with netstat
+    # si no tenemos netstat lo instalaremos con 
+    sudo apt install net-tools 
+    
+    sudo netstat -tunpl
+
+    # used arguments:
+
+    #-t - Queries the command for TCP ports.
+    #-u - Queries for UDP ports.
+    #-n - Avoids DNS lookup and shows only IP addresses to speed up the process.
+    #-p - Displays the process ID and the name of the program using the port.
+    #-l - Outputs listening ports.
+
+    
+    
+
+    ```

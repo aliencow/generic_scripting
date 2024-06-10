@@ -6,6 +6,8 @@ Antes de activarlo comprobar si nuestra conexión esta deshabilitada en en firew
 usando `sudo ufw allow "OpenSSH"` habilitamos el accesos mediante ssh exclusivamente.
 
 si usamos nginx hay que havilitar Nginx con `sudo ufw app list` lo buscamos en la lista de aplicaciones y se habilita para el firewall con `sudo ufw allow "Nginx Full"`
+Hay un tutorial completo en este link: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu
+
 
 ### FAIL2BAN
 Permite bloquear accesos repetitivos o incorrectos. Para instalarlo `sudo apt install fail2ban`

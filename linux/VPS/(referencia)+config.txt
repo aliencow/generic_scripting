@@ -1,0 +1,5 @@
+
+Host mi_vps_root
+	HostName 192.241.189.89
+	User root
+	IdentityFile C:\Users\JuanDMeGon\.ssh\mi_vps_root

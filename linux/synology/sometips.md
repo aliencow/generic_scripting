@@ -13,3 +13,8 @@ Got it solved by re-mounting the /tmp to give the volume permission to execute (
 sudo mount /tmp -o remount,exec
 ```
 
+## Eliminar desde linux las carpetas @eaDir que crea synology
+
+```bash
+sudo find . -type d -name "@eaDir" -prune -exec rm -rf {} \;
+```

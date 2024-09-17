@@ -27,6 +27,10 @@ export PS1=$'\[${LIGHTBLUE}\]\u250C\u2500\u2500(\[${LIGHTGREEN}\]\\u\[${GREEN}\]
 
 Alt+F2 + r + <intro>
 
+## Ejecutar el filebrowser desde la terminal
+
+nautilus --browser ~/some/directory
+
 ## Instalar python 3.10 on rocky
 https://www.atlantic.net/vps-hosting/how-to-install-python-3-10-on-rocky-linux/
 

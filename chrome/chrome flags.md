@@ -9,3 +9,8 @@ se accede en `chrome://flags`
 ### Salir de chrome (todas las instancias) desde linux
 
 `pkill chrome`
+
+### Salir de chrome (todas las instancias) desde Windows
+
+From powershell
+`Taskkill /T /F /IM firefox.exe /IM msedge.exe /IM chrome.exe`
